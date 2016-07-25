@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
 USERNAME='root'
-PASSWORD='AP2275002'
+PASSWORD='root'
 # persos
 
 DBNAME='db_elycee_qpaf'
