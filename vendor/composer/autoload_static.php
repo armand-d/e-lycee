@@ -318,6 +318,7 @@ class ComposerStaticInit612eaace2f7fe3496419deff18cdf6d3
         'Collective\\Html\\HtmlBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlBuilder.php',
         'Collective\\Html\\HtmlFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlFacade.php',
         'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
+        'CommentsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CommentsTableSeeder.php',
         'CreateChoicesTable' => __DIR__ . '/../..' . '/database/migrations/2016_07_25_082617_create_choices_table.php',
         'CreateCommentsTable' => __DIR__ . '/../..' . '/database/migrations/2016_07_25_082546_create_comments_table.php',
         'CreatePostsTable' => __DIR__ . '/../..' . '/database/migrations/2016_07_25_082529_create_posts_table.php',

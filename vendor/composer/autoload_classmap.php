@@ -54,6 +54,7 @@ return array(
     'Collective\\Html\\HtmlBuilder' => $vendorDir . '/laravelcollective/html/src/HtmlBuilder.php',
     'Collective\\Html\\HtmlFacade' => $vendorDir . '/laravelcollective/html/src/HtmlFacade.php',
     'Collective\\Html\\HtmlServiceProvider' => $vendorDir . '/laravelcollective/html/src/HtmlServiceProvider.php',
+    'CommentsTableSeeder' => $baseDir . '/database/seeds/CommentsTableSeeder.php',
     'CreateChoicesTable' => $baseDir . '/database/migrations/2016_07_25_082617_create_choices_table.php',
     'CreateCommentsTable' => $baseDir . '/database/migrations/2016_07_25_082546_create_comments_table.php',
     'CreatePostsTable' => $baseDir . '/database/migrations/2016_07_25_082529_create_posts_table.php',
