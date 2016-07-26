@@ -37,7 +37,7 @@
 </footer>
 
     {!!Html::script('https://code.jquery.com/jquery-3.1.0.min.js')!!}
-    <!-- {!!Html::script('assets/javascripts/bootstrap.min.js')!!} -->
+    {!!Html::script('assets/javascripts/bootstrap.min.js')!!}
     {!!Html::script('assets/javascripts/script.js')!!}
 
 </body>

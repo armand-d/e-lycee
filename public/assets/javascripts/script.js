@@ -29,6 +29,15 @@ $(document).ready(function(){
 		});
 		$search.animateCss('bounceOutUp');
 	});
+		// scroll
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > '10') {
+				$('header').css('padding','1em 0 0em 0');
+			} else {
+				$('header').css('padding','');
+			}
+		});
+		// end scroll
 	// end animate menu
 
 
