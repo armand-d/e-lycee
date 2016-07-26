@@ -20,16 +20,45 @@
 	$text-grey: #525252;
 	$text-black: #000000;
 	$background-grey: #F1F1F1;
-	$background-grey: #333333;
+	$background-dark-grey: #333333;
 	$transparent: transparent;
-	
+	// font
 	$font-1: 'Source Sans Pro', sans-serif;
 	$font-2: 'Source Sans Pro', sans-serif;
-
 	// durations
 	$duration-3: 0.3s;
 	$duration-5: 0.5s;
+	//images
+	$cover-slider:  url('../images/slider/lycee-photo.png');
+	$logo-header: url('../images/logo/logo.svg');
+
 // end variables
+
+// class global
+	.t-dark-blue { color: $dark-blue; }
+	.t-base-blue { color: $base-blue; }
+	.t-grey { color: $text-grey; }
+	.t-black { color: $text-black; }
+	.t-white { color: #FFFFFF; }
+
+	.bg-grey { background-color: $background-grey; }
+	.bg-dark-grey { background-color: $background-dark-grey; }
+
+	.t-s-2 { font-size: 2em;}
+	.t-s-3 { font-size: 3em;}
+
+	.t-bold { font-weight: bold; }
+
+	.spacer {
+		height: 5em;
+		clear: both;
+		display: block;
+	}
+
+	.padding-3 {
+		padding: 3em;
+	}
+// end class global
 
 a {
 	color: $text-grey;
@@ -42,6 +71,10 @@ a {
 
 ul, li {
 	list-style: none;
+}
+
+html, body {
+	overflow-x: hidden; 
 }
 
 html{
@@ -72,7 +105,7 @@ body {
 	input, button {
 	    padding: 1em;
 	    background-color: $transparent;
-	    font-size: 20px;
+	    font-size: 2em;
 	    border: none;
 	    &:focus {
 	    	outline: none;
@@ -82,8 +115,15 @@ body {
 
 header {
 	color: $text-grey;
-	padding: 20px 0;
+	padding: 2em 0 1em 0;
 	.logo {
+		background-image: url("../images/logo/logo.svg");
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: 50% 50%;
+	    width: 4em;
+	    height: 4em;
+	    margin-top: -1.1em; 
 	}
 	.title {
 		font-size: 1.2em;
@@ -91,5 +131,31 @@ header {
 			color: $base-blue;
 			font-weight: bold;
 		}
+	}
+}
+
+.slider {
+	background-image: $cover-slider;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    padding-bottom: 5em;
+	div > div:last-of-type {
+		margin-top: 5em;
+		button {
+			padding: 1em 1.5em;
+			background-color: $transparent; 
+			border: 1px solid;
+			transition-duration: $duration-5;
+			&:hover {
+				color: $dark-blue;
+			}
+		}
+	}
+	li {
+		margin: 1.5em 0;
+		padding-bottom: 1em; 
+		border-bottom: 3px solid;
+		font-weight: bold;
 	}
 }

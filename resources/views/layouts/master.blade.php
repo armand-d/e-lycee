@@ -24,6 +24,9 @@
 </header>
 
 <div>
+    @if(Route::current()->getPath() === '/')
+        @include('front-office.partials.slider')
+    @endif
     <div class="container">
         @yield('content')
     </div>
