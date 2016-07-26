@@ -32,9 +32,19 @@ $(document).ready(function(){
 		// scroll
 		$(window).scroll(function() {
 			if ($(this).scrollTop() > '10') {
-				$('header').css('padding','1em 0 0em 0');
+				$('header').css('padding','0.3em 0 0em 0');
+				$('header .logo').css({
+				    'margin-top': '-0.2em',
+				    'width': '3.5em',
+				    'height': '2.1em'
+				})
 			} else {
 				$('header').css('padding','');
+				$('header .logo').css({
+				    'margin-top': '',
+				    'width': '',
+				    'height': ''
+				})
 			}
 		});
 		// end scroll

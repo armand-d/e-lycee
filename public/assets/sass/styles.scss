@@ -167,6 +167,7 @@ header {
 		margin-top: -1.1em;
 	    width: 5.5em;
 	    height: 4em;
+		transition-duration: $duration-3;
 		#logo-svg {
 			fill: $base-blue;
 		}

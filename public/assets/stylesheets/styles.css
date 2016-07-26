@@ -9973,22 +9973,23 @@ header .logo {
   margin-top: -1.1em;
   width: 5.5em;
   height: 4em;
+  transition-duration: 0.3s;
 }
-/* line 170, ../sass/styles.scss */
+/* line 171, ../sass/styles.scss */
 header .logo #logo-svg {
   fill: #366dff;
 }
-/* line 174, ../sass/styles.scss */
+/* line 175, ../sass/styles.scss */
 header .title {
   font-size: 1.2em;
 }
-/* line 176, ../sass/styles.scss */
+/* line 177, ../sass/styles.scss */
 header .title span {
   color: #366dff;
   font-weight: bold;
 }
 
-/* line 183, ../sass/styles.scss */
+/* line 184, ../sass/styles.scss */
 .slider {
   background-image: url("../images/slider/lycee-photo.png");
   background-size: cover;
@@ -9996,23 +9997,23 @@ header .title span {
   background-position: 50% 50%;
   padding-bottom: 5em;
 }
-/* line 189, ../sass/styles.scss */
+/* line 190, ../sass/styles.scss */
 .slider div > div:last-of-type {
   margin-top: 5em;
 }
-/* line 191, ../sass/styles.scss */
+/* line 192, ../sass/styles.scss */
 .slider div > div:last-of-type button {
   padding: 1em 1.5em;
   background-color: transparent;
   border: 2px solid;
   transition-duration: 0.5s;
 }
-/* line 196, ../sass/styles.scss */
+/* line 197, ../sass/styles.scss */
 .slider div > div:last-of-type button:hover {
   border: 2px solid #112351;
   background-color: #112351;
 }
-/* line 202, ../sass/styles.scss */
+/* line 203, ../sass/styles.scss */
 .slider li {
   margin: 1.5em 0;
   padding-bottom: 1em;
@@ -10020,7 +10021,7 @@ header .title span {
   font-weight: bold;
 }
 
-/* line 211, ../sass/styles.scss */
+/* line 212, ../sass/styles.scss */
 .home #formations li p {
   background-color: #366dff;
 }
