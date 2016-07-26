@@ -15,7 +15,7 @@
 			<p class="bg-grey padding-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus doloremque voluptatum quis labore a cumque, dignissimos in, quod officia praesentium at hic dolore accusantium sint veritatis ad expedita eligendi fugit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus doloremque voluptatum quis labore a cumque, dignissimos in, quod officia praesentium at hic dolore accusantium sint veritatis ad expedita eligendi fugit
 			</p>
 			<div class="spacer-xs"></div>
-			<div class="row">
+			<div class="row col-lg-24">
 				<div class="col-lg-18"><span class="line-deco col-lg-24"></span></div>
 				<div class="col-lg-6"><button class="btn-line t-bold">PR&Eacute;SENTATION</button></div>
 			</div>
