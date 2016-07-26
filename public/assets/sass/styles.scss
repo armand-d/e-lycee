@@ -87,6 +87,19 @@
 #myModal {
 	padding: 0!important;
 }
+.modal-backdrop {
+	background-color: $body-color;
+	opacity: 0.8!important;
+	z-index: 997;
+}
+.modal-content {
+	border:none;
+	border-radius: 0px;
+	box-shadow: 0 0 0 $transparent;
+}
+.modal-dialog {
+	margin: 10em auto;
+}
 // end modal login
 
 a {

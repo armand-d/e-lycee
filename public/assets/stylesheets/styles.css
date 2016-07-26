@@ -9871,43 +9871,62 @@ body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
 }
 
-/* line 88, ../sass/styles.scss */
+/* line 87, ../sass/styles.scss */
 #myModal {
   padding: 0 !important;
 }
 
-/* line 93, ../sass/styles.scss */
+/* line 90, ../sass/styles.scss */
+.modal-backdrop {
+  background-color: #D8D8D8;
+  opacity: 0.8 !important;
+  z-index: 997;
+}
+
+/* line 95, ../sass/styles.scss */
+.modal-content {
+  border: none;
+  border-radius: 0px;
+  box-shadow: 0 0 0 transparent;
+}
+
+/* line 100, ../sass/styles.scss */
+.modal-dialog {
+  margin: 10em auto;
+}
+
+/* line 105, ../sass/styles.scss */
 a {
   color: #525252;
   text-decoration: none !important;
   transition-duration: 0.3s;
 }
-/* line 97, ../sass/styles.scss */
+/* line 109, ../sass/styles.scss */
 a:hover {
   color: #366dff;
 }
-/* line 100, ../sass/styles.scss */
+/* line 112, ../sass/styles.scss */
 a:focus {
   outline: none;
 }
 
-/* line 105, ../sass/styles.scss */
+/* line 117, ../sass/styles.scss */
 ul, li {
   list-style: none;
 }
 
-/* line 109, ../sass/styles.scss */
+/* line 121, ../sass/styles.scss */
 html, body {
   overflow-x: hidden;
   padding: 0 !important;
 }
 
-/* line 114, ../sass/styles.scss */
+/* line 126, ../sass/styles.scss */
 html {
   font-size: 100%;
 }
 
-/* line 118, ../sass/styles.scss */
+/* line 130, ../sass/styles.scss */
 body {
   font-size: 0.9em;
   background-color: #D8D8D8;
@@ -9915,7 +9934,7 @@ body {
   margin-top: 85px;
 }
 
-/* line 125, ../sass/styles.scss */
+/* line 137, ../sass/styles.scss */
 #no-click-search {
   display: none;
   position: absolute;
@@ -9927,7 +9946,7 @@ body {
   background-color: transparent;
 }
 
-/* line 133, ../sass/styles.scss */
+/* line 145, ../sass/styles.scss */
 .content-search {
   display: none;
   position: absolute;
@@ -9938,19 +9957,19 @@ body {
   color: #FFF;
   background-color: #333333;
 }
-/* line 140, ../sass/styles.scss */
+/* line 152, ../sass/styles.scss */
 .content-search input, .content-search button {
   padding: 1em;
   background-color: transparent;
   font-size: 2em;
   border: none;
 }
-/* line 145, ../sass/styles.scss */
+/* line 157, ../sass/styles.scss */
 .content-search input:focus, .content-search button:focus {
   outline: none;
 }
 
-/* line 151, ../sass/styles.scss */
+/* line 163, ../sass/styles.scss */
 header {
   position: fixed;
   top: 0;
@@ -9962,28 +9981,28 @@ header {
   padding: 2em 0 1em 0;
   transition-duration: 0.3s;
 }
-/* line 161, ../sass/styles.scss */
+/* line 173, ../sass/styles.scss */
 header .logo {
   margin-top: -1.1em;
   width: 5.5em;
   height: 4em;
   transition-duration: 0.3s;
 }
-/* line 166, ../sass/styles.scss */
+/* line 178, ../sass/styles.scss */
 header .logo #logo-svg {
   fill: #366dff;
 }
-/* line 170, ../sass/styles.scss */
+/* line 182, ../sass/styles.scss */
 header .title {
   font-size: 1.2em;
 }
-/* line 172, ../sass/styles.scss */
+/* line 184, ../sass/styles.scss */
 header .title span {
   color: #366dff;
   font-weight: bold;
 }
 
-/* line 179, ../sass/styles.scss */
+/* line 191, ../sass/styles.scss */
 .slider {
   background-image: url("../images/slider/lycee-photo.png");
   background-size: cover;
@@ -9991,23 +10010,23 @@ header .title span {
   background-position: 50% 50%;
   padding-bottom: 5em;
 }
-/* line 185, ../sass/styles.scss */
+/* line 197, ../sass/styles.scss */
 .slider div > div:last-of-type {
   margin-top: 5em;
 }
-/* line 187, ../sass/styles.scss */
+/* line 199, ../sass/styles.scss */
 .slider div > div:last-of-type button {
   padding: 1em 1.5em;
   background-color: transparent;
   border: 2px solid;
   transition-duration: 0.5s;
 }
-/* line 192, ../sass/styles.scss */
+/* line 204, ../sass/styles.scss */
 .slider div > div:last-of-type button:hover {
   border: 2px solid #112351;
   background-color: #112351;
 }
-/* line 198, ../sass/styles.scss */
+/* line 210, ../sass/styles.scss */
 .slider li {
   margin: 1.5em 0;
   padding-bottom: 1em;
@@ -10015,7 +10034,7 @@ header .title span {
   font-weight: bold;
 }
 
-/* line 207, ../sass/styles.scss */
+/* line 219, ../sass/styles.scss */
 .home #formations li p {
   background-color: #366dff;
 }
