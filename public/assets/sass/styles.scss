@@ -18,9 +18,10 @@
 	$dark-blue: #112351;
 	$base-blue: #366dff;
 	$text-grey: #525252;
-	$text-black: #000000;
-	$background-grey: #F1F1F1;
-	$background-dark-grey: #333333;
+	$light-grey: #F1F1F1;
+	$dark-grey: #333333;
+	$black: #000000;
+	$white: #ffffff;
 	$transparent: transparent;
 	// font
 	$font-1: 'Source Sans Pro', sans-serif;
@@ -38,11 +39,11 @@
 	.t-dark-blue { color: $dark-blue; }
 	.t-base-blue { color: $base-blue; }
 	.t-grey { color: $text-grey; }
-	.t-black { color: $text-black; }
+	.t-black { color: $black; }
 	.t-white { color: #FFFFFF; }
 	
-	.bg-grey { background-color: $background-grey; }
-	.bg-dark-grey { background-color: $background-dark-grey; }
+	.bg-grey { background-color: $light-grey; }
+	.bg-dark-grey { background-color: $dark-grey; }
 
 	.t-s-2 { font-size: 2em;}
 	.t-s-3 { font-size: 3em;}
@@ -57,6 +58,19 @@
 	.padding-1 { padding: 1em; }
 	.padding-2 { padding: 2em; }
 	.padding-3 { padding: 3em; }
+
+	.line-deco { height: 3px; background-color: $dark-grey; margin-top: 0.7em; }
+	.btn-line { 
+		border: 2px solid $dark-grey;
+		padding: 1em 1.5em; 
+		background-color: $transparent; 
+		transition-duration: $duration-5;
+		margin-top: -1em;
+		&:hover {
+			background-color: $dark-grey;
+			color: $white;
+		}
+	}
 // end class global
 
 a {
@@ -100,7 +114,7 @@ body {
 	top:0; right:0; left:0;
     z-index: 1000;
     color: #FFF;
-	background-color: $background-grey;
+	background-color: $dark-grey;
 	input, button {
 	    padding: 1em;
 	    background-color: $transparent;
@@ -143,7 +157,7 @@ header {
 		button {
 			padding: 1em 1.5em;
 			background-color: $transparent; 
-			border: 1px solid;
+			border: 2px solid;
 			transition-duration: $duration-5;
 			&:hover {
 				color: $dark-blue;
@@ -159,11 +173,9 @@ header {
 }
 
 .home {
-	.line-deco {
-
+	#formations {
+		li p {
+			background-color: $base-blue;
+		}
 	}
-}
-
-#Calque_1 {
-	color:red;
 }

@@ -11,7 +11,7 @@
 			<div class="col-lg-12 col-md-12 col-lg-offset-3 col-md-offset-3 text-center">
 				<p class="t-white t-s-3 t-bold">Rentrée scolaire :</p>
 				<p class="t-dark-blue t-s-3 t-bold">Jeudi 1er Septembre</p>
-				<button class="t-white">En savoir plus</button>
+				<button class="t-white t-bold">En savoir plus</button>
 			</div>
 		</div>
 	</div>
