@@ -160,7 +160,8 @@ header {
 			border: 2px solid;
 			transition-duration: $duration-5;
 			&:hover {
-				color: $dark-blue;
+				border: 2px solid $dark-blue;
+				background-color: $dark-blue;
 			}
 		}
 	}
@@ -173,9 +174,7 @@ header {
 }
 
 .home {
-	#formations {
-		li p {
-			background-color: $base-blue;
-		}
+	#formations li p {
+		background-color: $base-blue;
 	}
 }

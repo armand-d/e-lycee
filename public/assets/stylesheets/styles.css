@@ -9975,9 +9975,10 @@ header .title span {
 }
 /* line 162, ../sass/styles.scss */
 .slider div > div:last-of-type button:hover {
-  color: #112351;
+  border: 2px solid #112351;
+  background-color: #112351;
 }
-/* line 167, ../sass/styles.scss */
+/* line 168, ../sass/styles.scss */
 .slider li {
   margin: 1.5em 0;
   padding-bottom: 1em;
