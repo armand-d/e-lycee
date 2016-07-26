@@ -10,3 +10,48 @@
 // Import Compass 
 @import "compass";
 
+$dark-blue: #112351;
+$base-blue: #366dff;
+$text-grey: #525252;
+$text-black: #000000;
+$background-grey: #F1F1F1;
+$background-grey: #333333;
+
+$duration-3: 0.3s;
+$duration-5: 0.5s;
+
+a {
+	color: $text-grey;
+	text-decoration: none!important;
+	transition-duration: $duration-3;
+	&:hover {
+		color: $base-blue;
+	}
+}
+
+ul, li {
+	list-style: none;
+}
+
+html{
+	font-size : 100%;
+}
+
+body {
+	font-size: 0.9em;
+	background-color: #D8D8D8;
+}
+
+header {
+	color: $text-grey;
+	padding: 20px 0;
+	.logo {
+	}
+	.title {
+		font-size: 1.2em;
+		span {
+			color: $base-blue;
+			font-weight: bold;
+		}
+	}
+}
