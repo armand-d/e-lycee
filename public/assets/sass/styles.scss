@@ -40,7 +40,7 @@
 	.t-grey { color: $text-grey; }
 	.t-black { color: $text-black; }
 	.t-white { color: #FFFFFF; }
-
+	
 	.bg-grey { background-color: $background-grey; }
 	.bg-dark-grey { background-color: $background-dark-grey; }
 
@@ -48,16 +48,15 @@
 	.t-s-3 { font-size: 3em;}
 
 	.t-bold { font-weight: bold; }
+	.t-light { font-weight: lighter; }
+	
+	.spacer-xs { height: 2em; clear: both; display: block; }
+	.spacer-md { height: 5em; clear: both; display: block; }
+	.spacer-lg { height: 10em; clear: both; display: block; }
 
-	.spacer {
-		height: 5em;
-		clear: both;
-		display: block;
-	}
-
-	.padding-3 {
-		padding: 3em;
-	}
+	.padding-1 { padding: 1em; }
+	.padding-2 { padding: 2em; }
+	.padding-3 { padding: 3em; }
 // end class global
 
 a {
@@ -117,13 +116,12 @@ header {
 	color: $text-grey;
 	padding: 2em 0 1em 0;
 	.logo {
-		background-image: url("../images/logo/logo.svg");
-	    background-size: cover;
-	    background-repeat: no-repeat;
-	    background-position: 50% 50%;
-	    width: 4em;
+		margin-top: -1.1em;
+	    width: 5.5em;
 	    height: 4em;
-	    margin-top: -1.1em; 
+		#logo-svg {
+			fill: $base-blue;
+		}
 	}
 	.title {
 		font-size: 1.2em;
@@ -158,4 +156,14 @@ header {
 		border-bottom: 3px solid;
 		font-weight: bold;
 	}
+}
+
+.home {
+	.line-deco {
+
+	}
+}
+
+#Calque_1 {
+	color:red;
 }

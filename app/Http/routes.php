@@ -12,9 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('front-office.home');
-});
-Route::get('/toto', function () {
-    return view('front-office.home');
+    return view('front-office.pages.home');
 });
 
