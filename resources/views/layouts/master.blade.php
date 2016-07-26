@@ -1,11 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>E-lycée - @yield('title')</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {!!Html::style('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')!!}    
     {!!Html::style('assets/style/stylesheets/screen.css')!!}
-    {!!Html::style('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')!!}
 </head>
 <body>
 <header>
@@ -19,12 +20,15 @@
 </header>
 
 <div>
-    <div class="container">@yield('content')</div>
+    <div class="container">
+        @yield('content')
+    </div>
 </div>
 
 <footer>
     @include('front-office.partials.footer')
 </footer>
+
     {!!Html::script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')!!}
     {!!Html::script('assets/js/script.js')!!}
 
