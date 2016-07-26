@@ -13,18 +13,23 @@
 // Google fonts
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
-$dark-blue: #112351;
-$base-blue: #366dff;
-$text-grey: #525252;
-$text-black: #000000;
-$background-grey: #F1F1F1;
-$background-grey: #333333;
+// variables
+	//colors
+	$dark-blue: #112351;
+	$base-blue: #366dff;
+	$text-grey: #525252;
+	$text-black: #000000;
+	$background-grey: #F1F1F1;
+	$background-grey: #333333;
+	$transparent: transparent;
+	
+	$font-1: 'Source Sans Pro', sans-serif;
+	$font-2: 'Source Sans Pro', sans-serif;
 
-$font-1: 'Source Sans Pro', sans-serif;
-$font-2: 'Source Sans Pro', sans-serif;
-
-$duration-3: 0.3s;
-$duration-5: 0.5s;
+	// durations
+	$duration-3: 0.3s;
+	$duration-5: 0.5s;
+// end variables
 
 a {
 	color: $text-grey;
@@ -47,6 +52,32 @@ body {
 	font-size: 0.9em;
 	background-color: #D8D8D8;
 	font-family: $font-1;
+}
+
+#no-click-search {
+	display:none;
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+    z-index: 999;
+    background-color: $transparent;
+}
+
+.content-search {
+	display: none;
+	position: absolute;
+	top:0; right:0; left:0;
+    z-index: 1000;
+    color: #FFF;
+	background-color: $background-grey;
+	input, button {
+	    padding: 1em;
+	    background-color: $transparent;
+	    font-size: 20px;
+	    border: none;
+	    &:focus {
+	    	outline: none;
+	    }
+	}
 }
 
 header {

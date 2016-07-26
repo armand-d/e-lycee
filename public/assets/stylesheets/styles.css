@@ -9748,43 +9748,78 @@ button.close {
     display: none !important;
   }
 }
-/* line 23, ../sass/styles.scss */
+/* line 27, ../sass/styles.scss */
 a {
   color: #525252;
   text-decoration: none !important;
   transition-duration: 0.3s;
 }
-/* line 27, ../sass/styles.scss */
+/* line 31, ../sass/styles.scss */
 a:hover {
   color: #366dff;
 }
 
-/* line 32, ../sass/styles.scss */
+/* line 36, ../sass/styles.scss */
 ul, li {
   list-style: none;
 }
 
-/* line 36, ../sass/styles.scss */
+/* line 40, ../sass/styles.scss */
 html {
   font-size: 100%;
 }
 
-/* line 40, ../sass/styles.scss */
+/* line 44, ../sass/styles.scss */
 body {
   font-size: 0.9em;
   background-color: #D8D8D8;
 }
 
-/* line 45, ../sass/styles.scss */
+/* line 49, ../sass/styles.scss */
+#no-click-search {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background-color: transparent;
+}
+
+/* line 57, ../sass/styles.scss */
+.content-search {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  color: #FFF;
+  background-color: #333333;
+}
+/* line 64, ../sass/styles.scss */
+.content-search input, .content-search button {
+  padding: 1em;
+  background-color: transparent;
+  font-size: 20px;
+  border: none;
+}
+/* line 69, ../sass/styles.scss */
+.content-search input:focus, .content-search button:focus {
+  outline: none;
+}
+
+/* line 75, ../sass/styles.scss */
 header {
   color: #525252;
   padding: 20px 0;
 }
-/* line 50, ../sass/styles.scss */
+/* line 80, ../sass/styles.scss */
 header .title {
   font-size: 1.2em;
 }
-/* line 52, ../sass/styles.scss */
+/* line 82, ../sass/styles.scss */
 header .title span {
   color: #366dff;
   font-weight: bold;
