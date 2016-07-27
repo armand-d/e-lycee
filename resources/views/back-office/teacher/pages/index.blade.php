@@ -16,7 +16,9 @@
 	  <div class="tab-pane" id="questionnaire">
 	  	@include('back-office.teacher.pages.partials-tab.questionnaire')
 	  </div>
-	  <div class="tab-pane" id="article"></div>
+	  <div class="tab-pane" id="article">
+	  	@include('back-office.teacher.pages.partials-tab.article')
+	  </div>
 	  <div class="tab-pane" id="student"></div>
 	  <div class="tab-pane" id="profile"></div>
 	</div>

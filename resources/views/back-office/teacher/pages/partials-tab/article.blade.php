@@ -1,7 +1,7 @@
-<div class="row" class="questionnaire-content">
+<div class="row" class="article-content">
 	<div class="spacer-xs"></div>
 	<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2">
-		<a class="col-lg-4 col-md-4 status active-status">Tous (3q)</a>
+		<a class="col-lg-4 col-md-4 status active-status">Tous (3a)</a>
 		<a class="col-lg-4 col-md-4 status">Publiés ()</a>
 		<a class="col-lg-4 col-md-4 status">Brouillons</a>
 		<a class="col-lg-4 col-md-4 status">Corbeille</a>

@@ -23,6 +23,7 @@
 	$light-grey: #F1F1F1;
 	$middle-grey: #999;
 	$dark-grey: #333333;
+	$green: #4DC188;
 	$black: #000000;
 	$white: #ffffff;
 	$transparent: transparent;
@@ -313,11 +314,30 @@ header {
 // tab dashboard
 .tab-content {background-color: $white;}
 // dashboard liste
-.questionnaire {
-	button.status {
-		border:none;
-		background-color: $body-color;
+a.status {
+	cursor:pointer;
+	background-color: $body-color;
+	text-align: center;
+    border: 1px solid $footer-color;
+    padding: 10px;
+    &:focus, &:active, &:hover {
+		background-color: $base-blue;
+		color: $white;
+		border: 1px solid $base-blue;
 	}
+}
+a.active-status {
+	background-color: $base-blue;
+	color: $white;
+	border: 1px solid $base-blue;
+}
+a.add {
+	background-color: $green;
+	color: $white;
+	border: 1px solid $green;
+}
+tbody tr:nth-child(odd) {
+	background-color: $light-grey;
 }
 // end dashboard liste
 // end tab dashboard
