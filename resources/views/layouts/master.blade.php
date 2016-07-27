@@ -36,6 +36,15 @@
     @include('front-office.partials.footer')
 </footer>
 
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.7&appId=1679877968935520";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     {!!Html::script('https://code.jquery.com/jquery-3.1.0.min.js')!!}
     {!!Html::script('assets/javascripts/bootstrap.min.js')!!}
     {!!Html::script('assets/javascripts/script.js')!!}
