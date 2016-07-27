@@ -9785,69 +9785,89 @@ button.close {
 }
 
 /* line 49, ../sass/styles.scss */
+.t-s-1_5 {
+  font-size: 1.5em;
+}
+
+/* line 50, ../sass/styles.scss */
 .t-s-2 {
   font-size: 2em;
 }
 
-/* line 50, ../sass/styles.scss */
+/* line 51, ../sass/styles.scss */
 .t-s-3 {
   font-size: 3em;
 }
 
-/* line 52, ../sass/styles.scss */
+/* line 53, ../sass/styles.scss */
 .t-bold {
   font-weight: 700;
 }
 
-/* line 53, ../sass/styles.scss */
+/* line 54, ../sass/styles.scss */
 .t-light {
   font-weight: 400;
 }
 
-/* line 55, ../sass/styles.scss */
+/* line 56, ../sass/styles.scss */
 .spacer-xs {
   height: 2em;
   clear: both;
   display: block;
 }
 
-/* line 56, ../sass/styles.scss */
+/* line 57, ../sass/styles.scss */
 .spacer-md {
   height: 5em;
   clear: both;
   display: block;
 }
 
-/* line 57, ../sass/styles.scss */
+/* line 58, ../sass/styles.scss */
 .spacer-lg {
   height: 10em;
   clear: both;
   display: block;
 }
 
-/* line 59, ../sass/styles.scss */
+/* line 60, ../sass/styles.scss */
 .padding-1 {
   padding: 1em;
 }
 
-/* line 60, ../sass/styles.scss */
+/* line 61, ../sass/styles.scss */
 .padding-2 {
   padding: 2em;
 }
 
-/* line 61, ../sass/styles.scss */
+/* line 62, ../sass/styles.scss */
 .padding-3 {
   padding: 3em;
 }
 
-/* line 63, ../sass/styles.scss */
+/* line 64, ../sass/styles.scss */
+.padding-lf-1 {
+  padding: 0px 1em;
+}
+
+/* line 65, ../sass/styles.scss */
+.padding-lf-2 {
+  padding: 0px 2em;
+}
+
+/* line 66, ../sass/styles.scss */
+.padding-lf-3 {
+  padding: 0px 3em;
+}
+
+/* line 68, ../sass/styles.scss */
 .line-deco {
   height: 3px;
   background-color: #333333;
   margin-top: 0.7em;
 }
 
-/* line 64, ../sass/styles.scss */
+/* line 69, ../sass/styles.scss */
 .btn-line {
   border: 2px solid #333333;
   padding: 1em 1.5em;
@@ -9855,59 +9875,69 @@ button.close {
   transition-duration: 0.5s;
   margin-top: -1em;
 }
-/* line 70, ../sass/styles.scss */
+/* line 75, ../sass/styles.scss */
 .btn-line:hover {
   background-color: #333333;
   color: #ffffff;
 }
 
-/* line 75, ../sass/styles.scss */
+/* line 80, ../sass/styles.scss */
 .border-right {
   border-right: 1px solid #999;
 }
 
-/* line 79, ../sass/styles.scss */
+/* line 81, ../sass/styles.scss */
+.border-bottom {
+  border-bottom: 1px solid #999;
+}
+
+/* line 83, ../sass/styles.scss */
+.radius-50 {
+  border-radius: 50%;
+}
+
+/* line 87, ../sass/styles.scss */
 body::-webkit-scrollbar {
   width: 0.75em;
 }
 
-/* line 82, ../sass/styles.scss */
+/* line 90, ../sass/styles.scss */
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
 }
 
-/* line 87, ../sass/styles.scss */
+/* line 95, ../sass/styles.scss */
 a {
   color: #525252;
   text-decoration: none !important;
   transition-duration: 0.3s;
 }
-/* line 91, ../sass/styles.scss */
+/* line 99, ../sass/styles.scss */
 a:hover {
   color: #366dff;
 }
-/* line 94, ../sass/styles.scss */
+/* line 102, ../sass/styles.scss */
 a:focus {
   outline: none;
 }
 
-/* line 99, ../sass/styles.scss */
+/* line 107, ../sass/styles.scss */
 ul, li {
   list-style: none;
 }
 
-/* line 103, ../sass/styles.scss */
+/* line 111, ../sass/styles.scss */
 html, body {
   overflow-x: hidden;
   padding: 0 !important;
 }
 
-/* line 108, ../sass/styles.scss */
+/* line 116, ../sass/styles.scss */
 html {
   font-size: 100%;
 }
 
-/* line 112, ../sass/styles.scss */
+/* line 120, ../sass/styles.scss */
 body {
   font-size: 0.9em;
   background-color: #D8D8D8;
@@ -9915,7 +9945,7 @@ body {
   margin-top: 85px;
 }
 
-/* line 119, ../sass/styles.scss */
+/* line 127, ../sass/styles.scss */
 #no-click-search {
   display: none;
   position: absolute;
@@ -9927,7 +9957,7 @@ body {
   background-color: transparent;
 }
 
-/* line 127, ../sass/styles.scss */
+/* line 135, ../sass/styles.scss */
 .content-search {
   display: none;
   position: absolute;
@@ -9938,19 +9968,19 @@ body {
   color: #FFF;
   background-color: #333333;
 }
-/* line 134, ../sass/styles.scss */
+/* line 142, ../sass/styles.scss */
 .content-search input, .content-search button {
   padding: 1em;
   background-color: transparent;
   font-size: 2em;
   border: none;
 }
-/* line 139, ../sass/styles.scss */
+/* line 147, ../sass/styles.scss */
 .content-search input:focus, .content-search button:focus {
   outline: none;
 }
 
-/* line 145, ../sass/styles.scss */
+/* line 153, ../sass/styles.scss */
 header {
   position: fixed;
   top: 0;
@@ -9962,28 +9992,28 @@ header {
   padding: 2em 0 1em 0;
   transition-duration: 0.3s;
 }
-/* line 155, ../sass/styles.scss */
+/* line 163, ../sass/styles.scss */
 header .logo {
   margin-top: -1.1em;
   width: 5.5em;
   height: 4em;
   transition-duration: 0.3s;
 }
-/* line 160, ../sass/styles.scss */
+/* line 168, ../sass/styles.scss */
 header .logo #logo-svg {
   fill: #366dff;
 }
-/* line 164, ../sass/styles.scss */
+/* line 172, ../sass/styles.scss */
 header .title {
   font-size: 1.2em;
 }
-/* line 166, ../sass/styles.scss */
+/* line 174, ../sass/styles.scss */
 header .title span {
   color: #366dff;
   font-weight: 700;
 }
 
-/* line 173, ../sass/styles.scss */
+/* line 181, ../sass/styles.scss */
 .slider {
   background-image: url("../images/slider/lycee-photo.png");
   background-size: cover;
@@ -9991,23 +10021,23 @@ header .title span {
   background-position: 50% 50%;
   padding-bottom: 5em;
 }
-/* line 179, ../sass/styles.scss */
+/* line 187, ../sass/styles.scss */
 .slider div > div:last-of-type {
   margin-top: 5em;
 }
-/* line 181, ../sass/styles.scss */
+/* line 189, ../sass/styles.scss */
 .slider div > div:last-of-type button {
   padding: 1em 1.5em;
   background-color: transparent;
   border: 2px solid;
   transition-duration: 0.5s;
 }
-/* line 186, ../sass/styles.scss */
+/* line 194, ../sass/styles.scss */
 .slider div > div:last-of-type button:hover {
   border: 2px solid #112351;
   background-color: #112351;
 }
-/* line 192, ../sass/styles.scss */
+/* line 200, ../sass/styles.scss */
 .slider li {
   margin: 1.5em 0;
   padding-bottom: 1em;
@@ -10015,37 +10045,37 @@ header .title span {
   font-weight: 700;
 }
 
-/* line 201, ../sass/styles.scss */
+/* line 209, ../sass/styles.scss */
 .home #formations li p {
   background-color: #366dff;
 }
 
-/* line 207, ../sass/styles.scss */
+/* line 215, ../sass/styles.scss */
 #myModal {
   padding: 0 !important;
 }
 
-/* line 210, ../sass/styles.scss */
+/* line 218, ../sass/styles.scss */
 .modal-backdrop {
   background-color: #D8D8D8;
   opacity: 0.8 !important;
   z-index: 997;
 }
 
-/* line 215, ../sass/styles.scss */
+/* line 223, ../sass/styles.scss */
 .modal-content {
   border: none;
   border-radius: 0px;
   box-shadow: 0 0 0 transparent;
 }
 
-/* line 220, ../sass/styles.scss */
+/* line 228, ../sass/styles.scss */
 .modal-dialog {
   margin: 10em auto;
   width: 400px;
 }
 
-/* line 225, ../sass/styles.scss */
+/* line 233, ../sass/styles.scss */
 .loginmodal-container input[type=submit] {
   width: 100%;
   display: block;
@@ -10053,7 +10083,7 @@ header .title span {
   position: relative;
 }
 
-/* line 232, ../sass/styles.scss */
+/* line 240, ../sass/styles.scss */
 .loginmodal-container input[type=text], input[type=password] {
   height: 44px;
   width: 100%;
@@ -10063,12 +10093,12 @@ header .title span {
   border: none;
   padding: 0 8px;
 }
-/* line 240, ../sass/styles.scss */
+/* line 248, ../sass/styles.scss */
 .loginmodal-container input[type=text]:focus, input[type=password]:focus {
   outline: none;
 }
 
-/* line 245, ../sass/styles.scss */
+/* line 253, ../sass/styles.scss */
 .loginmodal {
   text-align: center;
   font-size: 14px;
@@ -10078,7 +10108,7 @@ header .title span {
   padding: 0 8px;
 }
 
-/* line 254, ../sass/styles.scss */
+/* line 262, ../sass/styles.scss */
 .loginmodal-submit {
   border: none;
   color: #ffffff;
@@ -10086,27 +10116,27 @@ header .title span {
   padding: 17px 0px;
   transition-duration: 0.3s;
 }
-/* line 260, ../sass/styles.scss */
+/* line 268, ../sass/styles.scss */
 .loginmodal-submit:hover {
   background-color: #112351;
 }
 
-/* line 265, ../sass/styles.scss */
+/* line 273, ../sass/styles.scss */
 .login-help {
   font-size: 12px;
 }
 
-/* line 271, ../sass/styles.scss */
+/* line 279, ../sass/styles.scss */
 .has-error {
   background-color: rgba(255, 0, 0, 0.3) !important;
 }
 
-/* line 278, ../sass/styles.scss */
+/* line 286, ../sass/styles.scss */
 #menu-caret:focus, #menu-caret:active {
   color: #366dff;
 }
 
-/* line 282, ../sass/styles.scss */
+/* line 290, ../sass/styles.scss */
 .menu-caret {
   position: absolute;
   top: 28px;
@@ -10118,12 +10148,17 @@ header .title span {
   font-weight: 700;
   display: none;
 }
-/* line 292, ../sass/styles.scss */
+/* line 300, ../sass/styles.scss */
 .menu-caret hr {
   margin: 5px;
 }
 
-/* line 298, ../sass/styles.scss */
+/* line 306, ../sass/styles.scss */
 #name-user:first-letter {
   text-transform: uppercase;
+}
+
+/* line 311, ../sass/styles.scss */
+.tab-content {
+  background-color: #ffffff;
 }

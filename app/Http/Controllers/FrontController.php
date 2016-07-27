@@ -23,6 +23,6 @@ class FrontController extends Controller
      */
     public function index()
     {
-        return view('front-office.pages.home');
+        return view('front-office.pages.index');
     }
 }

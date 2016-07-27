@@ -46,6 +46,7 @@
 	.bg-grey { background-color: $light-grey; }
 	.bg-dark-grey { background-color: $dark-grey; }
 
+	.t-s-1_5 { font-size: 1.5em;}
 	.t-s-2 { font-size: 2em;}
 	.t-s-3 { font-size: 3em;}
 
@@ -60,6 +61,10 @@
 	.padding-2 { padding: 2em; }
 	.padding-3 { padding: 3em; }
 
+	.padding-lf-1 { padding: 0px 1em; }
+	.padding-lf-2 { padding: 0px 2em; }
+	.padding-lf-3 { padding: 0px 3em; }
+
 	.line-deco { height: 3px; background-color: $dark-grey; margin-top: 0.7em; }
 	.btn-line { 
 		border: 2px solid $dark-grey;
@@ -73,6 +78,9 @@
 		}
 	}
 	.border-right { border-right: 1px solid $middle-grey; }
+	.border-bottom { border-bottom: 1px solid $middle-grey; }
+
+	.radius-50 { border-radius: 50%; }
 // end class global
 
 // scroolbar
@@ -298,4 +306,10 @@ header {
 #name-user:first-letter {
 	text-transform: uppercase;
 }
+
+// tab dashboard
+.tab-content {
+	background-color: $white;
+}
+// end tab dashboard
 

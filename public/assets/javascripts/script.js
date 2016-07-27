@@ -119,4 +119,9 @@ $(document).ready(function(){
 	});
 	// end menu caret
 
+	$('#myTab a').click(function (e) {
+	  e.preventDefault();
+	  $(this).tab('show');
+	})
+
 });
