@@ -16,6 +16,7 @@
 // variables
 	//colors
 	$body-color: #D8D8D8;
+	$footer-color : #bfbfbf;
 	$dark-blue: #112351;
 	$base-blue: #366dff;
 	$text-grey: #525252;
@@ -45,6 +46,7 @@
 	
 	.bg-grey { background-color: $light-grey; }
 	.bg-dark-grey { background-color: $dark-grey; }
+	.bg-footer-grey { background-color: $footer-color; }
 
 	.t-s-1_5 { font-size: 1.5em;}
 	.t-s-2 { font-size: 2em;}
@@ -81,6 +83,7 @@
 	.border-bottom { border-bottom: 1px solid $middle-grey; }
 
 	.radius-50 { border-radius: 50%; }
+
 // end class global
 
 // scroolbar
@@ -308,8 +311,13 @@ header {
 }
 
 // tab dashboard
-.tab-content {
-	background-color: $white;
+.tab-content {background-color: $white;}
+// dashboard liste
+.questionnaire {
+	button.status {
+		border:none;
+		background-color: $body-color;
+	}
 }
+// end dashboard liste
 // end tab dashboard
-

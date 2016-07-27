@@ -124,4 +124,10 @@ $(document).ready(function(){
 	  $(this).tab('show');
 	})
 
+	$('.link-action-tab').on('click', function(e){
+		e.preventDefault();
+		var id = $(this).attr('id').split('-');
+		$('#btn-'+id[1]).trigger('click');
+	});
+
 });
