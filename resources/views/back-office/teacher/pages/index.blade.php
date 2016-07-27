@@ -3,8 +3,8 @@
 @section('content')
 	<ul class="nav nav-tabs" id="myTab">
 	  <li class="active"><a href="#dashboard">Tableau de bord</a></li>
-	  <li><a href="#questionnaire" id="btn-1">Questionnaires</a></li>
-	  <li><a href="#article">Articles</a></li>
+	  <li><a href="#questionnaire" id="btn-1">QCM</a></li>
+	  <li><a href="#article" id="btn-2">Articles</a></li>
 	  <li><a href="#student" id="btn-3">&Eacute;lèves</a></li>
 	  <li><a href="#profile" id="btn-4">Profil</a></li>
 	</ul>

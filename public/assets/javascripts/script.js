@@ -164,4 +164,17 @@ $(document).ready(function(){
 	});
 	// end add / cancel
 
+	// new in dash
+	$('#new-qcm').on('click', function(e){
+		$('#btn-1').trigger('click');
+		$('.add-q').trigger('click');
+		e.preventDefault;
+	});
+	$('#new-article').on('click', function(e){
+		$('#btn-2').trigger('click');
+		$('.add-a').trigger('click');
+		e.preventDefault;
+	});
+	// new in dash
+
 });

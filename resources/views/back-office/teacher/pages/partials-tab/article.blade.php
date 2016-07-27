@@ -26,7 +26,7 @@
 			  <tbody>
 			    <tr>
 			      <th scope="row">{{Form::checkbox('remember', 'id')}}</th>
-			      <td>Mark</td>
+			      <td><a href="{{url('article/modification/')}}">Mark</a></td>
 			      <td>Otto</td>
 			      <td>@mdo</td>
 			    </tr>
