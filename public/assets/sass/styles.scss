@@ -339,5 +339,15 @@ a.add {
 tbody tr:nth-child(odd) {
 	background-color: $light-grey;
 }
+input.apply {
+	border:none;
+	background:none;
+	&:hover {
+		color:$base-blue;
+	}
+}
+select {
+	border:none;
+}
 // end dashboard liste
 // end tab dashboard

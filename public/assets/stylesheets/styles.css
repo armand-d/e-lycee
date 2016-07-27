@@ -10201,3 +10201,18 @@ a.add {
 tbody tr:nth-child(odd) {
   background-color: #F1F1F1;
 }
+
+/* line 342, ../sass/styles.scss */
+input.apply {
+  border: none;
+  background: none;
+}
+/* line 345, ../sass/styles.scss */
+input.apply:hover {
+  color: #366dff;
+}
+
+/* line 349, ../sass/styles.scss */
+select {
+  border: none;
+}
