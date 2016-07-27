@@ -130,4 +130,38 @@ $(document).ready(function(){
 		$('#btn-'+id[1]).trigger('click');
 	});
 
+	$('.status-q').on('click', function(e){
+		$('.status-q').removeClass('active-status-q');
+		$(this).addClass('active-status-q');
+		e.preventDefault
+	});
+	$('.status-a').on('click', function(e){
+		$('.status-a').removeClass('active-status-a');
+		$(this).addClass('active-status-a');
+		e.preventDefault
+	});
+
+	// add / cancel
+	$('.add-q').on('click', function(){
+		console.log('ok')
+		$('.questionnaire-content-list').slideUp();
+		$('.questionnaire-content-form').slideDown();
+	});
+	$('.cancel-q').on('click', function(){
+		console.log('ok')
+		$('.questionnaire-content-list').slideDown();
+		$('.questionnaire-content-form').slideUp();
+	});
+	$('.add-a').on('click', function(){
+		console.log('ok')
+		$('.article-content-list').slideUp();
+		$('.article-content-form').slideDown();
+	});
+	$('.cancel-a').on('click', function(){
+		console.log('ok')
+		$('.article-content-list').slideDown();
+		$('.article-content-form').slideUp();
+	});
+	// end add / cancel
+
 });

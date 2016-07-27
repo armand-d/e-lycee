@@ -24,6 +24,7 @@
 	$middle-grey: #999;
 	$dark-grey: #333333;
 	$green: #4DC188;
+	$red: #FFB3B3;
 	$black: #000000;
 	$white: #ffffff;
 	$transparent: transparent;
@@ -314,7 +315,7 @@ header {
 // tab dashboard
 .tab-content {background-color: $white;}
 // dashboard liste
-a.status {
+a.status-q, a.status-a {
 	cursor:pointer;
 	background-color: $body-color;
 	text-align: center;
@@ -326,7 +327,7 @@ a.status {
 		border: 1px solid $base-blue;
 	}
 }
-a.active-status {
+a.active-status-q, a.active-status-a {
 	background-color: $base-blue;
 	color: $white;
 	border: 1px solid $base-blue;
@@ -335,6 +336,23 @@ a.add {
 	background-color: $green;
 	color: $white;
 	border: 1px solid $green;
+	cursor:pointer;
+	text-align: center;
+    padding: 10px;
+    &:hover {
+		opacity: 0.8;
+    }
+}
+a.cancel {
+	background-color: $red;
+	color: $white;
+	border: 1px solid $red;
+	cursor:pointer;
+	text-align: center;
+    padding: 10px;
+    &:hover {
+		opacity: 0.8;
+    }
 }
 tbody tr:nth-child(odd) {
 	background-color: $light-grey;
@@ -348,6 +366,9 @@ input.apply {
 }
 select {
 	border:none;
+}
+.questionnaire-content-form, .article-content-form {
+	display:none;
 }
 // end dashboard liste
 // end tab dashboard
