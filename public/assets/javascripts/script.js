@@ -103,4 +103,20 @@ $(document).ready(function(){
 	});
 	// end ajax login
 
+	// menu caret
+	var active = false;
+	$('#menu-caret').on('click', function(){
+		$('.menu-caret').slideToggle();
+		if (!active) {
+			$('#menu-caret').css('color', '#366dff');
+			$(this).html('<i class="fa fa-close"></i>')
+			active = true;
+		} else {
+			$('#menu-caret').css('color', '#525252');
+			$(this).html('<i class="fa fa-caret-down"></i>')
+			active = false;
+		}
+	});
+	// end menu caret
+
 });

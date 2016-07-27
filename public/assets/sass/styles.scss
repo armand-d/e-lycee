@@ -20,6 +20,7 @@
 	$base-blue: #366dff;
 	$text-grey: #525252;
 	$light-grey: #F1F1F1;
+	$middle-grey: #999;
 	$dark-grey: #333333;
 	$black: #000000;
 	$white: #ffffff;
@@ -71,6 +72,7 @@
 			color: $white;
 		}
 	}
+	.border-right { border-right: 1px solid $middle-grey; }
 // end class global
 
 // scroolbar
@@ -265,6 +267,35 @@ header {
 }
 // end modal login
 
+// error
 .has-error {
 	background-color: rgba(255,0,0,0.3)!important;
 }
+// end error
+
+// menu-caret 
+#menu-caret {
+	&:focus, &:active {
+		color: $base-blue;
+	}
+}
+.menu-caret {
+	position: absolute;
+    top: 28px;
+    right: 16px;
+    width: 150px;
+    background-color: #FFF;
+    padding: 0px 10px;
+    color: $dark-blue;
+    font-weight: 700;
+    display: none;
+    hr {
+    	margin: 5px;
+    }
+}
+// end menu-caret 
+
+#name-user:first-letter {
+	text-transform: uppercase;
+}
+
