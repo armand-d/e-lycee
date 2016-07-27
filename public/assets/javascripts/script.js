@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+	$.ajaxSetup(
+	{
+	    headers:
+	    {
+	        'X-CSRF-Token': $('input[name="_token"]').val()
+	    }
+	});
+
 	$.fn.extend({
 	    animateCss: function (animationName) {
 	        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -50,5 +58,49 @@ $(document).ready(function(){
 		// end scroll
 	// end animate menu
 
+	$('#login').on('click',function(){
+		window.location.hash = 'connexion';
+	});
+	if (window.location.hash == '#connexion') {
+		$('#login').trigger('click');
+	}
+
+	// ajax login
+
+	$('#form-login').submit(function(e) {
+		var password = $("#form-login input[name='password']");
+		var username = $("#form-login input[name='username']");
+		
+		password.removeClass('has-error');	
+		username.removeClass('has-error');
+		password.prev().html('');	
+		username.prev().html('');	
+		$('#error-login').html('');
+
+		$.post($(this).attr('action'), $(this).serialize())
+		.done(function(data) {
+			if(data.ok) {
+				if(data.ok == 'teacher') {
+					window.location.href = 'professeur';
+				} else {
+					window.location.href = 'etudiant';
+				}
+			} else if(data.require) {
+				$('.modal').animateCss('shake');
+				console.log(data.require);
+				if(data.require.password)
+					password.addClass('has-error');
+					password.prev().html(data.require.password);	
+				if(data.require.username) 
+					username.addClass('has-error');
+					username.prev().html(data.require.username);	
+			} else if(data.response == 'fail') {
+				$('.modal').animateCss('shake');
+				$('#error-login').html('Identifiant ou mot de passe incorrect.');
+			}
+		});
+		e.preventDefault();
+	});
+	// end ajax login
 
 });

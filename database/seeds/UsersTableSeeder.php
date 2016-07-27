@@ -41,6 +41,13 @@ class UsersTableSeeder extends Seeder
 				'created_at'     => $faker->dateTime(),
 	        ]);
         }
+        DB::table('users')->insert([
+            'username'       => 'armand',
+            'password'       => Hash::make('armand'),
+            'role'           => 'teacher',
+            'remember_token' => str_random(10),
+            'created_at'     => $faker->dateTime(),
+        ]);
     }
 
 }

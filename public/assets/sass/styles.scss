@@ -11,7 +11,7 @@
 @import "compass";
 
 // Google fonts
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400);
 
 // variables
 	//colors
@@ -26,7 +26,6 @@
 	$transparent: transparent;
 	// font
 	$font-1: 'Source Sans Pro', sans-serif;
-	$font-2: 'Source Sans Pro', sans-serif;
 	// durations
 	$duration-3: 0.3s;
 	$duration-5: 0.5s;
@@ -49,8 +48,8 @@
 	.t-s-2 { font-size: 2em;}
 	.t-s-3 { font-size: 3em;}
 
-	.t-bold { font-weight: bold; }
-	.t-light { font-weight: lighter; }
+	.t-bold { font-weight: 700; }
+	.t-light { font-weight: 400; }
 	
 	.spacer-xs { height: 2em; clear: both; display: block; }
 	.spacer-md { height: 5em; clear: both; display: block; }
@@ -82,25 +81,6 @@
 	  background-color: darkgrey;
 	}
 // end scroolbar
-
-// modal login
-#myModal {
-	padding: 0!important;
-}
-.modal-backdrop {
-	background-color: $body-color;
-	opacity: 0.8!important;
-	z-index: 997;
-}
-.modal-content {
-	border:none;
-	border-radius: 0px;
-	box-shadow: 0 0 0 $transparent;
-}
-.modal-dialog {
-	margin: 10em auto;
-}
-// end modal login
 
 a {
 	color: $text-grey;
@@ -183,7 +163,7 @@ header {
 		font-size: 1.2em;
 		span {
 			color: $base-blue;
-			font-weight: bold;
+			font-weight: 700;
 		}
 	}
 }
@@ -211,7 +191,7 @@ header {
 		margin: 1.5em 0;
 		padding-bottom: 1em; 
 		border-bottom: 3px solid;
-		font-weight: bold;
+		font-weight: 700;
 	}
 }
 
@@ -219,4 +199,72 @@ header {
 	#formations li p {
 		background-color: $base-blue;
 	}
+}
+
+// modal login
+#myModal {
+	padding: 0!important;
+}
+.modal-backdrop {
+	background-color: $body-color;
+	opacity: 0.8!important;
+	z-index: 997;
+}
+.modal-content {
+	border:none;
+	border-radius: 0px;
+	box-shadow: 0 0 0 $transparent;
+}
+.modal-dialog {
+	margin: 10em auto;
+	width: 400px;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  padding: 0 8px;
+  &:focus {
+	outline:none;
+  }
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+}
+
+.loginmodal-submit {
+	border: none;
+	color: $white;
+	background-color: $base-blue;
+	padding: 17px 0px;
+	transition-duration: $duration-3;
+	&:hover {
+		background-color: $dark-blue;
+	}
+}
+
+.login-help{
+  font-size: 12px;
+}
+// end modal login
+
+.has-error {
+	background-color: rgba(255,0,0,0.3)!important;
 }

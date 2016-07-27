@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'username', 'role', 'password',
     ];
 
     /**
@@ -23,4 +23,22 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function isTeacherAdmin()
+    {
+        if (!empty($this->role) && $this->role == 'teacher') {
+            return $this->role;
+        }
+        return false;
+    }
+
+    public function isStudentAdmin()
+    {
+        if (!empty($this->role) && $this->role == 'first_class' || $this->role == 'final_class') {
+            return $this->role;
+        }
+        return false;
+    }
+
+
 }

@@ -15,5 +15,6 @@
 				<div class="col-lg-2">2</div>
 			</div>
 		</div>
+		<a href="{{url('logout')}}">logout</a>
 	</div>
 </div>

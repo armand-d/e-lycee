@@ -11,7 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('front-office.pages.home');
+Route::get('/', ['as' => 'home', 'uses' => 'FrontController@index']);
+
+Route::group(['middleware' => ['throttle:60,1']], function () {
+    Route::any('connexion', 'LoginController@login');
 });
+
+Route::group([
+    'middleware' => ['auth', 'adminTeacher']], function () {
+    Route::resource('professeur', 'Admin\DashboardTeacherController');
+});
+
+Route::group([
+    'middleware' => ['auth', 'adminStudent']], function () {
+    Route::resource('etudiant', 'Admin\DashboardStudentController');
+});
+
+Route::get('logout', 'LoginController@logout');
+
 
