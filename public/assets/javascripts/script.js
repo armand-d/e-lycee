@@ -280,7 +280,7 @@ $(document).ready(function(){
 		$('#no-click-loader-search').fadeOut();
 	}
 
-	$('#action-qcm-status a').on('click', function(e){
+	$('#action-qcm-status a.status-q').on('click', function(e){
 		e.preventDefault;
 		$('table tbody').hide();
 		status = $(this).attr('id').substr(4);;
