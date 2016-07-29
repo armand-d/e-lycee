@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Question extends Model
+class Qcm extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,6 +12,7 @@ class Question extends Model
      * @var array
      */
     protected $fillable = [
-        'qcm_id', 'title', 'response'
+        'title', 'level', 'nbr_choice', 'nbr_question', 'status', 'user_id'
     ];
+
 }

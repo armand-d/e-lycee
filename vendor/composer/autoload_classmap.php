@@ -10,6 +10,7 @@ return array(
     'CreateChoicesTable' => $baseDir . '/database/migrations/2016_07_25_082617_create_choices_table.php',
     'CreateCommentsTable' => $baseDir . '/database/migrations/2016_07_25_082546_create_comments_table.php',
     'CreatePostsTable' => $baseDir . '/database/migrations/2016_07_25_082529_create_posts_table.php',
+    'CreateQcmsTable' => $baseDir . '/database/migrations/2016_07_29_093116_create_qcms_table.php',
     'CreateQuestionsTable' => $baseDir . '/database/migrations/2016_07_25_082605_create_questions_table.php',
     'CreateScoresTable' => $baseDir . '/database/migrations/2016_07_25_082628_create_scores_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
@@ -520,6 +521,5 @@ return array(
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
-    'Tretert' => $baseDir . '/database/migrations/2016_07_25_151603_tretert.php',
     'UsersTableSeeder' => $baseDir . '/database/seeds/UsersTableSeeder.php',
 );

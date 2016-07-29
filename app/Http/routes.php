@@ -20,6 +20,8 @@ Route::group(['middleware' => ['throttle:60,1']], function () {
 Route::group([
     'middleware' => ['auth', 'adminTeacher']], function () {
     Route::resource('professeur', 'Admin\DashboardTeacherController');
+    Route::resource('qcm', 'Admin\DashboardTeacherController');
+    Route::resource('qcm', 'Admin\DashboardTeacherController');
 });
 
 Route::group([

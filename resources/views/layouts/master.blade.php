@@ -12,6 +12,7 @@
 </head>
 <body>
     <div id="no-click-search"></div>
+    <div id="no-click-loader-search"><img src="{{Request::root('/').'/assets/images/loader-search.svg'}}" class="col-lg-24" alt=""></div>
     @include('front-office.partials.search')
 <header>
     @if (Auth::check() && Auth::user()->role == 'teacher')

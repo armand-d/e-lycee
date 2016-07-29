@@ -274,6 +274,7 @@ class ComposerStaticInit612eaace2f7fe3496419deff18cdf6d3
         'CreateChoicesTable' => __DIR__ . '/../..' . '/database/migrations/2016_07_25_082617_create_choices_table.php',
         'CreateCommentsTable' => __DIR__ . '/../..' . '/database/migrations/2016_07_25_082546_create_comments_table.php',
         'CreatePostsTable' => __DIR__ . '/../..' . '/database/migrations/2016_07_25_082529_create_posts_table.php',
+        'CreateQcmsTable' => __DIR__ . '/../..' . '/database/migrations/2016_07_29_093116_create_qcms_table.php',
         'CreateQuestionsTable' => __DIR__ . '/../..' . '/database/migrations/2016_07_25_082605_create_questions_table.php',
         'CreateScoresTable' => __DIR__ . '/../..' . '/database/migrations/2016_07_25_082628_create_scores_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
@@ -784,7 +785,6 @@ class ComposerStaticInit612eaace2f7fe3496419deff18cdf6d3
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
-        'Tretert' => __DIR__ . '/../..' . '/database/migrations/2016_07_25_151603_tretert.php',
         'UsersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/UsersTableSeeder.php',
     );
 
