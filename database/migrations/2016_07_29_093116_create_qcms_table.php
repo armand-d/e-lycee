@@ -16,7 +16,7 @@ class CreateQcmsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('title', 100);
-            $table->enum('level', ['first_class', 'final_class']);
+            $table->enum('level', ['Seconde', 'Première', 'Terminale']);
             $table->integer('nbr_choice');
             $table->integer('nbr_question');
             $table->integer('status');

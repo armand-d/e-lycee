@@ -85,7 +85,8 @@
 	.border-bottom { border-bottom: 1px solid $middle-grey; }
 
 	.radius-50 { border-radius: 50%; }
-
+	.input-grey { padding: 5px 5px; background-color: $body-color; border: none; ; margin-bottom: 10px;}
+	.submit-form {background-color: $base-blue; padding: 10px 15px; color: $white; border: none; margin-top: 10px;display:block;}
 // end class global
 
 // scroolbar
@@ -386,9 +387,14 @@ input.apply {
 select {
 	border:none;
 }
-.questionnaire-content-form, .article-content-form, .add-question, #submt-qcm, #qcm-publish, #qcm-unpublish, #qcm-delete {
+.questionnaire-content-form, .article-content-form, .add-question, #submt-qcm, #qcm-publish, #qcm-unpublish, #qcm-delete, #delete-qcms, #article-publish, #article-unpublish, #article-delete, .student-content-form, .questionnaire-content-single {
 	display:none;
 }
 // end dashboard liste
 // end tab dashboard
 
+.new-question {
+	border-bottom: 1px solid #CDCDCD;
+    width: 80%;
+    margin-bottom: 10px;
+}

@@ -48,7 +48,6 @@ class LoginController extends Controller
                 $remember = !empty($request->input('remember')) ? true : false;
 
                 $credentials = $request->only('username', 'password');
-
                 if (Auth::attempt($credentials, $remember)) {
                     if (Auth::user()->role == 'teacher') {
                         return redirect('professeur')->with(['message' => 'success']);

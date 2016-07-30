@@ -14,4 +14,8 @@ class Question extends Model
     protected $fillable = [
         'qcm_id', 'title', 'response'
     ];
+
+    public function getChoices(){
+    	return $this->hasMany('App\Choice');
+    }
 }

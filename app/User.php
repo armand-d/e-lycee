@@ -34,7 +34,7 @@ class User extends Authenticatable
 
     public function isStudentAdmin()
     {
-        if (!empty($this->role) && $this->role == 'first_class' || $this->role == 'final_class') {
+        if (!empty($this->role) && $this->role == 'student') {
             return $this->role;
         }
         return false;

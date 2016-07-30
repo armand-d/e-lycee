@@ -33,9 +33,11 @@
     </div>
 </div>
 
+@if (!Auth::check())
 <footer>
     @include('front-office.partials.footer')
 </footer>
+@endif
 
     <div id="fb-root"></div>
     <script>(function(d, s, id) {

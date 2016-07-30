@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('abstract', 100);
             $table->longText('content');
             $table->string('url_thumbnail', 100);
-            $table->boolean('status');
+            $table->integer('status');
             $table->timestamps();
         });
     }

@@ -18,25 +18,41 @@ class UsersTableSeeder extends Seeder
     	$faker = Faker::create();
     	foreach (range(1,10) as $index) {
     		$name = $faker->userName();
-    		$rand = rand (1, 3);
+    		$rand = rand (1, 2);
     		switch ($rand) {
     			case 1:
     				$role = 'teacher';
     				break;
     			case 2:
-    				$role = 'first_class';
-    				break;
-    			case 3:
-    				$role = 'final_class';
+    				$role = 'student';
     				break;
     			default:
     				$role = 'teacher';
     				break;
     		}
+            $level = NULL;
+            if ($role != 'teacher') {
+                $rand = rand (1, 3);
+                switch ($rand) {
+                    case 1:
+                        $level = 'Seconde';
+                        break;
+                    case 2:
+                        $level = 'Première';
+                        break;
+                    case 3:
+                        $level = 'Terminale';
+                        break;
+                    default:
+                        $level = NULL;
+                        break;
+                }
+            }
 	        DB::table('users')->insert([
 				'username'       => $name,
 				'password'       => Hash::make($name),
 				'role'           =>	$role,
+                'level'          => $level,
 				'remember_token' => str_random(10),
 				'created_at'     => $faker->dateTime(),
 	        ]);

@@ -19,7 +19,11 @@
 	  <div class="tab-pane" id="article">
 	  	@include('back-office.teacher.pages.partials-tab.article')
 	  </div>
-	  <div class="tab-pane" id="student"></div>
-	  <div class="tab-pane" id="profile"></div>
+	  <div class="tab-pane" id="student">
+	  	@include('back-office.teacher.pages.partials-tab.student')
+	  </div>
+	  <div class="tab-pane" id="profile">
+	  	@include('back-office.teacher.pages.partials-tab.profile')
+	  </div>
 	</div>
 @endsection

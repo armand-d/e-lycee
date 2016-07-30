@@ -65,9 +65,34 @@ $(document).ready(function(){
 		$('#login').trigger('click');
 	}
 	if (window.location.hash == '#QCM') {
-		console.log('ok')
-		$('#btn-1').tab('show')
+		$('#btn-1').tab('show');
 	}
+	if (window.location.hash == '#articles') {
+		$('#btn-2').tab('show');
+	}
+	if (window.location.hash == '#profil') {
+		$('#btn-4').tab('show');
+	}
+	if (window.location.hash == '#ajouter-article') {
+		$('#btn-2').tab('show');
+		$('.article-content-list').slideUp();
+		$('.article-content-form').slideDown();
+	}
+	if (window.location.hash == '#eleves') {
+		$('#btn-3').tab('show');
+	}
+	if (window.location.hash == '#ajouter-eleve') {
+		$('#btn-3').tab('show');
+		$('.student-content-list').slideUp();
+		$('.student-content-form').slideDown();
+	}
+	if (window.location.hash == '#ajouter-qcm') {
+		$('#btn-1').tab('show');
+		$('.questionnaire-content-list').slideUp();
+		$('.questionnaire-content-form').slideDown();
+	}
+	
+	
 
 	// ajax login
 
@@ -149,6 +174,10 @@ $(document).ready(function(){
 		$('.questionnaire-content-list').slideUp();
 		$('.questionnaire-content-form').slideDown();
 	});
+	$('.prev-q').on('click', function(){
+		$('.questionnaire-content-list').slideDown();
+		$('.questionnaire-content-single').slideUp();
+	});
 	$('.cancel-q').on('click', function(){
 		$('.questionnaire-content-list').slideDown();
 		$('.questionnaire-content-form').slideUp();
@@ -160,6 +189,14 @@ $(document).ready(function(){
 	$('.cancel-a').on('click', function(){
 		$('.article-content-list').slideDown();
 		$('.article-content-form').slideUp();
+	});
+	$('.add-s').on('click', function(){
+		$('.student-content-list').slideUp();
+		$('.student-content-form').slideDown();
+	});
+	$('.cancel-s').on('click', function(){
+		$('.student-content-list').slideDown();
+		$('.student-content-form').slideUp();
 	});
 	// end add / cancel
 
@@ -200,7 +237,7 @@ $(document).ready(function(){
 		var nbrQuestion = $('.new-question').length;
 		for (var j = 0; j < nbrQuestion; j++) {
 			for (var i = 0; i+1 <= nbr; i++) {
-				$('.question-'+(j)+' .all-choice').append("<li class='choice-"+(j)+"-"+(i)+"'><input type='text' name='choice-"+(j)+"-"+(i)+"' placeholder='Choix "+(i+1)+"'><input type='radio' name='response-"+j+"' class='response'></li>")
+				$('.question-'+(j)+' .all-choice').append("<li class='choice-"+(j)+"-"+(i)+"'><input type='text' name='choice-"+(j)+"-"+(i)+"' placeholder='Choix "+(i+1)+"' class='input-grey'> <input type='radio' name='response-"+j+"' class='response'></li>")
 			}
 		}
 		addResponse();
@@ -212,11 +249,11 @@ $(document).ready(function(){
 		var nbrQuestion = $('.new-question').length;
 		$('input[name="nbr_questions"]').val(nbrQuestion+1);
 		
-		$('#all-question').append('<li class="question-'+(nbrQuestion)+' new-question"><input type="text" name="question-'+(nbrQuestion)+'" placeholder="Question"><ul class="all-choice"></ul></li>')
+		$('#all-question').append('<li class="question-'+(nbrQuestion)+' new-question"><input type="text" name="question-'+(nbrQuestion)+'" placeholder="Question" class="input-grey"><ul class="all-choice"></ul></li>')
 
 		var nbr = $('select[name="nbr_choice"]').val();
 		for (var i = 0; i <= nbr-1; i++) {
-			$('.question-'+(nbrQuestion)+' .all-choice').append("<li class='choice-"+(nbrQuestion)+"-"+(i)+"'><input type='text' name='choice-"+(nbrQuestion)+"-"+(i)+"' placeholder='Choix "+(i+1)+"'><input type='radio' name='response-"+(nbrQuestion)+"' class='response'></li>")
+			$('.question-'+(nbrQuestion)+' .all-choice').append("<li class='choice-"+(nbrQuestion)+"-"+(i)+"'><input type='text' name='choice-"+(nbrQuestion)+"-"+(i)+"' placeholder='Choix "+(i+1)+"' class='input-grey'> <input type='radio' name='response-"+(nbrQuestion)+"' class='response'></li>")
 		}
 		addResponse();
 	});
@@ -282,8 +319,67 @@ $(document).ready(function(){
 
 	$('#action-qcm-status a.status-q').on('click', function(e){
 		e.preventDefault;
-		$('table tbody').hide();
-		status = $(this).attr('id').substr(4);;
+		$('table#tab-qcm tbody').hide();
+		status = $(this).attr('id').substr(4);
+		if (status == 'delete') $('#delete-qcms').show();
+		else $('#delete-qcms').hide();
+		if (status == 'all') $('.action-select').show();
+		else $('.action-select').hide();
 		$('#qcm-'+status).show();
+	});
+
+	$('#action-article-status a.status-a').on('click', function(e){
+		e.preventDefault;
+		$('table#tab-article tbody').hide();
+		status = $(this).attr('id').substr(4);
+		console.log(status)
+		if (status == 'delete') $('#delete-articles').show();
+		else $('#delete-articles').hide();
+		if (status == 'all') $('.action-select').show();
+		else $('.action-select').hide();
+		$('#article-'+status).show();
+	});
+
+	$('input[name="selected"]').on('click', function(){
+		var idSelected = $(this).val();
+		current = $('#id_selected_qcm').val();
+		if ($(this).prop('checked')) {
+			$('#id_selected_qcm').val(current+','+idSelected);
+		} else {
+			rewrite = current.replace(','+idSelected, "");
+			$('#id_selected_qcm').val(rewrite);
+		}
+	});
+
+	$('.link-show-qcm').on('click', function(e){
+		$.ajax({
+		  type: "GET",
+		  url: $(this).attr('href'),
+		  success: function(data){
+		  	// console.log(data)
+		  	$('.questionnaire-content-list').slideUp();
+		  	$('.questionnaire-content-single').slideDown();
+		  	$('.title-single-qcm').empty();
+		  	$('.title-single-qcm').html(data.qcm.title);
+		  	$('.level-single-qcm').empty();
+		  	$('.level-single-qcm').html('Niveau : '+data.qcm.level);
+		  	$('.nbr_question-single-qcm').empty();
+		  	$('.nbr_question-single-qcm').html('Nombres de questions : '+data.qcm.nbr_question);
+		  	$('.nbr_choice-single-qcm').empty();
+		  	$('.nbr_choice-single-qcm').html('Nombres de choix : '+data.qcm.nbr_choice);
+		  	$('.questions-single-qcm').empty();
+		  	for (var i = 0; i < data.data.length; i++) {
+		  		question = data.data[i];
+		  		$('.questions-single-qcm').append('<li class="single-qcm-question-'+i+'">'+question.question.title+' :</li><ul class="single-qcm-choices-'+i+'"></ul>');
+		  		for (var j = 0; j < question.choices.length; j++) {
+		  			if (question.choices[j].title == question.question.response)
+		  			$('.single-qcm-choices-'+i+'').append('<li class="t-base-blue">'+question.choices[j].title+'</li>');
+		  			else
+		  			$('.single-qcm-choices-'+i+'').append('<li>'+question.choices[j].title+'</li>');
+		  		}
+		  	}
+		  }
+		});
+		return false;
 	});
 });

@@ -15,4 +15,8 @@ class Qcm extends Model
         'title', 'level', 'nbr_choice', 'nbr_question', 'status', 'user_id'
     ];
 
+    public function getQuestions(){
+    	return $this->hasMany('App\Question');
+    }
+
 }
