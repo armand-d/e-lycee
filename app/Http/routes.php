@@ -19,6 +19,7 @@ Route::group(['middleware' => ['throttle:60,1']], function () {
 
 Route::group([
     'middleware' => ['auth', 'adminTeacher']], function () {
+
     Route::resource('professeur', 'Admin\DashboardTeacherController');
     
     Route::resource('qcm', 'QcmController');
@@ -27,6 +28,13 @@ Route::group([
 
     Route::get('qcms/delete-multiple', 'QcmController@deleteMultiple');
     Route::post('qcm-update-status-multiple', 'QcmController@updateStatusMultiple');
+
+    Route::get('articles/delete-multiple', 'ArticleController@deleteMultiple');
+    Route::post('article-update-status-multiple', 'ArticleController@updateStatusMultiple');
+
+    Route::post('update/teacher','UserController@updateTeacher');
+    Route::get('user/delete/photo', 'UserController@deletePhoto');
+    Route::post('user/replace/photo', 'UserController@replacePhoto');
 });
 
 Route::group([

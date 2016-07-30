@@ -35,9 +35,38 @@ class ArticleController extends Controller
 
         $post = Post::create($request->all());
         $post->user_id = Auth::user()->id;
-        $post->url_thumbnail = public_path().'/assets/images/uploads/'.$fileName;
+        $post->url_thumbnail = url('assets/images/uploads/'.$fileName);
         $post->save();
 
     	return Redirect::to('professeur#articles');
+    }
+
+        public function updateStatusMultiple(Request $request) {
+        
+        $idArticle = Input::get('id_selected_article');
+        $idArticle = substr($idArticle,1);
+        $idArticleArr = explode(',', $idArticle);
+
+        $action = Input::get('action');
+
+        foreach ($idArticleArr as $key => $value) {
+            $Article = Post::findOrFail($value);
+            $Article->status = $action;
+            $Article->save();
+        }
+
+        return Redirect::to('professeur#articles');
+    }
+
+    public function deleteMultiple(){
+        Post::where('status', '=', 2)->where('user_id', '=', Auth::user()->id)->delete();
+        return Redirect::to('professeur#articles');
+    }
+
+    public function show($id) {
+
+        $article = Post::findOrFail($id);
+
+        return response()->json($article);
     }
 }

@@ -53,6 +53,7 @@ class UsersTableSeeder extends Seeder
 				'password'       => Hash::make($name),
 				'role'           =>	$role,
                 'level'          => $level,
+                'url_avatar'     => $faker->imageUrl,
 				'remember_token' => str_random(10),
 				'created_at'     => $faker->dateTime(),
 	        ]);
@@ -63,6 +64,7 @@ class UsersTableSeeder extends Seeder
                     'username'       => 'armand',
                     'password'       => Hash::make('armand'),
                     'role'           => 'teacher',
+                    'url_avatar'     => $faker->imageUrl,
                     'remember_token' => str_random(10),
                     'created_at'     => $faker->dateTime()
                 ],
@@ -70,6 +72,7 @@ class UsersTableSeeder extends Seeder
                     'username'       => 'quentin',
                     'password'       => Hash::make('quentin'),
                     'role'           => 'teacher',
+                    'url_avatar'     => $faker->imageUrl,
                     'remember_token' => str_random(10),
                     'created_at'     => $faker->dateTime()
                 ],

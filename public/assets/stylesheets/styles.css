@@ -10283,7 +10283,7 @@ select {
 }
 
 /* line 390, ../sass/styles.scss */
-.questionnaire-content-form, .article-content-form, .add-question, #submt-qcm, #qcm-publish, #qcm-unpublish, #qcm-delete, #delete-qcms, #article-publish, #article-unpublish, #article-delete, .student-content-form, .questionnaire-content-single {
+.questionnaire-content-form, .article-content-form, .add-question, #submt-qcm, #qcm-publish, #qcm-unpublish, #qcm-delete, #delete-qcms, #article-publish, #article-unpublish, #article-delete, .student-content-form, .questionnaire-content-single, #delete-articles, .article-content-single, .user-replace-photo {
   display: none;
 }
 

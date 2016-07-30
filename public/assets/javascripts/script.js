@@ -190,6 +190,10 @@ $(document).ready(function(){
 		$('.article-content-list').slideDown();
 		$('.article-content-form').slideUp();
 	});
+	$('.prev-a').on('click', function(){
+		$('.article-content-list').slideDown();
+		$('.article-content-single').slideUp();
+	});
 	$('.add-s').on('click', function(){
 		$('.student-content-list').slideUp();
 		$('.student-content-form').slideDown();
@@ -332,7 +336,6 @@ $(document).ready(function(){
 		e.preventDefault;
 		$('table#tab-article tbody').hide();
 		status = $(this).attr('id').substr(4);
-		console.log(status)
 		if (status == 'delete') $('#delete-articles').show();
 		else $('#delete-articles').hide();
 		if (status == 'all') $('.action-select').show();
@@ -351,12 +354,22 @@ $(document).ready(function(){
 		}
 	});
 
+	$('input[name="selected-article"]').on('click', function(){
+		var idSelected = $(this).val();
+		current = $('#id_selected_article').val();
+		if ($(this).prop('checked')) {
+			$('#id_selected_article').val(current+','+idSelected);
+		} else {
+			rewrite = current.replace(','+idSelected, "");
+			$('#id_selected_article').val(rewrite);
+		}
+	});
+
 	$('.link-show-qcm').on('click', function(e){
 		$.ajax({
 		  type: "GET",
 		  url: $(this).attr('href'),
 		  success: function(data){
-		  	// console.log(data)
 		  	$('.questionnaire-content-list').slideUp();
 		  	$('.questionnaire-content-single').slideDown();
 		  	$('.title-single-qcm').empty();
@@ -382,4 +395,43 @@ $(document).ready(function(){
 		});
 		return false;
 	});
+
+	$('.link-show-article').on('click', function(e){
+		$.ajax({
+			type: "GET",
+			url: $(this).attr('href'),
+			success: function(data){
+				$('.article-content-list').slideUp();
+				$('.article-content-single').slideDown();
+				$('.title-single-article').html('<input type="text" name="title" class="input-grey" value="'+data.title+'">');
+				$('.content-single-article').html('<textarea class="input-grey col-lg-20 col-md-20" name="content">'+data.content+'</textarea>');
+			}  	
+		});
+		return false;
+	});
+
+	$('#user-replace-photo').on('click', function(e){
+		$('.user-replace-photo').slideDown();
+	});
+
+	$('#form-user-replace-photo').submit(function(e) {
+		e.preventDefault();
+		var $form = $(this);
+        var formdata = (window.FormData) ? new FormData($form[0]) : null;
+        var data = (formdata !== null) ? formdata : $form.serialize();
+ 
+        $.ajax({
+            url: $form.attr('action'),
+            type: 'post',
+            contentType: false,
+            processData: false,
+            dataType: 'json',
+            data: data,
+            success: function (response) {
+                $('.avatar').attr('src', response.avatar);
+                $('.user-replace-photo').slideUp();
+            }
+        });
+	});
+
 });

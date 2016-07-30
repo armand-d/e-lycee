@@ -9,14 +9,14 @@
 	</div>
 	<div class="spacer-xs"></div>
 	<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2">
-		{{ Form::open() }}
+		{{ Form::open(array('url'=>'article-update-status-multiple', 'method'=> 'POST')) }}
 			<div class="row">
 				<span class="action-select">
 					{{ Form::select('action', ['' => 'Actions','0' => 'Brouillon','1' => 'Publier','2' => 'Suprimer']) }}
 					{{ Form::submit('Appliquer', array('class'=> 'apply')) }}
-					{{Form::hidden('id_selected_qcm', false,array('id'=>'id_selected_qcm'))}}
+					{{Form::hidden('id_selected_article', false,array('id'=>'id_selected_article'))}}
 				</span>
-				<a href="{{url('qcms/delete-multiple')}}" id="delete-articles">Vider la corbeille</a>
+				<a href="{{url('articles/delete-multiple')}}" id="delete-articles">Vider la corbeille</a>
 			</div>
 			<table class="table table-hover" id="tab-article">
 			  <thead>
@@ -30,8 +30,8 @@
 			  <tbody  id="article-all">
 			    @foreach($articlesAll as $article)
 			    <tr>
-			      <td>{{Form::checkbox('selected', $article->id)}}</td>
-			      <th>{{$article->title}}</th>
+			      <td>{{Form::checkbox('selected-article', $article->id)}}</td>
+			      <th><a href="{{url('article/'.$article->id)}}" class="link-show-article">{{$article->title}}</a></th>
 			      <td>
 			      	@if($article->status == 1) Publié
 					@elseif($article->status == 2) Supprimé
@@ -116,4 +116,23 @@
 	</div>
 	<div class="spacer-xs"></div>
 
+</div>
+<div class="article-content-single">
+	<div class="spacer-xs"></div>
+	<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2">
+		<a href="#" class="col-lg-4 col-md-4 col-lg-offset-20 col-md-offset-20 cancel prev-a"><i class="fa fa-close"></i> Retour</a>
+	</div>
+	<div class="spacer-xs"></div>
+	<div class="single-qcm">
+		{{Form::open()}}
+		<div class="row">
+			<p class="col-lg-21 col-md-21 col-lg-offset-1 col-md-offset-1 t-s-1_5 border-bottom title-single-article"></p>
+		</div>
+		<div class="col-lg-18 col-md-18 col-lg-offset-3 col-md-offset-3">
+			<div class="content-single-article"></div>
+		</div>
+		{{Form::submit('Modifier', array('class'=>'submit-form'))}}
+		{{Form::close()}}
+	</div>
+	<div class="spacer-xs"></div>
 </div>

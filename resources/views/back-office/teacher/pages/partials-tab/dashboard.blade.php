@@ -1,6 +1,6 @@
 <div class="spacer-xs"></div>
 <div class="row col-lg-24 col-md-24">
-	<div class="col-lg-8 col-md-8 text-center"><img class="radius-50" width="150px" src="{{Request::root('/').'/assets/images/avatar.png'}}" alt=""></div>
+	<div class="col-lg-8 col-md-8 text-center"><img class="radius-50 avatar" width="200px" height="200px" src="{{$user->url_avatar}}" alt=""></div>
 	<div class="col-lg-16 col-md-16">
 		<div class="spacer-xs"></div>
 		<p class="t-s-2">Bonjour {{Auth::user()->username}}</p>
