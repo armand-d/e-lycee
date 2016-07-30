@@ -9919,48 +9919,58 @@ button.close {
   display: block;
 }
 
-/* line 93, ../sass/styles.scss */
+/* line 91, ../sass/styles.scss */
+.delete-user {
+  cursor: pointer;
+}
+/* line 91, ../sass/styles.scss */
+.delete-user:hover {
+  color: #FFB3B3;
+  transition-duration: 0.3s;
+}
+
+/* line 95, ../sass/styles.scss */
 body::-webkit-scrollbar {
   width: 0.75em;
 }
 
-/* line 96, ../sass/styles.scss */
+/* line 98, ../sass/styles.scss */
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
 }
 
-/* line 101, ../sass/styles.scss */
+/* line 103, ../sass/styles.scss */
 a {
   color: #525252;
   text-decoration: none !important;
   transition-duration: 0.3s;
 }
-/* line 105, ../sass/styles.scss */
+/* line 107, ../sass/styles.scss */
 a:hover {
   color: #366dff;
 }
-/* line 108, ../sass/styles.scss */
+/* line 110, ../sass/styles.scss */
 a:focus {
   outline: none;
 }
 
-/* line 113, ../sass/styles.scss */
+/* line 115, ../sass/styles.scss */
 ul, li {
   list-style: none;
 }
 
-/* line 117, ../sass/styles.scss */
+/* line 119, ../sass/styles.scss */
 html, body {
   overflow-x: hidden;
   padding: 0 !important;
 }
 
-/* line 122, ../sass/styles.scss */
+/* line 124, ../sass/styles.scss */
 html {
   font-size: 100%;
 }
 
-/* line 126, ../sass/styles.scss */
+/* line 128, ../sass/styles.scss */
 body {
   font-size: 0.9em;
   background-color: #D8D8D8;
@@ -9968,7 +9978,7 @@ body {
   margin-top: 85px;
 }
 
-/* line 133, ../sass/styles.scss */
+/* line 135, ../sass/styles.scss */
 #no-click-search {
   display: none;
   position: absolute;
@@ -9980,7 +9990,7 @@ body {
   background-color: transparent;
 }
 
-/* line 141, ../sass/styles.scss */
+/* line 143, ../sass/styles.scss */
 #no-click-loader-search {
   display: none;
   position: absolute;
@@ -9991,7 +10001,7 @@ body {
   z-index: 999;
   background-color: rgba(250, 250, 250, 0.8);
 }
-/* line 147, ../sass/styles.scss */
+/* line 149, ../sass/styles.scss */
 #no-click-loader-search img {
   width: 100px;
   position: absolute;
@@ -10001,7 +10011,7 @@ body {
   margin-left: -50px;
 }
 
-/* line 157, ../sass/styles.scss */
+/* line 159, ../sass/styles.scss */
 .content-search {
   display: none;
   position: absolute;
@@ -10012,19 +10022,19 @@ body {
   color: #FFF;
   background-color: #333333;
 }
-/* line 164, ../sass/styles.scss */
+/* line 166, ../sass/styles.scss */
 .content-search input, .content-search button {
   padding: 1em;
   background-color: transparent;
   font-size: 2em;
   border: none;
 }
-/* line 169, ../sass/styles.scss */
+/* line 171, ../sass/styles.scss */
 .content-search input:focus, .content-search button:focus {
   outline: none;
 }
 
-/* line 175, ../sass/styles.scss */
+/* line 177, ../sass/styles.scss */
 header {
   position: fixed;
   top: 0;
@@ -10036,28 +10046,28 @@ header {
   padding: 2em 0 1em 0;
   transition-duration: 0.3s;
 }
-/* line 185, ../sass/styles.scss */
+/* line 187, ../sass/styles.scss */
 header .logo {
   margin-top: -1.1em;
   width: 5.5em;
   height: 4em;
   transition-duration: 0.3s;
 }
-/* line 190, ../sass/styles.scss */
+/* line 192, ../sass/styles.scss */
 header .logo #logo-svg {
   fill: #366dff;
 }
-/* line 194, ../sass/styles.scss */
+/* line 196, ../sass/styles.scss */
 header .title {
   font-size: 1.2em;
 }
-/* line 196, ../sass/styles.scss */
+/* line 198, ../sass/styles.scss */
 header .title span {
   color: #366dff;
   font-weight: 700;
 }
 
-/* line 203, ../sass/styles.scss */
+/* line 205, ../sass/styles.scss */
 .slider {
   background-image: url("../images/slider/lycee-photo.png");
   background-size: cover;
@@ -10065,23 +10075,23 @@ header .title span {
   background-position: 50% 50%;
   padding-bottom: 5em;
 }
-/* line 209, ../sass/styles.scss */
+/* line 211, ../sass/styles.scss */
 .slider div > div:last-of-type {
   margin-top: 5em;
 }
-/* line 211, ../sass/styles.scss */
+/* line 213, ../sass/styles.scss */
 .slider div > div:last-of-type button {
   padding: 1em 1.5em;
   background-color: transparent;
   border: 2px solid;
   transition-duration: 0.5s;
 }
-/* line 216, ../sass/styles.scss */
+/* line 218, ../sass/styles.scss */
 .slider div > div:last-of-type button:hover {
   border: 2px solid #112351;
   background-color: #112351;
 }
-/* line 222, ../sass/styles.scss */
+/* line 224, ../sass/styles.scss */
 .slider li {
   margin: 1.5em 0;
   padding-bottom: 1em;
@@ -10089,37 +10099,37 @@ header .title span {
   font-weight: 700;
 }
 
-/* line 231, ../sass/styles.scss */
+/* line 233, ../sass/styles.scss */
 .home #formations li p {
   background-color: #366dff;
 }
 
-/* line 237, ../sass/styles.scss */
+/* line 239, ../sass/styles.scss */
 #myModal {
   padding: 0 !important;
 }
 
-/* line 240, ../sass/styles.scss */
+/* line 242, ../sass/styles.scss */
 .modal-backdrop {
   background-color: #D8D8D8;
   opacity: 0.8 !important;
   z-index: 997;
 }
 
-/* line 245, ../sass/styles.scss */
+/* line 247, ../sass/styles.scss */
 .modal-content {
   border: none;
   border-radius: 0px;
   box-shadow: 0 0 0 transparent;
 }
 
-/* line 250, ../sass/styles.scss */
+/* line 252, ../sass/styles.scss */
 .modal-dialog {
   margin: 10em auto;
   width: 400px;
 }
 
-/* line 255, ../sass/styles.scss */
+/* line 257, ../sass/styles.scss */
 .loginmodal-container input[type=submit] {
   width: 100%;
   display: block;
@@ -10127,7 +10137,7 @@ header .title span {
   position: relative;
 }
 
-/* line 262, ../sass/styles.scss */
+/* line 264, ../sass/styles.scss */
 .loginmodal-container input[type=text], input[type=password] {
   height: 44px;
   width: 100%;
@@ -10137,12 +10147,12 @@ header .title span {
   border: none;
   padding: 0 8px;
 }
-/* line 270, ../sass/styles.scss */
+/* line 272, ../sass/styles.scss */
 .loginmodal-container input[type=text]:focus, input[type=password]:focus {
   outline: none;
 }
 
-/* line 275, ../sass/styles.scss */
+/* line 277, ../sass/styles.scss */
 .loginmodal {
   text-align: center;
   font-size: 14px;
@@ -10152,7 +10162,7 @@ header .title span {
   padding: 0 8px;
 }
 
-/* line 284, ../sass/styles.scss */
+/* line 286, ../sass/styles.scss */
 .loginmodal-submit {
   border: none;
   color: #ffffff;
@@ -10160,32 +10170,32 @@ header .title span {
   padding: 17px 0px;
   transition-duration: 0.3s;
 }
-/* line 290, ../sass/styles.scss */
+/* line 292, ../sass/styles.scss */
 .loginmodal-submit:hover {
   background-color: #112351;
 }
 
-/* line 295, ../sass/styles.scss */
+/* line 297, ../sass/styles.scss */
 .login-help {
   font-size: 12px;
 }
 
-/* line 301, ../sass/styles.scss */
+/* line 303, ../sass/styles.scss */
 .has-error {
   background-color: rgba(255, 0, 0, 0.3) !important;
 }
 
-/* line 304, ../sass/styles.scss */
+/* line 306, ../sass/styles.scss */
 .has-success {
   background-color: #4DC188;
 }
 
-/* line 311, ../sass/styles.scss */
+/* line 313, ../sass/styles.scss */
 #menu-caret:focus, #menu-caret:active {
   color: #366dff;
 }
 
-/* line 315, ../sass/styles.scss */
+/* line 317, ../sass/styles.scss */
 .menu-caret {
   position: absolute;
   top: 28px;
@@ -10197,22 +10207,22 @@ header .title span {
   font-weight: 700;
   display: none;
 }
-/* line 325, ../sass/styles.scss */
+/* line 327, ../sass/styles.scss */
 .menu-caret hr {
   margin: 5px;
 }
 
-/* line 331, ../sass/styles.scss */
+/* line 333, ../sass/styles.scss */
 #name-user:first-letter {
   text-transform: uppercase;
 }
 
-/* line 336, ../sass/styles.scss */
+/* line 338, ../sass/styles.scss */
 .tab-content {
   background-color: #ffffff;
 }
 
-/* line 338, ../sass/styles.scss */
+/* line 340, ../sass/styles.scss */
 a.status-q, a.status-a {
   cursor: pointer;
   background-color: #D8D8D8;
@@ -10220,21 +10230,21 @@ a.status-q, a.status-a {
   border: 1px solid #bfbfbf;
   padding: 10px;
 }
-/* line 344, ../sass/styles.scss */
+/* line 346, ../sass/styles.scss */
 a.status-q:focus, a.status-q:active, a.status-q:hover, a.status-a:focus, a.status-a:active, a.status-a:hover {
   background-color: #366dff;
   color: #ffffff;
   border: 1px solid #366dff;
 }
 
-/* line 350, ../sass/styles.scss */
+/* line 352, ../sass/styles.scss */
 a.active-status-q, a.active-status-a {
   background-color: #366dff;
   color: #ffffff;
   border: 1px solid #366dff;
 }
 
-/* line 355, ../sass/styles.scss */
+/* line 357, ../sass/styles.scss */
 a.add {
   background-color: #4DC188;
   color: #ffffff;
@@ -10243,12 +10253,12 @@ a.add {
   text-align: center;
   padding: 10px;
 }
-/* line 362, ../sass/styles.scss */
+/* line 364, ../sass/styles.scss */
 a.add:hover {
   opacity: 0.8;
 }
 
-/* line 366, ../sass/styles.scss */
+/* line 368, ../sass/styles.scss */
 a.cancel {
   background-color: #FFB3B3;
   color: #ffffff;
@@ -10257,37 +10267,37 @@ a.cancel {
   text-align: center;
   padding: 10px;
 }
-/* line 373, ../sass/styles.scss */
+/* line 375, ../sass/styles.scss */
 a.cancel:hover {
   opacity: 0.8;
 }
 
-/* line 377, ../sass/styles.scss */
+/* line 379, ../sass/styles.scss */
 tbody tr:nth-child(odd) {
   background-color: #F1F1F1;
 }
 
-/* line 380, ../sass/styles.scss */
+/* line 382, ../sass/styles.scss */
 input.apply {
   border: none;
   background: none;
 }
-/* line 383, ../sass/styles.scss */
+/* line 385, ../sass/styles.scss */
 input.apply:hover {
   color: #366dff;
 }
 
-/* line 387, ../sass/styles.scss */
+/* line 389, ../sass/styles.scss */
 select {
   border: none;
 }
 
-/* line 390, ../sass/styles.scss */
+/* line 392, ../sass/styles.scss */
 .questionnaire-content-form, .article-content-form, .add-question, #submt-qcm, #qcm-publish, #qcm-unpublish, #qcm-delete, #delete-qcms, #article-publish, #article-unpublish, #article-delete, .student-content-form, .questionnaire-content-single, #delete-articles, .article-content-single, .user-replace-photo {
   display: none;
 }
 
-/* line 396, ../sass/styles.scss */
+/* line 398, ../sass/styles.scss */
 .new-question {
   border-bottom: 1px solid #CDCDCD;
   width: 80%;

@@ -87,6 +87,8 @@
 	.radius-50 { border-radius: 50%; }
 	.input-grey { padding: 5px 5px; background-color: $body-color; border: none; ; margin-bottom: 10px;}
 	.submit-form {background-color: $base-blue; padding: 10px 15px; color: $white; border: none; margin-top: 10px;display:block;}
+
+	.delete-user { cursor:pointer; &:hover { color:$red; transition-duration: $duration-3; } }
 // end class global
 
 // scroolbar

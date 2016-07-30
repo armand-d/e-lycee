@@ -75,4 +75,9 @@ class UserController extends Controller
         return response()->json(['avatar' => url('assets/images/uploads/'.$fileName)]);
 
     }
+
+    public function destroy($id) {
+        User::where('id', '=', $id)->delete();
+        return Redirect::to('professeur#eleves');
+    }
 }

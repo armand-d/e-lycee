@@ -13,6 +13,7 @@
 			      <th>Nom</th>
 			      <th>Niveau</th>
 			      <th>Date</th>
+			      <th>Supprimer</th>
 			    </tr>
 			  </thead>
 			  <tbody>
@@ -22,6 +23,7 @@
 			      <th>{{$student->username}}</th>
 			      <td>{{$student->level}}</td>
 			      <td>{{ Carbon\Carbon::parse($student->created_at)->format('d/m/Y') }}</td>
+			      <td><a href="{{url('user/delete/'.$student->id)}}"><i class="fa fa-close delete-user"></i></a></td>
 			    </tr>
 			    @endforeach
 			</table>

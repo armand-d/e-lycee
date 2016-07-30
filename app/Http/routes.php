@@ -35,6 +35,7 @@ Route::group([
     Route::post('update/teacher','UserController@updateTeacher');
     Route::get('user/delete/photo', 'UserController@deletePhoto');
     Route::post('user/replace/photo', 'UserController@replacePhoto');
+    Route::get('user/delete/{id}', 'UserController@destroy');
 });
 
 Route::group([
