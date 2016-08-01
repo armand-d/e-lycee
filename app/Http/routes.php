@@ -13,6 +13,19 @@
 
 Route::get('/', ['as' => 'home', 'uses' => 'FrontController@index']);
 
+// FRONT-OFFICE
+
+Route::get('actualites', 'FrontController@showActualites');
+Route::get('mentions-legales', 'FrontController@showMentionLegales');
+Route::get('presentation', 'FrontController@showPresentation');
+Route::get('contact', 'FrontController@showContact');
+
+//article seul
+//Route::get('/actualites/{id}', 'FrontController@showArticle');
+
+
+// BACK-OFFICE
+
 Route::group(['middleware' => ['throttle:60,1']], function () {
     Route::any('connexion', 'LoginController@login');
 });
