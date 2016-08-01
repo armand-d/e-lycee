@@ -25,4 +25,26 @@ class FrontController extends Controller
     {
         return view('front-office.pages.index');
     }
+
+    public function showContact()
+    {
+        return view('front-office.pages.contact');
+    }
+
+    public function showMentionLegales()
+    {
+        return view('front-office.pages.mentions-legales');
+    }
+
+    public function showActualites()
+    {
+        return view('front-office.pages.actualites');
+    }
+
+    public function showPresentation()
+    {
+        return view('front-office.pages.presentation');
+    }
+
+
 }
