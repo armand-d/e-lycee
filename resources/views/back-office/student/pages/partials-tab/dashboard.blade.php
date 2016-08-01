@@ -21,7 +21,7 @@
 		{{-- <a href="" class="link-action-tab" id="link-2"><i class="fa fa-angle-right" aria-hidden="true"></i> Gestion des articles</a> --}}
 	</div>
 	<div class="col-lg-8 padding-lf-3">
-		<p><span class="t-s-3 t-base-blue t-bold">{{$average}}</span> Moyenne</p>
+		<p><span class="t-s-3 t-base-blue t-bold">{{round($average, 2)}}</span> Moyenne</p>
 		{{-- <a href="" class="link-action-tab" id="link-3"><i class="fa fa-angle-right" aria-hidden="true"></i> Gestion des élèves</a> --}}
 	</div>
 </div>
