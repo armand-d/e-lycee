@@ -2,6 +2,8 @@
 
 namespace App;
 
+use Auth;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Qcm extends Model
@@ -19,4 +21,7 @@ class Qcm extends Model
     	return $this->hasMany('App\Question');
     }
 
+    public function getScores(){
+        return $this->hasOne('App\Score')->where('user_id','=', Auth::user()->id);
+    }
 }

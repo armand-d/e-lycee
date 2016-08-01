@@ -1,23 +1,28 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin\Teacher;
 
-use App\Qcm;
-use App\Question;
-use App\Choice;
+use \App\Qcm;
+use \App\Question;
+use \App\Choice;
 
 use Auth;
 use Input;
 use Redirect;
 
-use Illuminate\Http\Request;
+use \Illuminate\Http\Request;
+use \App\Http\Requests;
+use \App\Http\Controllers\Controller;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-
-class QcmController extends Controller
+class QcmTeacherController extends Controller
 {
-        public function store(Request $request){
+
+    public function __construct()
+    {
+
+    }
+
+    public function store(Request $request){
 
     	$this->validate($request, [
 			'title_qcm'     => 'required',

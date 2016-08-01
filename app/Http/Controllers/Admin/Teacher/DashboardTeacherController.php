@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin\Teacher;
 
 use \App\Qcm;
 use \App\Question;
@@ -12,9 +12,9 @@ use Auth;
 use Input;
 use Redirect;
 
-use App\Http\Requests;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use \App\Http\Requests;
+use \Illuminate\Http\Request;
+use \App\Http\Controllers\Controller;
 
 class DashboardTeacherController extends Controller
 {

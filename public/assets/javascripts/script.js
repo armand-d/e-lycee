@@ -434,4 +434,68 @@ $(document).ready(function(){
         });
 	});
 
+	$('.link-qcm-student').on('click', function(e){
+		$.ajax({
+			type: "GET",
+			url: $(this).attr('href'),
+			success: function(data){
+				$('.qcm-content-list').slideUp();
+			  	$('.qcm-content-single').slideDown();
+			  	$('.title-single-qcm').empty();
+			  	$('.title-single-qcm').html(data.qcm.title);
+			  	$('.level-single-qcm').empty();
+			  	$('.level-single-qcm').html('Niveau : '+data.qcm.level);
+			  	$('.nbr_question-single-qcm').empty();
+			  	$('.nbr_question-single-qcm').html('Nombres de questions : '+data.qcm.nbr_question);
+			  	$('.nbr_choice-single-qcm').empty();
+			  	$('.nbr_choice-single-qcm').html('Nombres de choix : '+data.qcm.nbr_choice);
+			  	$('.questions-single-qcm').empty();
+			  	$('.questions-single-qcm').append('<input type="hidden" name="qcm_id" value="'+data.qcm.id+'">')
+			  	for (var i = 0; i < data.data.length; i++) {
+			  		question = data.data[i];
+			  		$('.questions-single-qcm').append('<li class="single-qcm-question-'+i+'">'+question.question.title+' :</li><ul class="single-qcm-choices-'+i+'"></ul>');
+			  		for (var j = 0; j < question.choices.length; j++) {
+			  			$('.single-qcm-choices-'+i).append('<li><input type="radio" id="question-'+i+'-'+j+'" name="question-'+question.question.id+'" value="'+question.choices[j].title+'"> <label for="question-'+i+'-'+j+'">'+question.choices[j].title+'</label></li>');
+			  		}
+			  	}
+			}  	
+		});
+		return false;
+	});
+
+	$('#link-return').on('click', function(){
+		$('.qcm-content-list').slideDown();
+		$('.qcm-content-single').slideUp();
+	});
+
+	$('#student-qcm').submit(function(e) {
+		e.preventDefault();
+		var $form = $(this);
+        var formdata = (window.FormData) ? new FormData($form[0]) : null;
+        var data = (formdata !== null) ? formdata : $form.serialize();
+ 		$('.error').html('');
+ 		$('.score').html('')
+
+        $.ajax({
+            url: $form.attr('action'),
+            type: 'post',
+            contentType: false,
+            processData: false,
+            dataType: 'json',
+            data: data,
+            success: function (response) {
+                if (response.status == 'error') {
+                	$('.error').html('<p class="has-error text-center">Vous devez répondre à toutes les questions</p>')
+                } else {
+                	$('#student-qcm input[type="submit"]').hide();
+                	$('.score').html('Votre score : '+response.score+'/'+response.nbr_question);
+                	$('.return').show();
+                }
+                console.log(response)
+            }
+        });
+	});
+
 });
+
+
