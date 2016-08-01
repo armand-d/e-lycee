@@ -13,9 +13,14 @@
 		  </thead>
 		  <tbody>
 		  	@foreach($qcms as $qcm)
-			    <tr>
+			    <tr class="@if($qcm->getScores)qcm-is-ok @endif">
 			      <td>{{$qcm->id}}</td>
-			      <th><a href="{{url('qcm-student/'.$qcm->id)}}" class="link-qcm-student">{{$qcm->title}}</a></th>
+			      <th>
+					@if($qcm->getScores)
+			      		{{$qcm->title}}
+			      	@else
+			      		<a href="{{url('qcm-student/'.$qcm->id)}}" class="link-qcm-student">{{$qcm->title}}</a></th>
+			      	@endif
 			      <td>{{$qcm->nbr_question}}</td>
 			      <td>
 			      	@if($qcm->getScores)

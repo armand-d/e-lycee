@@ -13,15 +13,15 @@
 </div>
 <div class="row col-lg-24 col-md-24">
 	<div class="col-lg-8 padding-lf-3">
-		<p><span class="t-s-3 t-base-blue t-bold">2</span> QCM</p>
+		<p><span class="t-s-3 t-base-blue t-bold">{{count($qcms)}}</span> QCM</p>
 		{{-- <a href="#QCM" class="link-action-tab" id="link-1"><i class="fa fa-angle-right" aria-hidden="true"></i> Gestion des QCM</a> --}}
 	</div>
 	<div class="col-lg-8 padding-lf-3">
-		<p><span class="t-s-3 t-base-blue t-bold">2</span> Moyenne</p>
+		<p><span class="t-s-3 t-base-blue t-bold">{{$scoreUser}}</span> Score</p>
 		{{-- <a href="" class="link-action-tab" id="link-2"><i class="fa fa-angle-right" aria-hidden="true"></i> Gestion des articles</a> --}}
 	</div>
 	<div class="col-lg-8 padding-lf-3">
-		{{-- <p><span class="t-s-3 t-base-blue t-bold">2</span> &Eacute;</p> --}}
+		<p><span class="t-s-3 t-base-blue t-bold">{{$average}}</span> Moyenne</p>
 		{{-- <a href="" class="link-action-tab" id="link-3"><i class="fa fa-angle-right" aria-hidden="true"></i> Gestion des élèves</a> --}}
 	</div>
 </div>

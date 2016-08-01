@@ -89,6 +89,7 @@
 	.submit-form {background-color: $base-blue; padding: 10px 15px; color: $white; border: none; margin-top: 10px;display:block;}
 
 	.delete-user { cursor:pointer; &:hover { color:$red; transition-duration: $duration-3; } }
+	.qcm-is-ok { background-color: rgba(54, 109, 255, 0.5)!important; color: white; }
 // end class global
 
 // scroolbar
