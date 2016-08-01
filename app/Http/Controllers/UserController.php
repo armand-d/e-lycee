@@ -36,21 +36,26 @@ class UserController extends Controller
     	return Redirect::to('professeur#eleves');
     }
 
-    public function updateTeacher(Request $request){
+    public function updateUser(Request $request){
 
         $validator = Validator::make($request->all(), [
             'username'         => 'required|string|unique:users',
         ]);
 
+        if (Auth::user()->role == 'teacher')
+            $role = 'professeur';
+        else
+            $role = 'etudiant';
+
         if ($validator->fails()) {
-            return redirect('professeur#profil')->withErrors($validator)->withInput();
+            return redirect($role.'#profil')->withErrors($validator)->withInput();
         }
 
         $user = User::FindOrFail(Auth::user()->id);
         $user->username = Input::get('username');
         $user->save();
 
-        return Redirect::to('professeur#profil');
+        return Redirect::to($role.'#profil');
     }
 
     public function deletePhoto(){
@@ -58,7 +63,12 @@ class UserController extends Controller
         $user->url_avatar = url('assets/images/avatar.png');
         $user->save();
 
-        return Redirect::to('professeur#profil');
+        if (Auth::user()->role == 'teacher')
+            $role = 'professeur';
+        else
+            $role = 'etudiant';
+
+        return Redirect::to($role.'#profil');
     }
 
     public function replacePhoto(Request $request){
