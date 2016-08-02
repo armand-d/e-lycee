@@ -2,22 +2,23 @@
 
 @section('content')
 
-@include('front-office.partials.twitter')
-
-<!-- Tous les articles avec nav catégories  -->
-<nav class="navbar">
-      <ul class="nav">
-
-		@foreach($articles as $article)
-			<p>titre :	{{ $article->title }}</p> 
-			<p>user : {{ $article->user['username'] }} </p>
-			<img src="{{ $article->url_thumbnail }}">
-			{{ $article->url_thumbnail }}
+<div class="row">
+		@foreach($actualites as $actualite)
+			<div class="col-lg-16 col-md-16 col-lg-offset-4 col-md-offset-4 actualites row">
+				<p class="t-s-1_5"><a href="{{url('actualite/'.$actualite->id.'/'.$actualite->title)}}">{{$actualite->title}}</a></p> 
+				<p>{{ $actualite->user['username'] }} - {{ Carbon\Carbon::parse($actualite->created_at)->format('d/m/Y') }}</p>
+				<div class="col-lg-10 col-md-10">
+					<img src="{{ $actualite->url_thumbnail }}">
+				</div>
+				<div class="col-lg-14 col-md-14">
+					<p>{{ str_limit($actualite->content, $limit = 150, $end = '') }} <a href="{{url('actualite/'.$actualite->id.'/'.$actualite->title)}}"><strong>Lire la suite</strong></a></p>
+				</div>
+			</div>
 		@endforeach
-
-	  </ul>
-</nav>
-
-
+		<div class="clearfix"></div>
+		<center>
+			<div class="row">{!! $actualites->render() !!}</div>
+		</center>
+</div>
 		
 @endsection

@@ -23,7 +23,7 @@ class PostsTableSeeder extends Seeder
                 'user_id'       => $user->id,
                 'title'         => $faker->sentence($nbWords = 3, $variableNbWords = true),
                 'abstract'      => '',
-                'content'       => $faker->paragraph($nbSentences = 9, $variableNbSentences = true),
+                'content'       => $faker->paragraph($nbSentences = 20, $variableNbSentences = true),
                 'url_thumbnail' => $faker->imageUrl,
                 'status'        => $faker->boolean,
                 'created_at'    => $faker->dateTime(),

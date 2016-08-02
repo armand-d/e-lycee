@@ -33,7 +33,7 @@
     </div>
 </div>
 
-@if (!Auth::check() || Route::current()->getPath() === '/')
+@if (!Auth::check() || Route::current()->getPath() === '/' || Route::current()->getPath() === 'contact' || Route::current()->getPath() === 'actualites')
 <footer>
     @include('front-office.partials.footer')
 </footer>
