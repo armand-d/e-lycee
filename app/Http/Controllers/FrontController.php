@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
+
 use Mail;
 use Auth;
 use View;
@@ -22,7 +24,8 @@ class FrontController extends Controller
      * @return View
      */
     public function index()
-    {
+    {   
+
         return view('front-office.pages.index');
     }
 
@@ -38,7 +41,9 @@ class FrontController extends Controller
 
     public function showActualites()
     {
-        return view('front-office.pages.actualites');
+        $articles = Post::all();
+
+        return view('front-office.pages.actualites')->with(array('articles'=>$articles));
     }
 
     public function showPresentation()
