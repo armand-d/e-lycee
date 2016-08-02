@@ -1,11 +1,11 @@
 <div class="row questionnaire-content-list">
 	<div class="spacer-xs"></div>
 	<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2" id="action-qcm-status">
-		<a href="#Tous" id="btn-all" class="col-lg-4 col-md-4 status-q active-status-q">Tous ({{count($qcmsAll)}})</a>
-		<a href="#Publies" id="btn-publish" class="col-lg-4 col-md-4 status-q">Publiés ({{count($qcmsPublish)}})</a>
-		<a href="#Brouillons" id="btn-unpublish" class="col-lg-4 col-md-4 status-q">Brouillons ({{count($qcmsUnpublish)}})</a>
-		<a href="#Corbeille" id="btn-delete" class="col-lg-4 col-md-4 status-q">Corbeille ({{count($qcmsDelete)}})</a>
-		<a href="#Ajouter" class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 add add-q"><i class="fa fa-plus"></i> Ajouter</a>
+		<a href="#QcmTous" id="btn-all" class="col-lg-4 col-md-4 status-q active-status-q">Tous ({{count($qcmsAll)}})</a>
+		<a href="#QcmPublies" id="btn-publish" class="col-lg-4 col-md-4 status-q">Publiés ({{count($qcmsPublish)}})</a>
+		<a href="#QcmBrouillons" id="btn-unpublish" class="col-lg-4 col-md-4 status-q">Brouillons ({{count($qcmsUnpublish)}})</a>
+		<a href="#QcmCorbeille" id="btn-delete" class="col-lg-4 col-md-4 status-q">Corbeille ({{count($qcmsDelete)}})</a>
+		<a href="#QcmAjouter" class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 add add-q"><i class="fa fa-plus"></i> Ajouter</a>
 	</div>
 	<div class="spacer-xs"></div>
 	<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2">
@@ -100,7 +100,7 @@
 <div class="row questionnaire-content-form">
 	<div class="spacer-xs"></div>
 	<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2">
-		<a href="#Annuler" class="col-lg-4 col-md-4 col-lg-offset-20 col-md-offset-20 cancel cancel-q"><i class="fa fa-close"></i> Annuler</a>
+		<a href="#QcmAnnuler" class="col-lg-4 col-md-4 col-lg-offset-20 col-md-offset-20 cancel cancel-q"><i class="fa fa-close"></i> Annuler</a>
 	</div>
 	<div class="spacer-xs"></div>
 	<div class="row">
@@ -114,7 +114,7 @@
 			<li>Niveau : {{ Form::select('level_qcm', ['Seconde'=>'Seconde','Première'=>'Première','Terminale'=>'Terminale']) }}</li>
 			<li>Nombre de choix : {{ Form::select('nbr_choice', ['2'=>'2','3'=>'3','4'=>'4','5'=>'5']) }}</li>
 			<div class="spacer-xs"></div>
-			<li><a href="#ajouter-des-questions" class="add" id="add-question">Ajouter des questions</a></li>
+			<li><a href="#QcmAjouterQuestions" class="add" id="add-question">Ajouter des questions</a></li>
 		</div>
 		<div class="add-question">
 			<div class="row">
@@ -140,7 +140,7 @@
 				</li>
 			</ul>
 			<a href="#" id="add-single-question" class="submit-form text-center">Ajouter une question</a>
-		<p id="verif-qcm"><a href="#" class="submit-form text-center">Vérifier le QCM</a></p>
+		<p id="verif-qcm"><a href="#QcmVerification" class="submit-form text-center">Vérifier le QCM</a></p>
 		<p id="submt-qcm">{{Form::submit('Ajouter le QCM',array('class' => 'submit-form'))}}</p>
 		</div>
 		{{ Form::close() }}
@@ -150,7 +150,7 @@
 <div class="row questionnaire-content-single">
 	<div class="spacer-xs"></div>
 	<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2">
-		<a href="#" class="col-lg-4 col-md-4 col-lg-offset-20 col-md-offset-20 cancel prev-q"><i class="fa fa-close"></i> Retour</a>
+		<a href="#QcmAnnuler" class="col-lg-4 col-md-4 col-lg-offset-20 col-md-offset-20 cancel prev-q"><i class="fa fa-close"></i> Retour</a>
 	</div>
 	<div class="spacer-xs"></div>
 	<div class="single-qcm">

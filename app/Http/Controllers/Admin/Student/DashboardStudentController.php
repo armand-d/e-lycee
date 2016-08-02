@@ -27,13 +27,16 @@ class DashboardStudentController extends Controller
         $scores = Score::where('user_id', '=', Auth::user()->id)->get();
         $scoreUser = 0;
         $i = 0;
-
+        $average = 0;
+        
         foreach ($scores as $key => $score) {
         	$scoreUser += $score->note;
         	$i++;
         }
- 	
- 		$average = $scoreUser/$i;
+
+ 		if ($scoreUser) {
+	 		$average = $scoreUser/$i;
+ 		}
 
     	return view('back-office.student.pages.index')->with(array('user'=>$user, 'qcms'=>$qcms, 'scoreUser'=>$scoreUser, 'average'=>$average));
     }

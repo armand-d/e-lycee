@@ -40,7 +40,7 @@ Route::group(['middleware' => ['auth']], function () {
         'middleware' => ['adminTeacher']], function () {
 
         Route::resource('professeur', 'Admin\Teacher\DashboardTeacherController');
-        
+
         Route::resource('qcm', 'Admin\Teacher\QcmTeacherController');
         Route::resource('article', 'ArticleController');
         Route::resource('user', 'UserController');

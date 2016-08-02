@@ -25,4 +25,10 @@ class FrontController extends Controller
     {
         return view('front-office.pages.index');
     }
+
+    public function showActualites()
+    {
+        return view('front-office.pages.actualites');
+    }
+
 }

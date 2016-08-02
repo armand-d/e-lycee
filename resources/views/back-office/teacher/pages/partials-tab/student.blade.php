@@ -40,6 +40,7 @@
 		</div>
 		{{Form::open(array('url'=>'user', 'method'=>'POST'))}}
 			{{Form::hidden('role', 'student')}}
+			{{Form::hidden('url_avatar', url('assets/images/avatar.png'))}}
 			<li>Nom : {{Form::text('username', old('username'), array('class'=>'input-grey'))}}</li>
 	    	@if($errors->has('username')) <span class="error">{{$errors->first('username')}}@endif</li>
 			<li>Niveau : {{Form::select('level', ['Seconde'=>'Seconde','Première'=>'Première','Terminale'=>'Terminale'])}}</li>

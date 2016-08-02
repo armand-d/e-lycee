@@ -58,14 +58,16 @@ $(document).ready(function(){
 		// end scroll
 	// end animate menu
 
+	$('a').on('click', function(){
+		if($(this).attr('href').substr(0,1) == '#')
+		window.location.hash = $(this).attr('href');
+	});
+
 	$('#login').on('click',function(){
 		window.location.hash = 'connexion';
 	});
 	if (window.location.hash == '#connexion') {
 		$('#login').trigger('click');
-	}
-	if (window.location.hash == '#QCM') {
-		$('#btn-1').tab('show');
 	}
 	if (window.location.hash == '#articles') {
 		$('#btn-2').tab('show');
@@ -86,13 +88,30 @@ $(document).ready(function(){
 		$('.student-content-list').slideUp();
 		$('.student-content-form').slideDown();
 	}
+	
+	// hash Qcm / articles
+	if (window.location.hash == '#QCM') {
+		$('#btn-1').tab('show');
+	}
 	if (window.location.hash == '#ajouter-qcm') {
 		$('#btn-1').tab('show');
 		$('.questionnaire-content-list').slideUp();
 		$('.questionnaire-content-form').slideDown();
 	}
+	if (window.location.hash == '#QcmAnnuler' ||window.location.hash == '#QcmTous' || window.location.hash == '#QcmPublies' || window.location.hash == '#QcmBrouillons' || window.location.hash == '#QcmCorbeille' || window.location.hash == '#QcmAjouter' || window.location.hash == '#QcmAjouterQuestions' || window.location.hash == '#QcmVerification') {
+		$('#btn-1').tab('show');
+		window.location.hash = 'QCM';
+	}
+	if (window.location.hash == '#articlesAnnuler' || window.location.hash == '#articlesTous' || window.location.hash == '#articlesPublies' || window.location.hash == '#articlesBrouillons' || window.location.hash == '#articlesCorbeille' || window.location.hash == '#articlesAjouter') {
+		$('#btn-2').tab('show');
+		window.location.hash = 'articles';
+	}
+	if (window.location.hash == '#profilRemplacerPhoto') {
+		$('#btn-4').tab('show');
+		window.location.hash = 'profil';
+	}
 	
-	
+	// end hash Qcm / articles
 
 	// ajax login
 
@@ -464,8 +483,7 @@ $(document).ready(function(){
 	});
 
 	$('#link-return').on('click', function(){
-		$('.qcm-content-list').slideDown();
-		$('.qcm-content-single').slideUp();
+		window.location.href = 'etudiant';
 	});
 
 	$('#student-qcm').submit(function(e) {

@@ -9,7 +9,7 @@
 			</div>
 			<div class="spacer-xs"></div>
 			<li>
-				<a href="#" id="user-replace-photo"><i class="fa fa-angle-right" aria-hidden="true"></i> Remplacer votre photo</a>
+				<a href="#profilRemplacerPhoto" id="user-replace-photo"><i class="fa fa-angle-right" aria-hidden="true"></i> Remplacer votre photo</a>
 				<div class="user-replace-photo">
 					{{Form::open(array('url'=>'user/replace/photo', 'enctype'=>'multipart/form-data', 'id'=>'form-user-replace-photo'))}}
 						{{Form::file('avatar')}}

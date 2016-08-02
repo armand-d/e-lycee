@@ -18,7 +18,7 @@ class Qcm extends Model
     ];
 
     public function getQuestions(){
-    	return $this->hasMany('App\Question');
+    	return $this->hasMany('App\Question')->select('id','qcm_id','title');
     }
 
     public function getScores(){

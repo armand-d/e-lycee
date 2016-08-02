@@ -1,11 +1,11 @@
 <div class="row article-content-list">
 	<div class="spacer-xs"></div>
 	<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2" id="action-article-status">
-		<a href="#Tous" id="btn-all" class="col-lg-4 col-md-4 status-a active-status-a">Tous ({{count($articlesAll)}})</a>
-		<a href="#Publies" id="btn-publish" class="col-lg-4 col-md-4 status-a">Publiés ({{count($articlesPublish)}})</a>
-		<a href="#Brouillons" id="btn-unpublish" class="col-lg-4 col-md-4 status-a">Brouillons ({{count($articlesUnpublish)}})</a>
-		<a href="#Corbeille" id="btn-delete" class="col-lg-4 col-md-4 status-a">Corbeille ({{count($articlesDelete)}})</a>
-		<a href="#Ajouter" class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 add add-a"><i class="fa fa-plus"></i> Ajouter</a>
+		<a href="#articlesTous" id="btn-all" class="col-lg-4 col-md-4 status-a active-status-a">Tous ({{count($articlesAll)}})</a>
+		<a href="#articlesPublies" id="btn-publish" class="col-lg-4 col-md-4 status-a">Publiés ({{count($articlesPublish)}})</a>
+		<a href="#articlesBrouillons" id="btn-unpublish" class="col-lg-4 col-md-4 status-a">Brouillons ({{count($articlesUnpublish)}})</a>
+		<a href="#articlesCorbeille" id="btn-delete" class="col-lg-4 col-md-4 status-a">Corbeille ({{count($articlesDelete)}})</a>
+		<a href="#articlesAjouter" class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 add add-a"><i class="fa fa-plus"></i> Ajouter</a>
 	</div>
 	<div class="spacer-xs"></div>
 	<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2">
@@ -98,7 +98,7 @@
 <div class="row article-content-form">
 	<div class="spacer-xs"></div>
 	<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2">
-		<a href="#Annuler" class="col-lg-4 col-md-4 col-lg-offset-20 col-md-offset-20 cancel cancel-a"><i class="fa fa-close"></i> Annuler</a>
+		<a href="#articlesAnnuler" class="col-lg-4 col-md-4 col-lg-offset-20 col-md-offset-20 cancel cancel-a"><i class="fa fa-close"></i> Annuler</a>
 		<div class="row">
 			<p class="col-lg-21 col-md-21 col-lg-offset-1 col-md-offset-1 t-s-1_5 border-bottom">Ajouter un article</p>
 		</div>
@@ -120,7 +120,7 @@
 <div class="article-content-single">
 	<div class="spacer-xs"></div>
 	<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2">
-		<a href="#" class="col-lg-4 col-md-4 col-lg-offset-20 col-md-offset-20 cancel prev-a"><i class="fa fa-close"></i> Retour</a>
+		<a href="#articlesAnnuler" class="col-lg-4 col-md-4 col-lg-offset-20 col-md-offset-20 cancel prev-a"><i class="fa fa-close"></i> Retour</a>
 	</div>
 	<div class="spacer-xs"></div>
 	<div class="single-qcm">
