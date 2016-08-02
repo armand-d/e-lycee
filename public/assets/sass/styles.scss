@@ -11,12 +11,16 @@
 @import "compass";
 
 // Google fonts
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,200);
 
 // variables
+	//media queries
+	$mobile: 768px;
+	$tablette: 992px;
+	$desktop: 1200px;
 	//colors
 	$body-color: #D8D8D8;
-	$footer-color : #bfbfbf;
+	$footer-color: #bfbfbf;
 	$dark-blue: #112351;
 	$base-blue: #366dff;
 	$text-grey: #525252;
@@ -52,10 +56,11 @@
 
 	.t-s-1_5 { font-size: 1.5em;}
 	.t-s-2 { font-size: 2em;}
-	.t-s-3 { font-size: 3em;}
+	.t-s-3 { font-size: 2.75em;}
 
 	.t-bold { font-weight: 700; }
-	.t-light { font-weight: 400; }
+	.t-regular { font-weight: 400;}
+	.t-light { font-weight: 200; }
 	
 	.spacer-xs { height: 2em; clear: both; display: block; }
 	.spacer-md { height: 5em; clear: both; display: block; }
@@ -217,8 +222,9 @@ header {
 			border: 2px solid;
 			transition-duration: $duration-5;
 			&:hover {
-				border: 2px solid $dark-blue;
-				background-color: $dark-blue;
+				color : $dark-blue;
+				border: 2px solid $white;
+				background-color: $white;
 			}
 		}
 	}
@@ -233,6 +239,9 @@ header {
 .home {
 	#formations li p {
 		background-color: $base-blue;
+	}
+	#actualite li p {
+		background-color: $white;
 	}
 }
 
