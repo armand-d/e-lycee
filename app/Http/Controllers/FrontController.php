@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Comment;
 
 use Mail;
 use Auth;
@@ -41,14 +42,19 @@ class FrontController extends Controller
 
     public function showActualites()
     {
-        $articles = Post::all();
+        $actualites = Post::where('status','=',1)->orderBy('created_at', 'desc')->paginate(5);
 
-        return view('front-office.pages.actualites')->with(array('articles'=>$articles));
+        return view('front-office.pages.actualites')->with(array('actualites'=>$actualites));
     }
 
     public function showPresentation()
     {
         return view('front-office.pages.presentation');
+    }
+
+    public function showSingleActualite($id, $title) {
+        $actualite = Post::findOrFail($id);
+        return view('front-office.pages.actualite')->with(array('actualite'=>$actualite));
     }
 
 

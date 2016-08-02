@@ -16,9 +16,12 @@ Route::get('/', ['as' => 'home', 'uses' => 'FrontController@index']);
 // FRONT-OFFICE
 
 Route::get('actualites', 'FrontController@showActualites');
+Route::get('actualite/{id}/{title}', 'FrontController@showSingleActualite');
 Route::get('mentions-legales', 'FrontController@showMentionLegales');
 Route::get('presentation', 'FrontController@showPresentation');
 Route::get('contact', 'FrontController@showContact');
+
+Route::resource('comment','CommentController');
 
 //article seul
 //Route::get('/actualites/{id}', 'FrontController@showArticle');

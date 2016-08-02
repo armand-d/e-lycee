@@ -74,6 +74,8 @@
 	.padding-lf-2 { padding: 0px 2em; }
 	.padding-lf-3 { padding: 0px 3em; }
 
+	.justify { text-align:justify; }
+
 	.line-deco { height: 3px; background-color: $dark-grey; margin-top: 0.7em; }
 	.btn-line { 
 		border: 2px solid $dark-grey;
@@ -409,4 +411,27 @@ select {
 	border-bottom: 1px solid #CDCDCD;
     width: 80%;
     margin-bottom: 10px;
+}
+
+.actualites, .article {
+	background: $white;
+    padding: 2%;
+    margin-bottom: 2%;
+	img {
+		width: 100%;
+	}
+	input[type="text"] {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	textarea {
+		resize: none;
+	    width: 100%;
+	    height: 100px;
+	}
+	ul li {
+		background: $light-grey;
+	    padding: 10px;
+	    margin-bottom: 5px;
+	}
 }
