@@ -29,6 +29,7 @@
         @include('front-office.partials.slider')
     @endif
     <div class="container">
+        @include('errors.alert')
         @yield('content')
     </div>
 </div>
