@@ -3662,7 +3662,7 @@
         },
         "time": "2016-04-16 18:58:00",
         "type": "library",
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "nickurt\\Akismet\\": "src/"
