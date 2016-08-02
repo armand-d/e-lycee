@@ -16,11 +16,17 @@
 			</p>
 			<div class="spacer-xs"></div>
 			<div class="row col-lg-24">
-				<div class="col-lg-18"><span class="line-deco col-lg-24"></span></div>
-				<div class="col-lg-6"><button class="btn-line t-bold">PR&Eacute;SENTATION</button></div>
+				<div class="col-lg-18 col-xs-24">
+					<span class="line-deco col-lg-24 col-xs-24"></span>
+				</div>
+				<div class="col-lg-6 col-xs-24"><button class="btn-line t-bold">PR&Eacute;SENTATION</button></div>
 			</div>
 		</div>
-		<div class="col-lg-6"><div class="spacer-xs"></div><img src="{{Request::root('/').'/assets/images/marcel.png'}}" class="col-lg-24" alt=""></div>
+
+		<div class="col-lg-6">
+			<div class="spacer-xs"></div>
+			<img src="{{Request::root('/').'/assets/images/marcel.png'}}" class="col-lg-24" alt="">
+		</div>
 	</div>
 	<div class="spacer-md"></div>
 	<p class="t-s-2 col-lg-24">Les formations</p>
@@ -29,5 +35,20 @@
 		<li class="col-lg-8"><p class="text-center t-white padding-3 t-s-2">Technologique</p></li>
 		<li class="col-lg-8"><p class="text-center t-white padding-3 t-s-2">Professionnelle</p></li>
 	</div>
+
+		<div class="spacer-md"></div>
+	<p class="t-s-2 col-lg-24">L'actualités</p>
+	<div id="actualites">
+		<div class="col-lg-12">
+
+		@include('front-office.partials.twitter')
+		
+		</div>
+
+		<li class="col-lg-12"><p class="text-center t-black padding-3 t-s-2">Article 1</p></li>
+		<li class="col-lg-12"><p class="text-center t-black padding-3 t-s-2">Article 2</p></li>
+		<li class="col-lg-12"><p class="text-center t-black padding-3 t-s-2">Article 3</p></li>
+	</div>
+
 </div>
 @stop
