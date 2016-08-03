@@ -102,17 +102,18 @@
 		<div class="row">
 			<p class="col-lg-21 col-md-21 col-lg-offset-1 col-md-offset-1 t-s-1_5 border-bottom">Ajouter un article</p>
 		</div>
+		<div class="col-lg-16 col-lg-offset-4 col-md-16 col-md-offset-4">
 		{{Form::open(array('url'=>'article', 'method'=>'POST', 'enctype'=>'multipart/form-data'))}}
-			<li>Titre : {{Form::text('title', old('title'), array('class'=>'input-grey'))}}</li>
-	    	@if($errors->has('title')) <span class="error">{{$errors->first('title')}}@endif</li>
-			<li>Contenu : <br>{{Form::textarea('content', old('content'), array('class'=>'input-grey'))}}</li>
-	    	@if($errors->has('content')) <span class="error">{{$errors->first('content')}}@endif</li>
+			<li>{{Form::text('title', old('title'), array('class'=>'input-grey','placeholder'=>'Titre'))}}</li>
+	    	@if($errors->has('title')) <span class="error">{{$errors->first('title')}} </span>@endif</li>
+			<li>{{Form::textarea('content', old('content'), array('class'=>'input-grey','placeholder'=>'Contenu de l\'article...'))}}</li>
+	    	@if($errors->has('content')) <span class="error">{{$errors->first('content')}} </span>@endif</li>
 			<li>Image : {{Form::file('url_thumbnail', array('class'=>'input-grey'))}}</li>
-	    	@if($errors->has('url_thumbnail')) <span class="error">{{$errors->first('url_thumbnail')}}@endif</li>
-	    	<hr>
-			<li>{{Form::checkbox('status', old('status'))}} Publié</li>
-			<li>{{Form::submit('Ajouter',array('class' => 'submit-form'))}}</li>
+	    	@if($errors->has('url_thumbnail')) <span class="error">{{$errors->first('url_thumbnail')}} </span>@endif</li>
+			<li>{{Form::checkbox('status', old('status'))}} Publié l'article</li>
+			<li>{{Form::submit('Ajouter', array('class' => 'submit-form'))}}</li>
 		{{Form::close()}}
+		</div>
 	</div>
 	<div class="spacer-xs"></div>
 
@@ -124,7 +125,23 @@
 	</div>
 	<div class="spacer-xs"></div>
 	<div class="single-qcm">
-		{{Form::open()}}
+		<div class="row">
+			<p class="col-lg-21 col-md-21 col-lg-offset-1 col-md-offset-1 t-s-1_5 border-bottom">Modifier l'article</p>
+		</div>
+		<div class="col-lg-16 col-lg-offset-4 col-md-16 col-md-offset-4">
+		{{Form::open(array('url'=>'article', 'method'=>'PUT', 'enctype'=>'multipart/form-data', 'id'=>'article-modify'))}}
+			<li>{{Form::text('title', old('title'), array('class'=>'input-grey title-single-article-modify','placeholder'=>'Titre'))}}</li>
+	    	@if($errors->has('title')) <span class="error">{{$errors->first('title')}} </span>@endif</li>
+			<li>{{Form::textarea('content', old('content'), array('class'=>'input-grey content-single-article-modify','placeholder'=>'Contenu de l\'article...'))}}</li>
+	    	@if($errors->has('content')) <span class="error">{{$errors->first('content')}} </span>@endif</li>
+			<li><img src="" width="200px" class="image-single-article-modify"></li>
+			<li>Image : {{Form::file('url_thumbnail', array('class'=>'input-grey'))}}</li>
+	    	@if($errors->has('url_thumbnail')) <span class="error">{{$errors->first('url_thumbnail')}} </span>@endif</li>
+			<li>{{Form::checkbox('status', old('status'), null,array('class'=>'status-single-article-modify'))}} Publié l'article</li>
+			<li>{{Form::submit('Modifier', array('class' => 'submit-form'))}}</li>
+		{{Form::close()}}
+		</div>
+		{{-- {{Form::open()}}
 		<div class="row">
 			<p class="col-lg-21 col-md-21 col-lg-offset-1 col-md-offset-1 t-s-1_5 border-bottom title-single-article"></p>
 		</div>
@@ -132,7 +149,7 @@
 			<div class="content-single-article"></div>
 		</div>
 		{{Form::submit('Modifier', array('class'=>'submit-form'))}}
-		{{Form::close()}}
+		{{Form::close()}} --}}
 	</div>
 	<div class="spacer-xs"></div>
 </div>

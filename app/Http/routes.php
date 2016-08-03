@@ -13,21 +13,14 @@
 
 Route::get('/', ['as' => 'home', 'uses' => 'FrontController@index']);
 
-// FRONT-OFFICE
-
-Route::get('actualites', 'FrontController@showActualites');
-Route::get('actualite/{id}/{title}', 'FrontController@showSingleActualite');
-Route::get('mentions-legales', 'FrontController@showMentionLegales');
-Route::get('presentation', 'FrontController@showPresentation');
-Route::get('contact', 'FrontController@showContact');
+// Route::get('actualites', 'FrontController@showActualites');
+// Route::get('actualite/{id}/{title}', 'FrontController@showSingleActualite');
+// Route::get('mentions-legales', 'FrontController@showMentionLegales');
+// Route::get('presentation', 'FrontController@showPresentation');
+// Route::get('contact', 'FrontController@showContact');
 
 Route::resource('comment','CommentController');
-
-//article seul
-//Route::get('/actualites/{id}', 'FrontController@showArticle');
-
-
-// BACK-OFFICE
+Route::resource('article', 'ArticleController');
 
 Route::group(['middleware' => ['throttle:60,1']], function () {
     Route::any('connexion', 'LoginController@login');
@@ -35,33 +28,31 @@ Route::group(['middleware' => ['throttle:60,1']], function () {
 
 Route::group(['middleware' => ['auth']], function () {
     
-    Route::post('update/user','UserController@updateUser');
-    Route::post('user/replace/photo', 'UserController@replacePhoto');
-    Route::get('user/delete/photo', 'UserController@deletePhoto');
+    // Route::post('update/user','UserController@updateUser');
+    // Route::post('user/replace/photo', 'UserController@replacePhoto');
+    // Route::get('user/delete/photo', 'UserController@deletePhoto');
+    Route::resource('user', 'UserController');
 
     Route::group([
         'middleware' => ['adminTeacher']], function () {
 
-        Route::resource('professeur', 'Admin\Teacher\DashboardTeacherController');
+        Route::get('professeur/tableau-de-bord', 'DashboardController@showDashboardTeacher');
+        Route::resource('professeur/qcm', 'QcmController');
 
-        Route::resource('qcm', 'Admin\Teacher\QcmTeacherController');
-        Route::resource('article', 'ArticleController');
-        Route::resource('user', 'UserController');
+        Route::get('professeur/qcm/delete/multiple', 'QcmController@deleteMultiple');
+        Route::post('professeur/qcm/update/multiple', 'QcmController@updateMultiple');
 
-        Route::get('qcms/delete-multiple', 'Admin\Teacher\QcmTeacherController@deleteMultiple');
-        Route::post('qcm-update-status-multiple', 'Admin\Teacher\QcmTeacherController@updateStatusMultiple');
+        // Route::get('articles/delete-multiple', 'ArticleController@deleteMultiple');
+        // Route::post('article-update-status-multiple', 'ArticleController@updateStatusMultiple');
 
-        Route::get('articles/delete-multiple', 'ArticleController@deleteMultiple');
-        Route::post('article-update-status-multiple', 'ArticleController@updateStatusMultiple');
-
-        Route::get('user/delete/{id}', 'UserController@destroy');
+        // Route::get('user/delete/{id}', 'UserController@destroy');
     });
     
     Route::group([
         'middleware' => ['adminStudent']], function () {
-        Route::resource('etudiant', 'Admin\Student\DashboardStudentController');
+        // Route::resource('etudiant/tableau-de-bord', 'DashboardController@showDashboardStudent');
 
-        Route::resource('qcm-student', 'Admin\Student\QcmStudentController');
+        // Route::resource('qcm-student', 'Admin\Student\QcmStudentController');
 
     });
     

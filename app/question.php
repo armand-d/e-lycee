@@ -15,7 +15,7 @@ class Question extends Model
         'qcm_id', 'title', 'response'
     ];
 
-    public function getChoices(){
+    public function choices(){
     	return $this->hasMany('App\Choice');
     }
 }
