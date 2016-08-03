@@ -9,9 +9,7 @@
 				<div class="col-xs-8 border-right text-center" id="name-user"><a href="{{url('professeur')}}" class="t-bold">{{Auth::user()->username}}</a></div>
 				<div class="col-xs-4 text-center"><a href="#" id="menu-caret"><i class="fa fa-caret-down"></i></a>
 					<div class="menu-caret">
-						<hr>
-						<li><a href="{{url('logout')}}"><i class="fa fa-power-off" aria-hidden="true"></i>&nbsp;Déconnexion</a></li>
-						<hr>
+						<li style="margin:15px;"><a href="{{url('logout')}}"><i class="fa fa-power-off" aria-hidden="true"></i>&nbsp;Déconnexion</a></li>
 					</div>
 				</div>
 			</div>

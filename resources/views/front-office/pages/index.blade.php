@@ -7,26 +7,28 @@
 	<div class="spacer-md"></div>
 
 	<div class="row">
-		<div class="col-sm-6">
-			<div class="spacer-xs"></div>
-			<p class="text-right t-s-2">Le Lycée</p>
-			<p class="text-center bg-dark-grey t-white padding-2 t-s-2 t-light">Marcel <br>Gimond</p>
-		</div>
-
-		<div class="col-sm-12">
-			<p class="row bg-grey padding-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus doloremque voluptatum quis labore a cumque, dignissimos in, quod officia praesentium at hic dolore accusantium sint veritatis ad expedita eligendi fugit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus doloremque voluptatum quis labore a cumque, dignissimos in, quod officia praesentium at hic dolore accusantium sint veritatis ad expedita eligendi fugit
-			</p>
-			<div class="spacer-xs"></div>
-			
-			<div class="row">
-				<div class="line-deco col-sm-8"></div>
-				<div class="col-sm-4"><button class="btn-line t-bold"><a href="{{url('presentation')}}">PR&Eacute;SENTATION</a></button></div>
+		<div class="col-sm-24">
+			<div class="col-sm-6">
+				<div class="spacer-xs"></div>
+				<p class="text-right t-s-2">Le Lycée</p>
+				<p class="text-center bg-dark-grey t-white padding-2 t-s-2 t-light">Marcel <br>Gimond</p>
 			</div>
-		</div>
 
-		<div class="col-sm-6">
-			<div class="spacer-xs"></div>
-			<img src="{{Request::root('/').'/assets/images/marcel.png'}}" class="col-xs-24" alt="">
+			<div class="col-sm-12">
+				<p class="bg-grey padding-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus doloremque voluptatum quis labore a cumque, dignissimos in, quod officia praesentium at hic dolore accusantium sint veritatis ad expedita eligendi fugit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus doloremque voluptatum quis labore a cumque, dignissimos in, quod officia praesentium at hic dolore accusantium sint veritatis ad expedita eligendi fugit
+				</p>
+				<div class="spacer-xs"></div>
+
+				<div class="row">
+					<div class="col-sm-16"><div class="line-deco col-xs-24"></div></div>
+					<div class="col-sm-8"><button class="btn-line t-bold col-xs-24"><a href="{{url('presentation')}}">PR&Eacute;SENTATION</a></button></div>
+				</div>
+			</div>
+
+			<div class="col-sm-6" style="overflow: hidden;">
+				<div class="spacer-xs"></div>
+				<img src="{{Request::root('/').'/assets/images/marcel.png'}}" alt="" style="max-width: 100%;">
+			</div>
 		</div>
 	</div>
 	<div class="spacer-md"></div>
