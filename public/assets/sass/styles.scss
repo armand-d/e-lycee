@@ -417,7 +417,7 @@ input.apply {
 select {
 	border:none;
 }
-.article-content-form, .add-question, #submt-qcm, #qcm-publish, #qcm-unpublish, #qcm-delete, #delete-qcms, #article-publish, #article-unpublish, #article-delete, .student-content-form, #delete-articles, .article-content-single, .user-replace-photo, .return {
+.add-question, #submt-qcm, #qcm-publish, #qcm-unpublish, #qcm-delete, #delete-qcms, #article-publish, #article-unpublish, #article-delete, .student-content-form, #delete-articles, .user-replace-photo, .return {
 	display:none;
 }
 .nav-tabs > li > a {
@@ -460,4 +460,5 @@ input[name="title"] {
 
 .tab-pane {
 	background-color: $white;
+	margin-bottom: 4%;
 }

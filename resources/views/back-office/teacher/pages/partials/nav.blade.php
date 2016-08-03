@@ -8,11 +8,11 @@
   	<a href="{{url('professeur/qcm')}}" id="btn-1">QCM</a>
   </li>
 
-  <li class="@if(Route::current()->getPath() === 'professeur/articles') active @endif">
-  	<a href="{{url('professeur/articles')}}" id="btn-2">Articles</a>
+  <li class="@if(Route::current()->getPath() === 'professeur/article' || Route::current()->getPath() === 'professeur/article/create') active @endif">
+  	<a href="{{url('professeur/article')}}" id="btn-2">Articles</a>
   </li>
 
-  <li class="@if(Route::current()->getPath() === 'professeur/eleves') active @endif">
+  <li class="@if(Route::current()->getPath() === 'professeur/eleve') active @endif">
   	<a href="{{url('professeur/eleves')}}" id="btn-3">&Eacute;lèves</a>
   </li>
   <li class="@if(Route::current()->getPath() === 'professeur/profil') active @endif">

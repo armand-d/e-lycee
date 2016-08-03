@@ -38,12 +38,13 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::get('professeur/tableau-de-bord', 'DashboardController@showDashboardTeacher');
         Route::resource('professeur/qcm', 'QcmController');
+        Route::resource('professeur/article', 'ArticleController');
 
         Route::get('professeur/qcm/delete/multiple', 'QcmController@deleteMultiple');
         Route::post('professeur/qcm/update/multiple', 'QcmController@updateMultiple');
 
-        // Route::get('articles/delete-multiple', 'ArticleController@deleteMultiple');
-        // Route::post('article-update-status-multiple', 'ArticleController@updateStatusMultiple');
+        Route::get('professeur/article/delete/multiple', 'ArticleController@deleteMultiple');
+        Route::post('professeur/article/update/multiple', 'ArticleController@updateMultiple');
 
         // Route::get('user/delete/{id}', 'UserController@destroy');
     });

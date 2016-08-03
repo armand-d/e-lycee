@@ -6,10 +6,10 @@
 	<div class="row questionnaire-content-list">
 		<div class="spacer-xs"></div>
 		<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2" id="action-qcm-status">
-			<a href="#QcmTous" id="btn-all" class="col-lg-4 col-md-4 status-q active-status-q">Tous ({{count($qcmsAll)}})</a>
-			<a href="#QcmPublies" id="btn-publish" class="col-lg-4 col-md-4 status-q">Publiés ({{count($qcmsPublish)}})</a>
-			<a href="#QcmBrouillons" id="btn-unpublish" class="col-lg-4 col-md-4 status-q">Brouillons ({{count($qcmsUnpublish)}})</a>
-			<a href="#QcmCorbeille" id="btn-delete" class="col-lg-4 col-md-4 status-q">Corbeille ({{count($qcmsDelete)}})</a>
+			<a id="btn-all" class="col-lg-4 col-md-4 status-q active-status-q">Tous ({{count($qcmsAll)}})</a>
+			<a id="btn-publish" class="col-lg-4 col-md-4 status-q">Publiés ({{count($qcmsPublish)}})</a>
+			<a id="btn-unpublish" class="col-lg-4 col-md-4 status-q">Brouillons ({{count($qcmsUnpublish)}})</a>
+			<a id="btn-delete" class="col-lg-4 col-md-4 status-q">Corbeille ({{count($qcmsDelete)}})</a>
 			<a href="{{url('professeur/qcm/create')}}" class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 add"><i class="fa fa-plus"></i> Ajouter</a>
 		</div>
 		<div class="spacer-xs"></div>
