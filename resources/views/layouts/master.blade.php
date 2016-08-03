@@ -15,13 +15,7 @@
     <div id="no-click-loader-search"><img src="{{Request::root('/').'/assets/images/loader-search.svg'}}" class="col-lg-24" alt=""></div>
     @include('front-office.partials.search')
 <header>
-    @if (Auth::check() && Auth::user()->role == 'teacher')
-        @include('back-office.teacher.partials.header')
-    @elseif (Auth::check() && Auth::user()->role != 'teacher')
-        @include('back-office.student.partials.header')
-    @else
-        @include('front-office.partials.header')
-    @endif
+@include('front-office.partials.header')
 </header>
 
 <div>

@@ -1,8 +1,4 @@
-<div class="col-xs-12">
-	<a href="{{url('/')}}">
-	<div class="col-xs-24">
-		<div class="col-xs-5 logo">@include('front-office.assets.logo')</div>
-		<div class="title"><span>Lycée</span>&nbsp;/&nbsp;Marcel&nbsp;Gimond</div>
-	</div>
-	</a>
-</div>
+<a href="{{url('/')}}">
+	<div class="logo pull-left col-xs-5">@include('front-office.assets.svglogo')</div>
+	<div class="title pull-left col-xs-11"><span>Lycée</span>&nbsp;/&nbsp;Marcel&nbsp;Gimond</div>
+</a>

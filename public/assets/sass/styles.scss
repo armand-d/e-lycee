@@ -77,7 +77,7 @@
 
 	.justify { text-align:justify; }
 
-	.line-deco { height: 3px; background-color: $dark-grey; margin-top: 0.7em; }
+	.line-deco { height: 3px; background-color: $dark-grey; margin: 0.5em 0px; }
 	.btn-line { 
 		border: 2px solid $dark-grey;
 		padding: 1em 1.5em; 
@@ -90,6 +90,8 @@
 			a { color: $white; }
 		}
 	}
+
+
 	.border-right { border-right: 1px solid $middle-grey; }
 	.border-bottom { border-bottom: 1px solid $middle-grey; }
 
