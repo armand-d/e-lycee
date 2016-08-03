@@ -4,9 +4,9 @@
 
 @section('content')
 <div class="home">
-	<div class="spacer-md"></div>
+<div class="spacer-md"></div>
 
-	<div class="row">
+<div class="row">
 		<div class="col-sm-24">
 			<div class="col-sm-6">
 				<div class="spacer-xs"></div>
@@ -30,32 +30,46 @@
 				<img src="{{Request::root('/').'/assets/images/marcel.png'}}" alt="" style="max-width: 100%;">
 			</div>
 		</div>
-	</div>
-	<div class="spacer-md"></div>
+</div>
 
+<div class="spacer-md"></div>
+
+<div class="row">
 	<p class="t-s-2 col-sm-24">Les formations</p>
+</div>
+
+<div class="row">
 	<div id="formations">
 		<li class="col-sm-8"><p class="text-center t-white padding-4 t-s-2">Générales</p></li>
 		<li class="col-sm-8"><p class="text-center t-white padding-4 t-s-2">Technologique</p></li>
 		<li class="col-sm-8"><p class="text-center t-white padding-4 t-s-2">Professionnelle</p></li>
 	</div>
-	<div class="spacer-md"></div>
+</div>
 
-	<p class="t-s-2 col-md-24" ><a href="{{url('actualites')}}">L'actualité</a></p>
-	<div class="col-md-8">@include('front-office.partials.twitter')</div>
-	<div id="actualite">
-		<li class="col-md-8"><p class="text-center t-black padding-4 t-s-2">Article 1</p></li>
-		<li class="col-md-8"><p class="text-center t-black padding-4 t-s-2">Article 2</p></li>
-		<li class="col-md-8"><p class="text-center t-black padding-4 t-s-2">Article 3</p></li>
-		<li class="col-md-8"><p class="text-center t-black padding-4 t-s-2">Article 4</p></li>
-	</div>
-	<div class="spacer-xs"></div>
-	<div class="row col-md-24">
-		<div class="col-md-16"><span class="line-deco col-xs-24"></span></div>
-		<div class="col-md-8"><button class="btn-line t-bold col-xs-24"><a href="{{url('actualites')}}">TOUTES LES ACTUALIT&Eacute;S</a></button></div>
-	</div>
-	<div class="spacer-md"></div>
+<div class="spacer-md"></div>
 
+<div class="row">
+	<p class="t-s-2" ><a href="{{url('actualites')}}">L'actualité</a></p>
+</div>
+
+<div class="row">
+	<div class="col-md-24 col-sm-12">
+		<div class="col-md-8 col-sm-6">@include('front-office.partials.twitter')</div>
+		<div id="actualite">
+			<li class="col-md-8 col-sm-6"><p class="text-center t-black padding-4 t-s-2">Article 1</p></li>
+			<li class="col-md-8 col-sm-6"><p class="text-center t-black padding-4 t-s-2">Article 2</p></li>
+			<li class="col-md-8 col-sm-6"><p class="text-center t-black padding-4 t-s-2">Article 3</p></li>
+			<li class="col-md-8 col-sm-6"><p class="text-center t-black padding-4 t-s-2">Article 4</p></li>
+		</div>
+		<div class="spacer-xs"></div>
+		<div class="row col-md-24">
+			<div class="col-md-16"><span class="line-deco col-xs-24"></span></div>
+			<div class="col-md-8"><button class="btn-line t-bold col-xs-24"><a href="{{url('actualites')}}">TOUTES LES ACTUALIT&Eacute;S</a></button></div>
+		</div>
+	</div>
+</div>
+
+<div class="spacer-md"></div>
 
 </div>
 @stop

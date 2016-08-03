@@ -10344,46 +10344,51 @@ select {
   display: none;
 }
 
-/* line 426, ../sass/styles.scss */
+/* line 423, ../sass/styles.scss */
+.nav-tabs > li > a {
+  border-radius: 0px;
+}
+
+/* line 429, ../sass/styles.scss */
 .new-question {
   border-bottom: 1px solid #CDCDCD;
   width: 80%;
   margin-bottom: 10px;
 }
 
-/* line 432, ../sass/styles.scss */
+/* line 435, ../sass/styles.scss */
 .actualites, .article {
   background: #ffffff;
   padding: 2%;
   margin-bottom: 2%;
 }
-/* line 436, ../sass/styles.scss */
+/* line 439, ../sass/styles.scss */
 .actualites img, .article img {
   width: 100%;
 }
-/* line 439, ../sass/styles.scss */
+/* line 442, ../sass/styles.scss */
 .actualites input[type="text"], .article input[type="text"] {
   width: 100%;
   margin-bottom: 10px;
 }
-/* line 443, ../sass/styles.scss */
+/* line 446, ../sass/styles.scss */
 .actualites textarea, .article textarea {
   width: 100%;
   height: 100px;
 }
-/* line 447, ../sass/styles.scss */
+/* line 450, ../sass/styles.scss */
 .actualites ul li, .article ul li {
   background: #F1F1F1;
   padding: 10px;
   margin-bottom: 5px;
 }
 
-/* line 454, ../sass/styles.scss */
+/* line 457, ../sass/styles.scss */
 input[name="title"] {
   width: 100%;
 }
 
-/* line 458, ../sass/styles.scss */
+/* line 461, ../sass/styles.scss */
 .tab-pane {
   background-color: #ffffff;
 }
