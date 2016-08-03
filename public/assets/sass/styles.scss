@@ -97,10 +97,16 @@
 
 	.radius-50 { border-radius: 50%; }
 	.input-grey { padding: 5px 5px; background-color: $body-color; border: none; ; margin-bottom: 10px;}
-	.submit-form {background-color: $base-blue; padding: 10px 15px; color: $white; border: none; margin-top: 10px;display:block;}
+	.submit-form {background-color: $base-blue; padding: 10px 15px; color: $white; border: none; margin-top: 10px;display:block;width: 100%;
+		&:hover, &:focus, &:active {
+			color: $white;
+		}
+	}
 
 	.delete-user { cursor:pointer; &:hover { color:$red; transition-duration: $duration-3; } }
 	.qcm-is-ok { background-color: rgba(54, 109, 255, 0.5)!important; color: white; }
+
+	.active { cursor:pointer; }
 // end class global
 
 // scroolbar
@@ -116,6 +122,7 @@ a {
 	color: $text-grey;
 	text-decoration: none!important;
 	transition-duration: $duration-3;
+	cursor:pointer;
 	&:hover {
 		color: $base-blue;
 	}
@@ -144,9 +151,14 @@ body {
 	margin-top: 85px;
 }
 
+textarea {
+	resize:none;
+	width: 100%;
+}
+
 #no-click-search {
 	display:none;
-	position:absolute;
+	position: fixed;
 	top:0; right:0; bottom:0; left:0;
     z-index: 999;
     background-color: $transparent;
@@ -154,13 +166,13 @@ body {
 
 #no-click-loader-search {
 	display:none;
-	position:absolute;
+	position:fixed;
 	top:0; right:0; bottom:0; left:0;
     z-index: 999;
     background-color: rgba(250,250,250, 0.8);
     img {
 	    width: 100px;
-	    position: absolute;
+	    position: fixed;
 	    top: 50%;
 	    left: 50%;
 	    margin-top: -50px;
@@ -405,7 +417,7 @@ input.apply {
 select {
 	border:none;
 }
-.questionnaire-content-form, .article-content-form, .add-question, #submt-qcm, #qcm-publish, #qcm-unpublish, #qcm-delete, #delete-qcms, #article-publish, #article-unpublish, #article-delete, .student-content-form, .questionnaire-content-single, #delete-articles, .article-content-single, .user-replace-photo, .qcm-content-single, .return {
+.article-content-form, .add-question, #submt-qcm, #qcm-publish, #qcm-unpublish, #qcm-delete, #delete-qcms, #article-publish, #article-unpublish, #article-delete, .student-content-form, #delete-articles, .article-content-single, .user-replace-photo, .return {
 	display:none;
 }
 // end dashboard liste
@@ -429,7 +441,6 @@ select {
 		margin-bottom: 10px;
 	}
 	textarea {
-		resize: none;
 	    width: 100%;
 	    height: 100px;
 	}
@@ -438,4 +449,12 @@ select {
 	    padding: 10px;
 	    margin-bottom: 5px;
 	}
+}
+
+input[name="title"] {
+	width: 100%;
+}
+
+.tab-pane {
+	background-color: $white;
 }

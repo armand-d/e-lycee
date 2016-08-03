@@ -20,7 +20,7 @@ class ArticleController extends Controller
 
         $validator = Validator::make($request->all(), [
             'title'         => 'required|string',
-			'content'       => 'required|max:250',
+			'content'       => 'required|max:2000',
 			'url_thumbnail' => 'required|image',
         ]);
 
@@ -68,5 +68,23 @@ class ArticleController extends Controller
         $article = Post::findOrFail($id);
 
         return response()->json($article);
+    }
+
+    public function update(Request $request, $id) {
+
+        $validator = Validator::make($request->all(), [
+            'title'         => 'required|string',
+            'content'       => 'required|max:2000',
+            'url_thumbnail' => 'required|image',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('professeur#modifierArticle')->withErrors($validator)->withInput();
+        }
+
+        $post = Post::findOrFail($id);
+        $post->update($request->all());
+
+        return Redirect::to('professeur#articles');
     }
 }

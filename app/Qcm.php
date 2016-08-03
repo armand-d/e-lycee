@@ -17,11 +17,11 @@ class Qcm extends Model
         'title', 'level', 'nbr_choice', 'nbr_question', 'status', 'user_id'
     ];
 
-    public function getQuestions(){
-    	return $this->hasMany('App\Question')->select('id','qcm_id','title');
+    public function questions(){
+    	return $this->hasMany('App\Question')->select('id','qcm_id','title','response');
     }
 
-    public function getScores(){
+    public function scores(){
         return $this->hasOne('App\Score')->where('user_id','=', Auth::user()->id);
     }
 }

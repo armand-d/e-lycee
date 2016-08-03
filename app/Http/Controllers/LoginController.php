@@ -50,7 +50,7 @@ class LoginController extends Controller
                 $credentials = $request->only('username', 'password');
                 if (Auth::attempt($credentials, $remember)) {
                     if (Auth::user()->role == 'teacher') {
-                        return redirect('professeur')->with(['message' => 'success']);
+                        return redirect('professeur/tableau-de-bord')->with(['message' => 'success']);
                     } else {
                         return redirect('etudiant')->with(['message' => 'success']);
                     }
