@@ -10340,7 +10340,7 @@ select {
 }
 
 /* line 418, ../sass/styles.scss */
-.article-content-form, .add-question, #submt-qcm, #qcm-publish, #qcm-unpublish, #qcm-delete, #delete-qcms, #article-publish, #article-unpublish, #article-delete, .student-content-form, #delete-articles, .article-content-single, .user-replace-photo, .return {
+.add-question, #submt-qcm, #qcm-publish, #qcm-unpublish, #qcm-delete, #delete-qcms, #article-publish, #article-unpublish, #article-delete, .student-content-form, #delete-articles, .user-replace-photo, .return {
   display: none;
 }
 
@@ -10386,4 +10386,5 @@ input[name="title"] {
 /* line 456, ../sass/styles.scss */
 .tab-pane {
   background-color: #ffffff;
+  margin-bottom: 4%;
 }

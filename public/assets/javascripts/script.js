@@ -182,11 +182,11 @@ $(document).ready(function(){
 		$(this).addClass('active-status-q');
 		e.preventDefault
 	});
-	// $('.status-a').on('click', function(e){
-	// 	$('.status-a').removeClass('active-status-a');
-	// 	$(this).addClass('active-status-a');
-	// 	e.preventDefault
-	// });
+	$('.status-a').on('click', function(e){
+		$('.status-a').removeClass('active-status-a');
+		$(this).addClass('active-status-a');
+		e.preventDefault
+	});
 
 	// // add / cancel
 	// $('.add-q').on('click', function(){
@@ -351,16 +351,16 @@ $(document).ready(function(){
 		$('#qcm-'+status).show();
 	});
 
-	// $('#action-article-status a.status-a').on('click', function(e){
-	// 	e.preventDefault;
-	// 	$('table#tab-article tbody').hide();
-	// 	status = $(this).attr('id').substr(4);
-	// 	if (status == 'delete') $('#delete-articles').show();
-	// 	else $('#delete-articles').hide();
-	// 	if (status == 'all') $('.action-select').show();
-	// 	else $('.action-select').hide();
-	// 	$('#article-'+status).show();
-	// });
+	$('#action-article-status a.status-a').on('click', function(e){
+		e.preventDefault;
+		$('table#tab-article tbody').hide();
+		status = $(this).attr('id').substr(4);
+		if (status == 'delete') $('#delete-articles').show();
+		else $('#delete-articles').hide();
+		if (status == 'all') $('.action-select').show();
+		else $('.action-select').hide();
+		$('#article-'+status).show();
+	});
 
 	$('input[name="selected"]').on('click', function(){
 		var idSelected = $(this).val();
@@ -374,16 +374,16 @@ $(document).ready(function(){
 		}
 	});
 
-	// $('input[name="selected-article"]').on('click', function(){
-	// 	var idSelected = $(this).val();
-	// 	current = $('#id_selected_article').val();
-	// 	if ($(this).prop('checked')) {
-	// 		$('#id_selected_article').val(current+','+idSelected);
-	// 	} else {
-	// 		rewrite = current.replace(','+idSelected, "");
-	// 		$('#id_selected_article').val(rewrite);
-	// 	}
-	// });
+	$('input[name="selected-article"]').on('click', function(){
+		var idSelected = $(this).val();
+		current = $('#id_selected_article').val();
+		if ($(this).prop('checked')) {
+			$('#id_selected_article').val(current+','+idSelected);
+		} else {
+			rewrite = current.replace(','+idSelected, "");
+			$('#id_selected_article').val(rewrite);
+		}
+	});
 
 	// $('.link-show-qcm').on('click', function(e){
 	// 	$.ajax({
