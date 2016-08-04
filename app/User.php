@@ -40,5 +40,16 @@ class User extends Authenticatable
         return false;
     }
 
+    public function scores(){
+        return $this->hasMany('App\Score');
+    }
+
+    public function getScore (){
+        $note = 0;
+        foreach ($this->scores as $score) {
+            $note += $score->note;
+        }
+        return $note;
+    }
 
 }

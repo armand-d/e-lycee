@@ -31,6 +31,20 @@
 				</li>
 				<li>{{Form::submit('Modifier', array('class' => 'submit-form','name'=>'article_create'))}}</li>
 			{{Form::close()}}
+			<hr>
+			<p class="t-s-1_5">Commentaires</p>
+			<ul>
+			@foreach($article->comments as $comment)
+				<li class="dash-comment">
+					<p><strong>{{$comment->title}}</strong></p>
+					<small>{{ Carbon\Carbon::parse($comment->created_at)->format('d/m/Y - H:i:s') }}</small>
+					<p>{{$comment->content}}</p>
+					{{Form::open(array('url'=>'comment/'.$comment->id, 'method'=>'delete'))}}
+							<button type="submit">Supprimer le commentaire</button>
+				      	{{Form::close()}}
+				</li>
+			@endforeach
+			</ul>
 			</div>
 		</div>
 		<div class="spacer-xs"></div>

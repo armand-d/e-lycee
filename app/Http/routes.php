@@ -28,17 +28,19 @@ Route::group(['middleware' => ['throttle:60,1']], function () {
 
 Route::group(['middleware' => ['auth']], function () {
     
-    // Route::post('update/user','UserController@updateUser');
-    // Route::post('user/replace/photo', 'UserController@replacePhoto');
-    // Route::get('user/delete/photo', 'UserController@deletePhoto');
+    Route::post('update/user','UserController@updateUser');
+    Route::post('user/replace/photo', 'UserController@replacePhoto');
+    Route::get('user/delete/photo', 'UserController@deletePhoto');
     Route::resource('user', 'UserController');
 
     Route::group([
         'middleware' => ['adminTeacher']], function () {
 
         Route::get('professeur/tableau-de-bord', 'DashboardController@showDashboardTeacher');
+        Route::get('professeur/profil', 'DashboardController@showProfilTeacher');
         Route::resource('professeur/qcm', 'QcmController');
         Route::resource('professeur/article', 'ArticleController');
+        Route::resource('professeur/eleve', 'StudentController');
 
         Route::get('professeur/qcm/delete/multiple', 'QcmController@deleteMultiple');
         Route::post('professeur/qcm/update/multiple', 'QcmController@updateMultiple');

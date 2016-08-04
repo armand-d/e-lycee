@@ -13,7 +13,7 @@
   </li>
 
   <li class="@if(Route::current()->getPath() === 'professeur/eleve') active @endif">
-  	<a href="{{url('professeur/eleves')}}" id="btn-3">&Eacute;lèves</a>
+  	<a href="{{url('professeur/eleve')}}" id="btn-3">&Eacute;lèves</a>
   </li>
   <li class="@if(Route::current()->getPath() === 'professeur/profil') active @endif">
   	<a href="{{url('professeur/profil')}}" id="btn-4">Profil</a>

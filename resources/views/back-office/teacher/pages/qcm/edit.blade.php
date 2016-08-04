@@ -50,19 +50,19 @@
 							@foreach($question->choices as $keyB => $choice)
 							<li class="choice-{{$key}}-{{$keyB}}">
 								@if($question->response == $choice->title)
-								{{ Form::text('choice-'.$key.'-'.$keyB, $choice->title,array('placeholder'=> 'Choix', 'class'=>'input-grey')) }} {{ Form::radio('response-'.$key, old('response-'.$key), $choice->title, array('class'=>'response'))}}
+								{{ Form::text('choice-'.$key.'-'.$keyB, $choice->title,array('placeholder'=> 'Choix', 'class'=>'input-grey')) }} 
+								{{ Form::radio('response-'.$key, $choice->title, array('class'=>'response'))}}
 								@else
-								{{ Form::text('choice-'.$key.'-'.$keyB, $choice->title,array('placeholder'=> 'Choix', 'class'=>'input-grey')) }} {{ Form::radio('response-'.$key, old('response-'.$key), null, array('class'=>'response'))}}
+								{{ Form::text('choice-'.$key.'-'.$keyB, $choice->title,array('placeholder'=> 'Choix', 'class'=>'input-grey')) }} 
+								{{ Form::radio('response-'.$key, $choice->title, array('class'=>'response'))}}
 								@endif
 							</li>
 							@endforeach
 						</ul>
-
 					</li>
 					@endforeach
 				</ul>
-			<p id="verif-qcm"><a class="submit-form text-center">Modifier le QCM</a></p>
-			<p id="submt-qcm">{{Form::submit('Ajouter le QCM',array('class' => 'submit-form','name'=>'qcm_create'))}}</p>
+			<p>{{Form::submit('Modifier le QCM',array('class' => 'submit-form','name'=>'qcm_create'))}}</p>
 			</div>
 			{{ Form::close() }}
 	</div>

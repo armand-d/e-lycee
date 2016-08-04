@@ -63,12 +63,12 @@ $(document).ready(function(){
 	// 	window.location.hash = $(this).attr('href');
 	// });
 
-	// $('#login').on('click',function(){
-	// 	window.location.hash = 'connexion';
-	// });
-	// if (window.location.hash == '#connexion') {
-	// 	$('#login').trigger('click');
-	// }
+	$('#login').on('click',function(){
+		window.location.hash = 'connexion';
+	});
+	if (window.location.hash == '#connexion') {
+		$('#login').trigger('click');
+	}
 	// if (window.location.hash == '#articles') {
 	// 	$('#btn-2').tab('show');
 	// }
@@ -451,29 +451,29 @@ $(document).ready(function(){
 	// 	$('.article-content-single').slideDown();
 	// }
 
-	// $('#user-replace-photo').on('click', function(e){
-	// 	$('.user-replace-photo').slideDown();
-	// });
+	$('#user-replace-photo').on('click', function(e){
+		$('.user-replace-photo').slideDown();
+	});
 
-	// $('#form-user-replace-photo').submit(function(e) {
-	// 	e.preventDefault();
-	// 	var $form = $(this);
- //        var formdata = (window.FormData) ? new FormData($form[0]) : null;
- //        var data = (formdata !== null) ? formdata : $form.serialize();
+	$('#form-user-replace-photo').submit(function(e) {
+		e.preventDefault();
+		var $form = $(this);
+        var formdata = (window.FormData) ? new FormData($form[0]) : null;
+        var data = (formdata !== null) ? formdata : $form.serialize();
  
- //        $.ajax({
- //            url: $form.attr('action'),
- //            type: 'post',
- //            contentType: false,
- //            processData: false,
- //            dataType: 'json',
- //            data: data,
- //            success: function (response) {
- //                $('.avatar').attr('src', response.avatar);
- //                $('.user-replace-photo').slideUp();
- //            }
- //        });
-	// });
+        $.ajax({
+            url: $form.attr('action'),
+            type: 'post',
+            contentType: false,
+            processData: false,
+            dataType: 'json',
+            data: data,
+            success: function (response) {
+                $('.avatar').attr('src', response.avatar);
+                $('.user-replace-photo').slideUp();
+            }
+        });
+	});
 
 	// $('.link-qcm-student').on('click', function(e){
 	// 	$.ajax({

@@ -2,7 +2,7 @@
 
 @section('content')
 @include('back-office.teacher.pages.partials.nav')
-	<div class="tab-pane active row" id="article-create">
+<div class="tab-pane active row" id="article-create">
 	<div class="row article-content-form">
 		<div class="spacer-xs"></div>
 		<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2">

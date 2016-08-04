@@ -17,24 +17,6 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
-    public function store(Request $request) {
-
-        $validator = Validator::make($request->all(), [
-            'username'         => 'required|string|unique:users',
-			'level'       => 'required'
-        ]);
-
-        if ($validator->fails()) {
-            return redirect('professeur#ajouter-eleve')->withErrors($validator)->withInput();
-        }
-
-        $user = User::create($request->all());
-        $user->password = Hash::make(Input::get('username'));
-        $user->level = Input::get('level');
-        $user->save();
-
-    	return Redirect::to('professeur#eleves');
-    }
 
     public function updateUser(Request $request){
 
@@ -55,7 +37,7 @@ class UserController extends Controller
         $user->username = Input::get('username');
         $user->save();
 
-        return Redirect::to($role.'#profil');
+        return Redirect::to($role.'/profil');
     }
 
     public function deletePhoto(){
@@ -68,7 +50,7 @@ class UserController extends Controller
         else
             $role = 'etudiant';
 
-        return Redirect::to($role.'#profil');
+        return Redirect::to($role.'/profil');
     }
 
     public function replacePhoto(Request $request){
@@ -84,10 +66,5 @@ class UserController extends Controller
 
         return response()->json(['avatar' => url('assets/images/uploads/'.$fileName)]);
 
-    }
-
-    public function destroy($id) {
-        User::where('id', '=', $id)->delete();
-        return Redirect::to('professeur#eleves');
     }
 }

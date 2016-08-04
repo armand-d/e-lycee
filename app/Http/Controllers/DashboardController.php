@@ -31,5 +31,10 @@ class DashboardController extends Controller
     	return view('back-office.teacher.pages.dashboard')->with(array('qcms'=>$qcms,'articles'=>$articles,'students'=>$students, 'user'=>$user));
     }
 
+    public function showProfilTeacher(){
+        $user = User::findOrFail(Auth::user()->id);
+        return view('back-office.teacher.pages.profile')->with(array('user'=>$user));
+    }
+
 
 }

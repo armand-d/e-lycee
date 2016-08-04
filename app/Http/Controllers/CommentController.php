@@ -50,4 +50,9 @@ class CommentController extends Controller
             return redirect()->back();
         }
     }
+
+    public function destroy($id) {
+        Comment::where('id', '=', $id)->delete();
+        return Redirect::back()->with('alert-success','Le commentaire a bien était supprimé');
+    }
 }

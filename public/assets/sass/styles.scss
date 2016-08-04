@@ -106,7 +106,6 @@
 	.delete-user { cursor:pointer; &:hover { color:$red; transition-duration: $duration-3; } }
 	.qcm-is-ok { background-color: rgba(54, 109, 255, 0.5)!important; color: white; }
 
-	.active { cursor:pointer; }
 // end class global
 
 // scroolbar
@@ -417,7 +416,7 @@ input.apply {
 select {
 	border:none;
 }
-.add-question, #submt-qcm, #qcm-publish, #qcm-unpublish, #qcm-delete, #delete-qcms, #article-publish, #article-unpublish, #article-delete, .student-content-form, #delete-articles, .user-replace-photo, .return {
+.add-question, #submt-qcm, #qcm-publish, #qcm-unpublish, #qcm-delete, #delete-qcms, #article-publish, #article-unpublish, #article-delete, #delete-articles, .user-replace-photo, .return {
 	display:none;
 }
 // end dashboard liste
@@ -458,4 +457,10 @@ input[name="title"] {
 .tab-pane {
 	background-color: $white;
 	margin-bottom: 4%;
+}
+
+.dash-comment {
+	background-color:$light-grey;
+	margin-bottom:10px;
+	padding: 2%;
 }

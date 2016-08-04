@@ -29,6 +29,7 @@
 				      <th>{{Form::checkbox('select-all', false,false, array('disabled'=>'disabled'))}}</th>
 				      <th>Titre</th>
 				      <th>Statu</th>
+				      <th>Commentaires</th>
 				      <th>Date</th>
 				    </tr>
 				  </thead>
@@ -43,6 +44,7 @@
 						@else Brouillon
 				      	@endif
 				      </td>
+				      <td>{{count($article->comments)}}</td>
 				      <td>{{ Carbon\Carbon::parse($article->created_at)->format('d/m/Y') }}</td>
 				    </tr>
 				    @endforeach
