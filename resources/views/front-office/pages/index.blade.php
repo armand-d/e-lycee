@@ -56,10 +56,17 @@
 	<div class="col-md-24 col-sm-12">
 		<div class="col-md-8 col-sm-6">@include('front-office.partials.twitter')</div>
 		<div id="actualite">
-			<li class="col-md-8 col-sm-6"><p class="text-center t-black padding-4 t-s-2">Article 1</p></li>
-			<li class="col-md-8 col-sm-6"><p class="text-center t-black padding-4 t-s-2">Article 2</p></li>
-			<li class="col-md-8 col-sm-6"><p class="text-center t-black padding-4 t-s-2">Article 3</p></li>
-			<li class="col-md-8 col-sm-6"><p class="text-center t-black padding-4 t-s-2">Article 4</p></li>
+			@foreach($actualites as $actualite)
+				<div class="col-md-8 col-sm-6">
+					<li>
+						<div class="article-thumbnail-home">
+							<img width="100%" src="{{$actualite->url_thumbnail}}" alt="">
+						</div>
+						<p class="text-center t-black padding-2 t-s-1_5 no-wrap">{{$actualite->title}}</p>
+						<a href="{{url('actualite/'.$actualite->id.'/'.$actualite->title)}}" class="link-action-tab" id="link-1"><small><i class="fa fa-angle-right" aria-hidden="true"></i> Lire l'article</small></a>
+					</li>
+				</div>
+			@endforeach
 		</div>
 		<div class="spacer-xs"></div>
 		<div class="row col-md-24">

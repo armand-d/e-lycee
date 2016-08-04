@@ -13,6 +13,8 @@
 
 Route::get('/', ['as' => 'home', 'uses' => 'FrontController@index']);
 
+Route::get('search', 'FrontController@search');
+
 Route::get('actualites', 'FrontController@showActualites');
 Route::get('actualite/{id}/{title}', 'FrontController@showSingleActualite');
 Route::get('mentions-legales', 'FrontController@showMentionLegales');

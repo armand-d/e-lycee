@@ -4,7 +4,7 @@
 
 <div class="row">
 	<div class="col-lg-16 col-md-16 col-lg-offset-4 col-md-offset-4 article row">
-		<a href="{{url('actualites')}}"><i class="fa fa-angle-left" aria-hidden="true"></i> Retour</a>
+		<a href="{{url('actualites')}}"><i class="fa fa-angle-left" aria-hidden="true"></i> Retour aux atualitées</a>
 		<p class="t-s-1_5"><a href="{{url('actualite/'.$actualite->id.'/'.$actualite->title)}}">{{$actualite->title}}</a></p> 
 		<p>{{ $actualite->user['username'] }} - {{ Carbon\Carbon::parse($actualite->created_at)->format('d/m/Y') }}</p>
 		<div class="col-lg-12 col-lg-offset-6 col-md-12 col-md-offset-6">
