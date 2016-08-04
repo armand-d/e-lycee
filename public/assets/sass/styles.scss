@@ -419,6 +419,9 @@ select {
 .add-question, #submt-qcm, #qcm-publish, #qcm-unpublish, #qcm-delete, #delete-qcms, #article-publish, #article-unpublish, #article-delete, #delete-articles, .user-replace-photo, .return {
 	display:none;
 }
+.nav-tabs > li > a {
+	border-radius: 0px;
+}
 // end dashboard liste
 // end tab dashboard
 
