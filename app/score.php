@@ -14,4 +14,8 @@ class Score extends Model
     protected $fillable = [
         'qcm_id', 'status_qcm', 'note', 'user_id'
     ];
+
+    public function qcm (){
+    	return $this->belongsTo('App\Qcm');
+    }
 }

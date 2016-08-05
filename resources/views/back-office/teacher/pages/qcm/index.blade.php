@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-@include('back-office.teacher.pages.partials.nav')
+@include('back-office.teacher.partials.nav')
 <div class="tab-pane active row" id="qcm-index">
 	<div class="row questionnaire-content-list">
 		<div class="spacer-xs"></div>

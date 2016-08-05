@@ -55,7 +55,10 @@ Route::group(['middleware' => ['auth']], function () {
     
     Route::group([
         'middleware' => ['adminStudent']], function () {
-        // Route::resource('etudiant/tableau-de-bord', 'DashboardController@showDashboardStudent');
+        Route::resource('etudiant/tableau-de-bord', 'DashboardController@showDashboardStudent');
+        Route::get('etudiant/profil', 'DashboardController@showProfilStudent');
+        Route::get('etudiant/qcm', 'QcmController@indexStudent');
+        Route::get('etudiant/qcm/{id}', 'QcmController@show');
 
         // Route::resource('qcm-student', 'Admin\Student\QcmStudentController');
 

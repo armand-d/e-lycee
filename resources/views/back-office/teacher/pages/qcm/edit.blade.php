@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-@include('back-office.teacher.pages.partials.nav')
+@include('back-office.teacher.partials.nav')
 <div class="tab-pane active row" id="qcm-show">
 <div class="row qcm-content-single">
 	<div class="spacer-xs"></div>

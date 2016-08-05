@@ -504,10 +504,6 @@ $(document).ready(function(){
 	// 	return false;
 	// });
 
-	// $('#link-return').on('click', function(){
-	// 	window.location.href = 'etudiant';
-	// });
-
 	// $('#student-qcm').submit(function(e) {
 	// 	e.preventDefault();
 	// 	var $form = $(this);
@@ -518,7 +514,7 @@ $(document).ready(function(){
 
  //        $.ajax({
  //            url: $form.attr('action'),
- //            type: 'post',
+ //            type: 'GET',
  //            contentType: false,
  //            processData: false,
  //            dataType: 'json',
@@ -529,7 +525,6 @@ $(document).ready(function(){
  //                } else {
  //                	$('#student-qcm input[type="submit"]').hide();
  //                	$('.score').html('Votre score : '+response.score+'/'+response.nbr_question);
- //                	$('.return').show();
  //                }
  //                console.log(response)
  //            }

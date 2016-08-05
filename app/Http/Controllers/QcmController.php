@@ -2,18 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use \App\Qcm;
-use \App\Question;
-use \App\Choice;
+use App\Qcm;
+use App\Question;
+use App\Choice;
+use App\Score;
 
 use Auth;
 use Input;
 use Redirect;
 use Validator;
 
-use \Illuminate\Http\Request;
-use \App\Http\Requests;
-use \App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
 
 class QcmController extends Controller
 {
@@ -149,4 +150,49 @@ class QcmController extends Controller
     	Qcm::where('status', '=', 2)->where('user_id', '=', Auth::user()->id)->delete();
     	return Redirect::to('professeur#QCM');
     }
+
+    // student
+
+    public function indexStudent (){
+         $qcms = Qcm::where('level', '=', Auth::user()->level)->where('status', '=', 1)->get();
+         return view('back-office.student.pages.qcm.index')->with(array('qcms'=>$qcms));
+    }
+
+    public function show(Request $request, $id){
+
+        $qcm =  Qcm::findOrFail($id);
+        
+        if (!Input::get('qcm_submit')) {
+            return view('back-office.student.pages.qcm.show')->with(array('qcm'=>$qcm));
+        }
+
+        $questions = $qcm->questions;
+        $score = 0;
+
+        foreach ($questions as $key => $question) {
+            $validator = Validator::make($request->all(), ['question-'.$question->id => 'required']);
+            if ($validator->fails()) {
+                return Redirect::back()->with('alert-danger','Vous devez répondre à toutes les questions !');
+            }
+        }
+
+        foreach ($questions as $key => $question) {
+            if (Input::get('question-'.$question->id) == $question->response) {
+                $score++;
+            }
+        }
+
+        $data = array(
+            'user_id'    => Auth::user()->id,
+            'qcm_id'     => $qcm->id, 
+            'status_qcm' => 1, 
+            'note'       => $score
+        );
+
+        Score::create($data);
+
+        return Redirect::to('etudiant/qcm')->with('alert-success','Vous avez fini !');
+
+    }
+
 }
