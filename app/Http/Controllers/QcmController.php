@@ -191,7 +191,22 @@ class QcmController extends Controller
 
         Score::create($data);
 
-        return Redirect::to('etudiant/qcm')->with('alert-success','Vous avez fini !');
+        $average = ($score/$qcm->nbr_question)*20;
+        if ($average < 5) {
+            $txt = 'Décevant...';
+            $alert = 'danger';
+        } else if ($average < 10) {
+            $txt = 'Encore un effort...';
+            $alert = 'warning';
+        } else if ($average < 15) {
+            $txt = 'Bravo !';
+            $alert = 'success';
+        } else {
+            $txt = 'Excellent !';
+            $alert = 'success';
+        }
+
+        return Redirect::to('etudiant/qcm')->with('alert-'.$alert, $txt.' Votre note est de '.$average.'/20.');
 
     }
 
