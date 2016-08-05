@@ -11,9 +11,10 @@
 		<div class="spacer-xs"></div>
 		<div class="single-qcm">
 			<div class="row">
-				<p class="col-lg-21 col-md-21 col-lg-offset-1 col-md-offset-1 t-s-1_5 border-bottom">Modifier l'article</p>
+				<p class="col-lg-21 col-md-21 col-lg-offset-1 col-md-offset-1 t-s-1_5 border-bottom">Modifier l'article &nbsp;|&nbsp;<a href="{{url('actualite/'.$article->id.'/'.$article->title)}}" target="_blank"><small> voir l'article <i class="fa fa-angle-right" aria-hidden="true"></i></a></small></p>
 			</div>
-			<div class="col-lg-16 col-lg-offset-4 col-md-16 col-md-offset-4">
+			<div class="col-lg-16 col-lg-offset-4 col-md-16 col-md-offset-4">	
+			<div class="spacer-xs"></div>		
 			{{Form::open(array('url'=>'professeur/article/'.$article->id, 'method'=>'PAtCH', 'enctype'=>'multipart/form-data'))}}
 				<li>{{Form::text('title', $article->title, array('class'=>'input-grey','placeholder'=>'Titre'))}}</li>
 		    	@if($errors->has('title')) <span class="error">{{$errors->first('title')}} </span>@endif</li>

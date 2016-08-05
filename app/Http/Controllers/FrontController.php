@@ -69,6 +69,11 @@ class FrontController extends Controller
         $query = Post::where('title','like', '%'.$q.'%')->orWhere('content','like', '%'.$q.'%')->orderBy('created_at', 'desc');
         $allResults = $query->get();
         $results = $query->paginate(5);
+
+        if (count($results) == 0) {
+            return Redirect::back()->with('alert-danger','Aucun résultats...');
+        }
+
         return view('front-office.pages.search')->with(array('results'=>$results,'allResults'=>$allResults,'q'=>$q));
 
     }
