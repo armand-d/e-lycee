@@ -17,7 +17,7 @@
 				<li><a href="" id="login" data-toggle="modal" data-target="#myModal">Connexion</a></li>
 			</ul>
 			<ul class="col-md-5">
-				<li >Rechercher</li>
+				<li><a id="btn-search-footer">Rechercher</a></li>
 				<li>Comment ça marche</li>
 			</ul>
 			<ul class="col-md-5">

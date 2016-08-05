@@ -25,7 +25,7 @@
 					</div>
 					<div class="pull-right col-xs-2 border-right text-center"><i class="fa fa-bell"></i></div>
 					<div class="pull-right col-xs-2 border-right text-center">
-						<a href="#" id="btn-search"><i class="fa fa-search"></i></a>
+						<a id="btn-search"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
 				
@@ -34,8 +34,8 @@
 				<!-- SM -->
 				<div class="col-sm-12 visible-sm visible-md visible-lg">
 						<div class="col-sm-5 text-center"><a href="{{url('actualites')}}">Actualités</a></div>
-						<div class="col-sm-5 text-center"><a href="" id="login" data-toggle="modal" data-target="#myModal">Connexion</a></div>
-						<div class="col-sm-5 text-center"><a href="" id="btn-search">Rechercher</a></div>
+						<div class="col-sm-5 text-center"><a id="login" data-toggle="modal" data-target="#myModal">Connexion</a></div>
+						<div class="col-sm-5 text-center"><a id="btn-search">Rechercher</a></div>
 						<div class="col-sm-5 col-md-offset-4">
 							<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
 						</div>
