@@ -14,7 +14,7 @@
 	</div>
 	<div class="spacer-xs"></div>
 	<div class="row">
-		<p class="col-lg-21 col-md-21 col-lg-offset-1 col-md-offset-1 t-s-1_5 border-bottom">Statistiques</p>
+		<p class="col-lg-21 col-md-21 col-xs-21 col-lg-offset-1 col-md-offset-1 col-xs-offset-1 t-s-1_5 border-bottom">Statistiques</p>
 	</div>
 	<div class="row col-lg-24 col-md-24">
 		<div class="col-lg-8 padding-lf-3">
@@ -32,7 +32,7 @@
 	</div>
 	<div class="spacer-xs"></div>
 	<div class="row">
-		<p class="col-lg-21 col-md-21 col-lg-offset-1 col-md-offset-1 t-s-1_5 border-bottom">Activitées récentes</p>
+		<p class="col-lg-21 col-md-21 col-xs-21 col-lg-offset-1 col-md-offset-1 col-xs-offset-1 t-s-1_5 border-bottom">Activitées récentes</p>
 	</div>
 	<div class="row col-lg-21 col-md-21 col-lg-offset-1 col-md-offset-1">
 		<div class="spacer-xs"></div>

@@ -3,11 +3,11 @@
 @section('content')
 @include('back-office.student.partials.nav')
 <div class="tab-pane active row" id="qcm-show">
-	<div class="row qcm-content-single">
+	<div class="col-lg-22 col-md-22 col-xs-22 col-lg-offset-1 col-md-offset-1 col-xs-offset-1 row qcm-content-single">
 	<div class="spacer-xs"></div>
 	<div class="single-qcm">
 		<div class="row">
-			<p class="col-lg-21 col-md-21 col-lg-offset-1 col-md-offset-1 t-s-1_5 border-bottom title-single-qcm">{{$qcm->title}}</p>
+			<p class="col-lg-21 col-md-21 col-xs-21 col-lg-offset-1 col-md-offset-1 col-xs-offset-1 t-s-1_5 border-bottom title-single-qcm">{{$qcm->title}}</p>
 		</div>
 		<div class="col-lg-18 col-md-18 col-lg-offset-3 col-md-offset-3">
 			<div class="error"></div>

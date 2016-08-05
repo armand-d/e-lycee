@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="row">
-	<div class="col-lg-16 col-md-16 col-lg-offset-4 col-md-offset-4 article row">
+	<div class="col-lg-16 col-md-16 col-lg-offset-4 col-md-offset-4 col-sm-16 col-xs-16 col-sm-offset-4 col-xs-offset-4 actualites article row">
 		<a href="{{url('actualites')}}"><i class="fa fa-angle-left" aria-hidden="true"></i> Retour aux atualitées</a>
 		<p class="t-s-1_5"><a href="{{url('actualite/'.$actualite->id.'/'.$actualite->title)}}">{{$actualite->title}}</a></p> 
 		<p>{{ $actualite->user['username'] }} - {{ Carbon\Carbon::parse($actualite->created_at)->format('d/m/Y') }}</p>

@@ -5,15 +5,15 @@
 <div class="tab-pane active row" id="article-index">
 	<div class="row article-content-list">
 		<div class="spacer-xs"></div>
-		<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2" id="action-article-status">
-			<a id="btn-all" class="col-lg-4 col-md-4 status-a active-status-a">Tous ({{count($articlesAll)}})</a>
-			<a id="btn-publish" class="col-lg-4 col-md-4 status-a">Publiés ({{count($articlesPublish)}})</a>
-			<a id="btn-unpublish" class="col-lg-4 col-md-4 status-a">Brouillons ({{count($articlesUnpublish)}})</a>
-			<a id="btn-delete" class="col-lg-4 col-md-4 status-a">Corbeille ({{count($articlesDelete)}})</a>
-			<a href="{{url('professeur/article/create')}}" class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 add add-a"><i class="fa fa-plus"></i> Ajouter</a>
+		<div class="col-lg-20 col-md-20 col-xs-20 col-lg-offset-2 col-md-offset-2 col-xs-offset-2" id="action-article-status">
+			<a id="btn-all" class="col-lg-4 col-md-4 col-xs-8 status-a active-status-a">Tous ({{count($articlesAll)}})</a>
+			<a id="btn-publish" class="col-lg-4 col-md-4 col-xs-8 status-a">Publiés ({{count($articlesPublish)}})</a>
+			<a id="btn-unpublish" class="col-lg-4 col-md-4 col-xs-8 status-a">Brouillons ({{count($articlesUnpublish)}})</a>
+			<a id="btn-delete" class="col-lg-4 col-md-4 col-xs-8 status-a">Corbeille ({{count($articlesDelete)}})</a>
+			<a href="{{url('professeur/article/create')}}" class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 col-xs-8 add add-a"><i class="fa fa-plus"></i> Ajouter</a>
 		</div>
 		<div class="spacer-xs"></div>
-		<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2">
+		<div class="col-lg-20 col-md-20 col-xs-20 col-lg-offset-2 col-md-offset-2 col-xs-offset-2">
 			{{ Form::open(array('url'=>'professeur/article/update/multiple', 'method'=> 'POST')) }}
 				<div class="row">
 					<span class="action-select">

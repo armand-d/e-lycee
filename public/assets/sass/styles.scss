@@ -360,12 +360,30 @@ header {
 	position: absolute;
     top: 28px;
     right: 16px;
-    width: 150px;
+    width: 200px;
     background-color: #FFF;
     padding: 0px 10px;
     color: $dark-blue;
     font-weight: 700;
     display: none;
+    hr {
+    	margin: 5px;
+    }
+}
+
+.menu-caret-mobil {
+	position: fixed;
+    top: 85px;
+    right: 0px;
+    left: 0px;
+    z-index: 1000;
+    width: 100%;
+    background-color: #FFF;
+    padding: 0px 10px;
+    color: $dark-blue;
+    font-weight: 700;
+    display: none;
+    transition-duration: $duration-3;
     hr {
     	margin: 5px;
     }
@@ -488,3 +506,4 @@ input[name="title"] {
 		width: 100%;
 	}
 }
+

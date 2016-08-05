@@ -5,15 +5,15 @@
 <div class="tab-pane active row" id="qcm-show">
 <div class="row qcm-content-single">
 	<div class="spacer-xs"></div>
-	<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2">
+	<div class="col-lg-20 col-md-20 col-xs-20 col-lg-offset-2 col-md-offset-2 col-xs-offset-2">
 		<a href="{{url('professeur/qcm')}}" class="col-lg-4 col-md-4 col-lg-offset-20 col-md-offset-20 cancel"><i class="fa fa-close"></i> Retour</a>
 	</div>
 	<div class="spacer-xs"></div>
 	<div class="row">
-		<p class="col-lg-21 col-md-21 col-lg-offset-1 col-md-offset-1 t-s-1_5 border-bottom">Modifier le QCM</p>
+		<p class="col-lg-21 col-md-21 col-xs-21 col-lg-offset-1 col-md-offset-1 col-xs-offset-1 col-md-offset-1 t-s-1_5 border-bottom">Modifier le QCM</p>
 	</div>
 	<div class="spacer-xs"></div>
-	<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2">
+	<div class="col-lg-20 col-md-20 col-xs-20 col-lg-offset-2 col-md-offset-2 col-xs-offset-2">
 		{{ Form::open(array('url'=>'professeur/qcm/'.$qcm->id, 'method'=> 'PATCH')) }}
 			<p class="error-add-questions"></p>
 			<div class="add-qcm">
