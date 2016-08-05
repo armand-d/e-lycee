@@ -4,12 +4,8 @@
 |--------------------------------------------------------------------------
 | Application Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
 */
+
 // Front-office
 Route::get('/', ['as' => 'home', 'uses' => 'FrontController@index']);
 Route::get('search', 'FrontController@search');
@@ -18,6 +14,7 @@ Route::get('actualite/{id}/{title}', 'FrontController@showSingleActualite');
 Route::get('mentions-legales', 'FrontController@showMentionLegales');
 Route::get('presentation', 'FrontController@showPresentation');
 Route::get('contact', 'FrontController@showContact');
+Route::post('contact/send', 'FrontController@sendContact');
 
 Route::resource('comment','CommentController');
 // End front-office

@@ -3,7 +3,7 @@
     <head>
         <title>404</title>
         <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
-        {!!Html::style('assets/stylesheets/404.css')!!}
+    	{!!Html::style('assets/stylesheets/404.css')!!}
 
         <style>
             html, body {
@@ -36,8 +36,8 @@
                 margin: 0px;
             }
             a {
-                letter-spacing: 3px;
-                color: #333;
+            	letter-spacing: 3px;
+            	color: #333;
             }
 
         </style>
@@ -45,8 +45,8 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="glitch" data-text="Oups...">Oups...</div> 
-                <p class="title">Erreur</p>
+                <div class="glitch" data-text="404">404</div> 
+                <p class="title">Cette page n'existe pas</p>
                 <br>
                 <a href="{{url('/')}}">Retourner sur le site</a>
             </div>

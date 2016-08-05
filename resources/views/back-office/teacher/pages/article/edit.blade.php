@@ -15,7 +15,7 @@
 			</div>
 			<div class="col-lg-16 col-lg-offset-4 col-md-16 col-md-offset-4">	
 			<div class="spacer-xs"></div>		
-			{{Form::open(array('url'=>'professeur/article/'.$article->id, 'method'=>'PAtCH', 'enctype'=>'multipart/form-data'))}}
+			{{Form::open(array('url'=>'professeur/article/'.$article->id, 'method'=>'PATCH', 'enctype'=>'multipart/form-data'))}}
 				<li>{{Form::text('title', $article->title, array('class'=>'input-grey','placeholder'=>'Titre'))}}</li>
 		    	@if($errors->has('title')) <span class="error">{{$errors->first('title')}} </span>@endif</li>
 				<li>{{Form::textarea('content', $article->content, array('class'=>'input-grey','placeholder'=>'Contenu de l\'article...'))}}</li>
