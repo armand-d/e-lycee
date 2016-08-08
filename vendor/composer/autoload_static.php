@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInita869b452c596826796212bba3340592b
+class ComposerStaticInit524909a9996e64951feb23021128467e
 {
     public static $files = array (
         '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
@@ -317,13 +317,12 @@ class ComposerStaticInita869b452c596826796212bba3340592b
         'App\\Http\\Controllers\\ArticleController' => __DIR__ . '/../..' . '/app/Http/Controllers/ArticleController.php',
         'App\\Http\\Controllers\\Auth\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthController.php',
         'App\\Http\\Controllers\\Auth\\PasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/PasswordController.php',
+        'App\\Http\\Controllers\\BackController' => __DIR__ . '/../..' . '/app/Http/Controllers/BackController.php',
         'App\\Http\\Controllers\\CommentController' => __DIR__ . '/../..' . '/app/Http/Controllers/CommentController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-        'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
         'App\\Http\\Controllers\\FrontController' => __DIR__ . '/../..' . '/app/Http/Controllers/FrontController.php',
         'App\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
         'App\\Http\\Controllers\\QcmController' => __DIR__ . '/../..' . '/app/Http/Controllers/QcmController.php',
-        'App\\Http\\Controllers\\StudentController' => __DIR__ . '/../..' . '/app/Http/Controllers/StudentController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\AdminStudentMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/AdminStudentMiddleware.php',
@@ -3126,10 +3125,10 @@ class ComposerStaticInita869b452c596826796212bba3340592b
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInita869b452c596826796212bba3340592b::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInita869b452c596826796212bba3340592b::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInita869b452c596826796212bba3340592b::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInita869b452c596826796212bba3340592b::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit524909a9996e64951feb23021128467e::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit524909a9996e64951feb23021128467e::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit524909a9996e64951feb23021128467e::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit524909a9996e64951feb23021128467e::$classMap;
 
         }, null, ClassLoader::class);
     }

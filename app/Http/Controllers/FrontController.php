@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\Post;
 use App\Comment;
 
+use Config;
 use Mail;
 use Auth;
 use View;
 use Storage;
 use Input;
 use Redirect;
+use Validator;
 
 use Carbon\Carbon;
 use App\Score\IScore;
@@ -36,6 +38,32 @@ class FrontController extends Controller
     public function showContact()
     {
         return view('front-office.pages.contact');
+    }
+
+    public function sendContact(Request $request)
+    {
+        
+        $validator = Validator::make($request->all(), [
+            'email'     => 'required|email',
+            'subject'     => 'required|string|max:100',
+            'content'    => 'required|max:500'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput()->with('alert-danger','Merci de vérifier le formulaire');
+        }
+
+        $email = $request->input('email');
+        $subject = $request->input('subject');
+        $content = $request->input('content');
+
+        Mail::send('emails.contact', ['email' => $email,'content' => $content,'subject' => $subject], function ($m) use ($email,$subject,$content) {
+            $m->from(Config::get('mail.from')['address'], Config::get('mail.from')['name']);
+
+            $m->to(Config::get('mail.from')['address'], 'Nouveau contact')->subject($subject);
+        });
+
+        return Redirect::back()->with('alert-success','Votre message à bien était envoyer');
     }
 
     public function showMentionLegales()
@@ -69,7 +97,14 @@ class FrontController extends Controller
         $query = Post::where('title','like', '%'.$q.'%')->orWhere('content','like', '%'.$q.'%')->orderBy('created_at', 'desc');
         $allResults = $query->get();
         $results = $query->paginate(5);
+
+        if (count($results) == 0) {
+            return Redirect::back()->with('alert-danger','Aucun résultats...');
+        }
+
         return view('front-office.pages.search')->with(array('results'=>$results,'allResults'=>$allResults,'q'=>$q));
 
     }
+
+
 }

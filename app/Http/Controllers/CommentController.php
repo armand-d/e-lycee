@@ -11,12 +11,18 @@ use Validator;
 use Akismet;
 use Input;
 use URL;
+use Auth;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class CommentController extends Controller
 {
+
+    public function __construct() {
+        $this->middleware('auth,adminTeacher')->except('create');
+    }
+
     public function create(Request $request) {
 
         if( \Akismet::validateKey() ) 
@@ -41,7 +47,11 @@ class CommentController extends Controller
     	    	return redirect()->back()->withErrors($validator)->withInput()->with('alert-danger','Merci de vérifier le formulaire');
             }
         	
-        	$comment = Comment::create($request->all());
+            if(Auth::check()) $userId = Auth::user()->id; else $userId = NULL;
+
+            $comment = Comment::create($request->all());
+        	$comment->user_id = $userId;
+            $comment->save();
 
         	return redirect()->back()->with('alert-success','Votre commentaire a était ajouté avec succès!');
         }

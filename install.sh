@@ -21,20 +21,11 @@ echo $MySQL | mysql --user=$USERNAME --password=$PASSWORD
 
 php artisan migrate:refresh --seed
 
-if [ ! -d ./node_modules ]; then
-	npm install --save-dev gulp
-	npm install --save-dev gulp-sass
-	npm install --save-dev gulp-minify-css
-	npm install --save-dev gulp-concat
-	npm install --save-dev gulp-rename
-	npm install --save-dev gulp-uglify
-else
-	echo "ok pour gulp et ses dépendances"
-fi
+composer update
 
-if [ ! -f gulpfile.js ]; then
-	touch gulpfile.js
-fi
+php artisan vendor:publish
+
+php artisan route:cache
 
 
 

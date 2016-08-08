@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-@include('back-office.teacher.partials.nav')
+@include('back-office.student.partials.nav')
 <div class="tab-pane active row" id="profil">
 	<div class="spacer-xs"></div>
 	<div class="profile-teacher row">
@@ -14,11 +14,11 @@
 				</div>
 				<div class="spacer-xs"></div>
 				<li>
-					<a href="#profilRemplacerPhoto" id="user-replace-photo"><i class="fa fa-angle-right" aria-hidden="true"></i> Remplacer votre photo</a>
-					<div class="user-replace-photo row">
+					<a href="#" id="user-replace-photo"><i class="fa fa-angle-right" aria-hidden="true"></i> Remplacer votre photo</a>
+					<div class="user-replace-photo">
 						{{Form::open(array('url'=>'user/replace/photo', 'enctype'=>'multipart/form-data', 'id'=>'form-user-replace-photo'))}}
 							<li>{{Form::file('avatar')}}</li>
-							<li class="col-lg-8 col-md-8">{{Form::submit('Modifier la photo', array('class'=>'submit-form'))}}</li>
+							<li class="col-lg-8 col-md-8">{{Form::submit('Modifier', array('class'=>'submit-form'))}}</li>
 						{{Form::close()}}
 					</div>
 				</li>
@@ -30,6 +30,7 @@
 					<p class="col-lg-21 col-md-21 col-lg-offset-1 col-md-offset-1 t-s-1_5 border-bottom">Informations personnelles</p>
 				</div>
 				<div class="spacer-xs"></div>
+				<li><p>Niveau : {{$user->level}}</p></li>
 				{{Form::open(array('url'=>'update/user', 'method'=>'POST'))}}
 					<li>Nom : {{Form::text('username', $user->username, array('class' => 'input-grey' ))}}</li>
 			    	@if($errors->has('username')) <span class="error">{{$errors->first('username')}}</span>@endif</li>

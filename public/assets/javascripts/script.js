@@ -45,23 +45,19 @@ $(document).ready(function(){
 				    'margin-top': '-0.2em',
 				    'width': '3.5em',
 				    'height': '2.1em'
-				})
+				});
+				$('.menu-caret-mobil').css('top', '45px');
 			} else {
 				$('header').css('padding','');
 				$('header .logo').css({
 				    'margin-top': '',
 				    'width': '',
 				    'height': ''
-				})
+				});
+				$('.menu-caret-mobil').css('top', '');
 			}
 		});
 		// end scroll
-	// // end animate menu
-
-	// $('a').on('click', function(){
-	// 	if($(this).attr('href').substr(0,1) == '#')
-	// 	window.location.hash = $(this).attr('href');
-	// });
 
 	$('#login').on('click',function(){
 		window.location.hash = 'connexion';
@@ -69,49 +65,6 @@ $(document).ready(function(){
 	if (window.location.hash == '#connexion') {
 		$('#login').trigger('click');
 	}
-	// if (window.location.hash == '#articles') {
-	// 	$('#btn-2').tab('show');
-	// }
-	// if (window.location.hash == '#profil') {
-	// 	$('#btn-4').tab('show');
-	// }
-	// if (window.location.hash == '#ajouter-article') {
-	// 	$('#btn-2').tab('show');
-	// 	$('.article-content-list').slideUp();
-	// 	$('.article-content-form').slideDown();
-	// }
-	// if (window.location.hash == '#eleves') {
-	// 	$('#btn-3').tab('show');
-	// }
-	// if (window.location.hash == '#ajouter-eleve') {
-	// 	$('#btn-3').tab('show');
-	// 	$('.student-content-list').slideUp();
-	// 	$('.student-content-form').slideDown();
-	// }
-	
-	// // hash Qcm / articles
-	// if (window.location.hash == '#QCM') {
-	// 	$('#btn-1').tab('show');
-	// }
-	// if (window.location.hash == '#ajouter-qcm') {
-	// 	$('#btn-1').tab('show');
-	// 	$('.questionnaire-content-list').slideUp();
-	// 	$('.questionnaire-content-form').slideDown();
-	// }
-	// if (window.location.hash == '#QcmAnnuler' ||window.location.hash == '#QcmTous' || window.location.hash == '#QcmPublies' || window.location.hash == '#QcmBrouillons' || window.location.hash == '#QcmCorbeille' || window.location.hash == '#QcmAjouter' || window.location.hash == '#QcmAjouterQuestions' || window.location.hash == '#QcmVerification') {
-	// 	$('#btn-1').tab('show');
-	// 	window.location.hash = 'QCM';
-	// }
-	// if (window.location.hash == '#articlesAnnuler' || window.location.hash == '#articlesTous' || window.location.hash == '#articlesPublies' || window.location.hash == '#articlesBrouillons' || window.location.hash == '#articlesCorbeille' || window.location.hash == '#articlesAjouter') {
-	// 	$('#btn-2').tab('show');
-	// 	window.location.hash = 'articles';
-	// }
-	// if (window.location.hash == '#profilRemplacerPhoto') {
-	// 	$('#btn-4').tab('show');
-	// 	window.location.hash = 'profil';
-	// }
-	
-	// // end hash Qcm / articles
 
 	// ajax login
 
@@ -152,30 +105,22 @@ $(document).ready(function(){
 
 	// menu caret
 	var active = false;
-	$('#menu-caret').on('click', function(){
-		$('.menu-caret').slideToggle();
+	$('#menu-caret-mobil, #menu-caret').on('click', function(){
+		$('.menu-caret, .menu-caret-mobil').slideToggle();
 		if (!active) {
-			$('#menu-caret').css('color', '#366dff');
+			$('#menu-caret, #menu-caret-mobil').css('color', '#366dff');
 			$(this).html('<i class="fa fa-close"></i>')
 			active = true;
 		} else {
-			$('#menu-caret').css('color', '#525252');
-			$(this).html('<i class="fa fa-caret-down"></i>')
+			$('#menu-caret, #menu-caret-mobil').css('color', '#525252');
+			if($(this).attr('id') == 'menu-caret-mobil')
+				$(this).html('<i class="fa fa-bars"></i>');
+			else	
+				$(this).html('<i class="fa fa-caret-down"></i>');
 			active = false;
 		}
 	});
 	// end menu caret
-
-	// $('#myTab a').click(function (e) {
-	//   e.preventDefault();
-	//   $(this).tab('show');
-	// })
-
-	// $('.link-action-tab').on('click', function(e){
-	// 	e.preventDefault();
-	// 	var id = $(this).attr('id').split('-');
-	// 	$('#btn-'+id[1]).trigger('click');
-	// });
 
 	$('.status-q').on('click', function(e){
 		$('.status-q').removeClass('active-status-q');
@@ -187,54 +132,6 @@ $(document).ready(function(){
 		$(this).addClass('active-status-a');
 		e.preventDefault
 	});
-
-	// // add / cancel
-	// $('.add-q').on('click', function(){
-	// 	$('.questionnaire-content-list').slideUp();
-	// 	$('.questionnaire-content-form').slideDown();
-	// });
-	// $('.prev-q').on('click', function(){
-	// 	$('.questionnaire-content-list').slideDown();
-	// 	$('.questionnaire-content-single').slideUp();
-	// });
-	// $('.cancel-q').on('click', function(){
-	// 	$('.questionnaire-content-list').slideDown();
-	// 	$('.questionnaire-content-form').slideUp();
-	// });
-	// $('.add-a').on('click', function(){
-	// 	$('.article-content-list').slideUp();
-	// 	$('.article-content-form').slideDown();
-	// });
-	// $('.cancel-a').on('click', function(){
-	// 	$('.article-content-list').slideDown();
-	// 	$('.article-content-form').slideUp();
-	// });
-	// $('.prev-a').on('click', function(){
-	// 	$('.article-content-list').slideDown();
-	// 	$('.article-content-single').slideUp();
-	// });
-	// $('.add-s').on('click', function(){
-	// 	$('.student-content-list').slideUp();
-	// 	$('.student-content-form').slideDown();
-	// });
-	// $('.cancel-s').on('click', function(){
-	// 	$('.student-content-list').slideDown();
-	// 	$('.student-content-form').slideUp();
-	// });
-	// // end add / cancel
-
-	// // new in dash
-	// $('#new-qcm').on('click', function(e){
-	// 	$('#btn-1').trigger('click');
-	// 	$('.add-q').trigger('click');
-	// 	e.preventDefault;
-	// });
-	// $('#new-article').on('click', function(e){
-	// 	$('#btn-2').trigger('click');
-	// 	$('.add-a').trigger('click');
-	// 	e.preventDefault;
-	// });
-	// // new in dash
 
 	// add questions
 	$('#add-question').on('click', function(e){
@@ -385,72 +282,6 @@ $(document).ready(function(){
 		}
 	});
 
-	// $('.link-show-qcm').on('click', function(e){
-	// 	$.ajax({
-	// 	  type: "GET",
-	// 	  url: $(this).attr('href'),
-	// 	  success: function(data){
-	// 	  	$('.questionnaire-content-list').slideUp();
-	// 	  	$('.questionnaire-content-single').slideDown();
-	// 	  	$('.title-single-qcm').empty();
-	// 	  	$('.title-single-qcm').html(data.qcm.title);
-	// 	  	$('.level-single-qcm').empty();
-	// 	  	$('.level-single-qcm').html('Niveau : '+data.qcm.level);
-	// 	  	$('.nbr_question-single-qcm').empty();
-	// 	  	$('.nbr_question-single-qcm').html('Nombres de questions : '+data.qcm.nbr_question);
-	// 	  	$('.nbr_choice-single-qcm').empty();
-	// 	  	$('.nbr_choice-single-qcm').html('Nombres de choix : '+data.qcm.nbr_choice);
-	// 	  	$('.questions-single-qcm').empty();
-	// 	  	for (var i = 0; i < data.data.length; i++) {
-	// 	  		question = data.data[i];
-	// 	  		$('.questions-single-qcm').append('<li class="single-qcm-question-'+i+'">'+question.question.title+' :</li><ul class="single-qcm-choices-'+i+'"></ul>');
-	// 	  		for (var j = 0; j < question.choices.length; j++) {
-	// 	  			if (question.choices[j].title == question.question.response)
-	// 	  			$('.single-qcm-choices-'+i+'').append('<li class="t-base-blue">'+question.choices[j].title+'</li>');
-	// 	  			else
-	// 	  			$('.single-qcm-choices-'+i+'').append('<li>'+question.choices[j].title+'</li>');
-	// 	  		}
-	// 	  	}
-	// 	  }
-	// 	});
-	// 	return false;
-	// });
-
-	// $('.link-show-article').on('click', function(e){
-	// 	window.location.hash = 'modifierArticle';
-	// 	$.ajax({
-	// 		type: "GET",
-	// 		url: $(this).attr('href'),
-	// 		success: function(data){
-	// 			console.log(data)
-	// 			$('.article-content-list').slideUp();
-	// 			$('.article-content-single').slideDown();
-	// 			if (data.status === 1) {
-	// 				$('.status-single-article-modify').val('1');
-	// 				$('.status-single-article-modify').prop('checked','checked');
-	// 			}
-	// 			$('.image-single-article-modify').attr('src', data.url_thumbnail);
-	// 			$('.title-single-article-modify').val(data.title);
-	// 			$('.content-single-article-modify').html(data.content);
-	// 			$('form#article-modify').attr('action', 'article/'+data.id);
-	// 		}  	
-	// 	});
-	// 	return false;
-	// });
-
-	// $('.add-a').on('click', function(){
-	// 	$('.article-content-form input').val('');
-	// 	$('.article-content-form textarea').html('');
-	// 	$('.article-content-form .error').hide('');
-
-	// });
-
-	// if (window.location.hash == '#modifierArticle') {
-	// 	$('#btn-2').tab('show');
-	// 	$('.article-content-list').slideUp();
-	// 	$('.article-content-single').slideDown();
-	// }
-
 	$('#user-replace-photo').on('click', function(e){
 		$('.user-replace-photo').slideDown();
 	});
@@ -475,67 +306,9 @@ $(document).ready(function(){
         });
 	});
 
-	// $('.link-qcm-student').on('click', function(e){
-	// 	$.ajax({
-	// 		type: "GET",
-	// 		url: $(this).attr('href'),
-	// 		success: function(data){
-	// 			$('.qcm-content-list').slideUp();
-	// 		  	$('.qcm-content-single').slideDown();
-	// 		  	$('.title-single-qcm').empty();
-	// 		  	$('.title-single-qcm').html(data.qcm.title);
-	// 		  	$('.level-single-qcm').empty();
-	// 		  	$('.level-single-qcm').html('Niveau : '+data.qcm.level);
-	// 		  	$('.nbr_question-single-qcm').empty();
-	// 		  	$('.nbr_question-single-qcm').html('Nombres de questions : '+data.qcm.nbr_question);
-	// 		  	$('.nbr_choice-single-qcm').empty();
-	// 		  	$('.nbr_choice-single-qcm').html('Nombres de choix : '+data.qcm.nbr_choice);
-	// 		  	$('.questions-single-qcm').empty();
-	// 		  	$('.questions-single-qcm').append('<input type="hidden" name="qcm_id" value="'+data.qcm.id+'">')
-	// 		  	for (var i = 0; i < data.data.length; i++) {
-	// 		  		question = data.data[i];
-	// 		  		$('.questions-single-qcm').append('<li class="single-qcm-question-'+i+'">'+question.question.title+' :</li><ul class="single-qcm-choices-'+i+'"></ul>');
-	// 		  		for (var j = 0; j < question.choices.length; j++) {
-	// 		  			$('.single-qcm-choices-'+i).append('<li><input type="radio" id="question-'+i+'-'+j+'" name="question-'+question.question.id+'" value="'+question.choices[j].title+'"> <label for="question-'+i+'-'+j+'">'+question.choices[j].title+'</label></li>');
-	// 		  		}
-	// 		  	}
-	// 		}  	
-	// 	});
-	// 	return false;
-	// });
-
-	// $('#link-return').on('click', function(){
-	// 	window.location.href = 'etudiant';
-	// });
-
-	// $('#student-qcm').submit(function(e) {
-	// 	e.preventDefault();
-	// 	var $form = $(this);
- //        var formdata = (window.FormData) ? new FormData($form[0]) : null;
- //        var data = (formdata !== null) ? formdata : $form.serialize();
- // 		$('.error').html('');
- // 		$('.score').html('')
-
- //        $.ajax({
- //            url: $form.attr('action'),
- //            type: 'post',
- //            contentType: false,
- //            processData: false,
- //            dataType: 'json',
- //            data: data,
- //            success: function (response) {
- //                if (response.status == 'error') {
- //                	$('.error').html('<p class="has-error text-center">Vous devez répondre à toutes les questions</p>')
- //                } else {
- //                	$('#student-qcm input[type="submit"]').hide();
- //                	$('.score').html('Votre score : '+response.score+'/'+response.nbr_question);
- //                	$('.return').show();
- //                }
- //                console.log(response)
- //            }
- //        });
-	// });
-
+	$('#btn-search-footer, #btn-search-mobil').on('click', function(){
+		$('#btn-search').trigger('click');
+	});
 });
 
 

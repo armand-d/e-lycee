@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
-@include('back-office.teacher.pages.partials.nav')
+@include('back-office.teacher.partials.nav')
 <div class="tab-pane active row" id="student-index">
 	<div class="row student-content-list">
 		<div class="spacer-xs"></div>
-		<div class="col-lg-20 col-md-20 col-lg-offset-2 col-md-offset-2" id="action-student-status">
+		<div class="col-lg-20 col-md-20 col-xs-20 col-lg-offset-2 col-md-offset-2 col-xs-offset-2" id="action-student-status">
 			<a href="{{url('professeur/eleve/create')}}" class="col-lg-4 col-md-4 col-lg-offset-20 col-md-offset-20 add add-s"><i class="fa fa-plus"></i> Ajouter</a>
 		</div>
 		<div class="spacer-xs"></div>

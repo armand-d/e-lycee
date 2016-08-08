@@ -2,7 +2,7 @@
 <html class="no-js" lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>E-lycée - @yield('title') </title>
+    <title>E-lycée @yield('title') </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     {!!Html::style('assets/stylesheets/styles.css')!!}
@@ -14,6 +14,7 @@
     <div id="no-click-search"></div>
     <div id="no-click-loader-search"><img src="{{Request::root('/').'/assets/images/loader-search.svg'}}" class="col-lg-24" alt=""></div>
     @include('front-office.partials.search')
+    @include('front-office.partials.menu-mobil')
 <header>
 @include('front-office.partials.header')
 </header>
@@ -29,7 +30,7 @@
 </div>
 
 @if (!Auth::check() || Route::current()->getPath() === '/' || Route::current()->getPath() === 'contact' || Route::current()->getPath() === 'actualites')
-<footer>
+<footer class="hidden-xs">
     @include('front-office.partials.footer')
 </footer>
 @endif

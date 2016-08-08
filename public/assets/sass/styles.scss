@@ -28,7 +28,7 @@
 	$middle-grey: #999;
 	$dark-grey: #333333;
 	$green: #4DC188;
-	$red: #FFB3B3;
+	$red: #ea4b4b;
 	$black: #000000;
 	$white: #ffffff;
 	$transparent: transparent;
@@ -51,6 +51,7 @@
 	.t-white { color: #FFFFFF; }
 	
 	.bg-grey { background-color: $light-grey; }
+	.bg-white { background-color: $white; }
 	.bg-dark-grey { background-color: $dark-grey; }
 	.bg-footer-grey { background-color: $footer-color; }
 
@@ -106,6 +107,8 @@
 	.delete-user { cursor:pointer; &:hover { color:$red; transition-duration: $duration-3; } }
 	.qcm-is-ok { background-color: rgba(54, 109, 255, 0.5)!important; color: white; }
 	.no-wrap { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; }
+
+	span.error { color:$red; }
 
 // end class global
 
@@ -372,12 +375,30 @@ header {
 	position: absolute;
     top: 28px;
     right: 16px;
-    width: 150px;
+    width: 200px;
     background-color: #FFF;
     padding: 0px 10px;
     color: $dark-blue;
     font-weight: 700;
     display: none;
+    hr {
+    	margin: 5px;
+    }
+}
+
+.menu-caret-mobil {
+	position: fixed;
+    top: 85px;
+    right: 0px;
+    left: 0px;
+    z-index: 1000;
+    width: 100%;
+    background-color: #FFF;
+    padding: 0px 10px;
+    color: $dark-blue;
+    font-weight: 700;
+    display: none;
+    transition-duration: $duration-3;
     hr {
     	margin: 5px;
     }
@@ -494,3 +515,10 @@ input[name="title"] {
 	margin-bottom:10px;
 	padding: 2%;
 }
+
+.contact {
+	input {
+		width: 100%;
+	}
+}
+
