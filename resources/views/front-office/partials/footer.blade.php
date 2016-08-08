@@ -1,10 +1,12 @@
 <div class="container">
 	<hr>
 	<div class="row">
-		<div class="col-md-6 text-center">logo</div>
-		<div class="col-md-6 text-center">logo</div>
-		<div class="col-md-6 text-center">logo</div>
-		<div class="col-md-6 text-center">logo</div>
+		<div class="logos-footer">
+		<div class="col-md-6 text-center"><img src="{{Request::root('/').'/assets/images/logo/rhonealpes.png'}}" alt=""></div>
+		<div class="col-md-6 text-center"><img src="{{Request::root('/').'/assets/images/logo/academiedelyon.png'}}" alt=""></div>
+		<div class="col-md-6 text-center"><img src="{{Request::root('/').'/assets/images/logo/academiedegrenoble.png'}}" alt=""></div>
+		<div class="col-md-6 text-center"><img src="{{Request::root('/').'/assets/images/logo/draafrhonealpes.png'}}" alt=""></div>
+		</div>
 	</div>
 </div>
 <div class="spacer-xs"></div>

@@ -28,7 +28,7 @@
 						<a href="#" id="btn-search"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
-				
+
 		    @else
 				<!-- MENU PUBLIC -->
 				<!-- SM -->
@@ -42,7 +42,7 @@
 				</div>
 				<!-- XS -->
 				<div class="pull-right visible-xs col-xs-10">
-					burger menu
+					<i class="fa fa-bars" aria-hidden="true"></i>burger menu
 				</div>
 			@endif
 		</div>

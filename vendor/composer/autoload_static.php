@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit612eaace2f7fe3496419deff18cdf6d3
+class ComposerStaticInita869b452c596826796212bba3340592b
 {
     public static $files = array (
         '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
@@ -14,8 +14,8 @@ class ComposerStaticInit612eaace2f7fe3496419deff18cdf6d3
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
-        'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+        'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
@@ -314,17 +314,16 @@ class ComposerStaticInit612eaace2f7fe3496419deff18cdf6d3
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Events\\Event' => __DIR__ . '/../..' . '/app/Events/Event.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
-        'App\\Http\\Controllers\\Admin\\Student\\DashboardStudentController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Student/DashboardStudentController.php',
-        'App\\Http\\Controllers\\Admin\\Student\\QcmStudentController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Student/QcmStudentController.php',
-        'App\\Http\\Controllers\\Admin\\Teacher\\DashboardTeacherController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Teacher/DashboardTeacherController.php',
-        'App\\Http\\Controllers\\Admin\\Teacher\\QcmTeacherController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Teacher/QcmTeacherController.php',
         'App\\Http\\Controllers\\ArticleController' => __DIR__ . '/../..' . '/app/Http/Controllers/ArticleController.php',
         'App\\Http\\Controllers\\Auth\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthController.php',
         'App\\Http\\Controllers\\Auth\\PasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/PasswordController.php',
         'App\\Http\\Controllers\\CommentController' => __DIR__ . '/../..' . '/app/Http/Controllers/CommentController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
         'App\\Http\\Controllers\\FrontController' => __DIR__ . '/../..' . '/app/Http/Controllers/FrontController.php',
         'App\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
+        'App\\Http\\Controllers\\QcmController' => __DIR__ . '/../..' . '/app/Http/Controllers/QcmController.php',
+        'App\\Http\\Controllers\\StudentController' => __DIR__ . '/../..' . '/app/Http/Controllers/StudentController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\AdminStudentMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/AdminStudentMiddleware.php',
@@ -3127,10 +3126,10 @@ class ComposerStaticInit612eaace2f7fe3496419deff18cdf6d3
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit612eaace2f7fe3496419deff18cdf6d3::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit612eaace2f7fe3496419deff18cdf6d3::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit612eaace2f7fe3496419deff18cdf6d3::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit612eaace2f7fe3496419deff18cdf6d3::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInita869b452c596826796212bba3340592b::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInita869b452c596826796212bba3340592b::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInita869b452c596826796212bba3340592b::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInita869b452c596826796212bba3340592b::$classMap;
 
         }, null, ClassLoader::class);
     }
