@@ -3,6 +3,7 @@
 use App\Comment;
 use Illuminate\Database\Seeder;
 use App\Post;
+use App\User;
 use Faker\Factory as Faker;
 
 class CommentsTableSeeder extends Seeder
